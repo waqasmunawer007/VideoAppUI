@@ -1,4 +1,20 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/AccountInfoActivity.cs">
+    <Files>
+      <File FileName="Droid/MainActivity.cs" Line="117" Column="5" />
+      <File FileName="Droid/LoginMailActivity.cs" Line="43" Column="2" />
+      <File FileName="Droid/AccountInfoActivity.cs" Line="35" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/Resources/layout/headerdrawerlayout.axml" line="21" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../MallSage-Xamarin/MallSage/Droid/views/fragments/HomeFragment.cs" line="299" offsetX="436" offsetY="4470" expression="FeaturedViewAdapter.Count" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.VideoAppUISample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DFD76B1A-D3A8-4A72-B0EE-90B96670B8EF" />
-  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.07da9a5702457f27" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>
