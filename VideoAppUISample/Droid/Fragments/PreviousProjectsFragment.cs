@@ -16,7 +16,7 @@ using Android.Widget;
 
 namespace VideoAppUISample.Droid
 {
-	public class BisherigeFragment : Fragment
+	public class PreviousProjectsFragment : Fragment
 	{
 		public override void OnCreate(Bundle savedInstanceState)
 		{

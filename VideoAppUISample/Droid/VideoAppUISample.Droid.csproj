@@ -109,7 +109,7 @@
     <Compile Include="DetailProjectActivity.cs" />
     <Compile Include="Fragments\HelpFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
-    <Compile Include="Fragments\BisherigeFragment.cs" />
+    <Compile Include="Fragments\PreviousProjectsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

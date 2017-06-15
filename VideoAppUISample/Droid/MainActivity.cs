@@ -13,7 +13,7 @@ namespace VideoAppUISample.Droid
 	public class MainActivity : AppCompatActivity
 	{
 		ProjectFragment fragProject;
-		BisherigeFragment fragBisherige;
+		PreviousProjectsFragment fragBisherige;
 		SettingsFragment fragEinstenllungen;
 		HelpFragment fragHilfe;
 
@@ -39,7 +39,7 @@ namespace VideoAppUISample.Droid
 
 			//Load Fragment
 			fragProject = new ProjectFragment();
-			fragBisherige = new BisherigeFragment();
+			fragBisherige = new PreviousProjectsFragment();
 			fragEinstenllungen = new SettingsFragment();
 			fragHilfe = new HelpFragment();
 
