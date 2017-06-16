@@ -21,7 +21,7 @@ namespace VideoAppUISample.Droid
 		{
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.login_mail);
+			SetContentView(Resource.Layout.activity_login_mail);
 
 			// clic button login
 

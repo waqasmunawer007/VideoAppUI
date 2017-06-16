@@ -21,10 +21,9 @@ namespace VideoAppUISample.Droid
 		{
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.login);
+			SetContentView(Resource.Layout.activity_login);
 
 			// login facebook
-
 			Button logFacebook = FindViewById<Button>(Resource.Id.anmeldenFacebook);
 			logFacebook.Click += delegate
 			{
@@ -32,7 +31,6 @@ namespace VideoAppUISample.Droid
 			};
 
 			// login google
-
 			Button logGoogle = FindViewById<Button>(Resource.Id.anmeldenGoogle);
 			logGoogle.Click += delegate
 			{
@@ -40,7 +38,6 @@ namespace VideoAppUISample.Droid
 			};
 
 			// login mail
-
 			Button logMail = FindViewById<Button>(Resource.Id.anmeldenEmail);
 			logMail.Click += delegate
 			{

@@ -2,7 +2,7 @@ package md5db99e0f44738b1df054820e68a30bd22;
 
 
 public class RegisterActivity
-	extends android.app.Activity
+	extends android.support.v7.app.AppCompatActivity
 	implements
 		mono.android.IGCUserPeer
 {

@@ -358,11 +358,11 @@
     <AndroidResource Include="Resources\values-v21\Styles.xml" />
     <AndroidResource Include="Resources\layout\headerdrawerlayout.axml" />
     <AndroidResource Include="Resources\layout\fragment_project.axml" />
-    <AndroidResource Include="Resources\layout\login.axml" />
-    <AndroidResource Include="Resources\layout\login_mail.axml" />
-    <AndroidResource Include="Resources\layout\register_account.axml" />
-    <AndroidResource Include="Resources\layout\account_info.axml" />
-    <AndroidResource Include="Resources\layout\select_user_group.axml" />
+    <AndroidResource Include="Resources\layout\activity_login.axml" />
+    <AndroidResource Include="Resources\layout\activity_login_mail.axml" />
+    <AndroidResource Include="Resources\layout\activity_register_account.axml" />
+    <AndroidResource Include="Resources\layout\activity_account_info.axml" />
+    <AndroidResource Include="Resources\layout\activity_select_user_group.axml" />
     <AndroidResource Include="Resources\layout\detail_project.axml" />
     <AndroidResource Include="Resources\layout\cardview_detail.axml" />
     <AndroidResource Include="Resources\layout\cardview_clip_hinzufugen.axml" />
@@ -372,6 +372,7 @@
     <AndroidResource Include="Resources\layout\fragment_bisherige.axml" />
     <AndroidResource Include="Resources\layout\cardview_video.axml" />
     <AndroidResource Include="Resources\layout\fragment_einstenllungen.axml" />
+    <AndroidResource Include="Resources\layout\project_view_pager_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

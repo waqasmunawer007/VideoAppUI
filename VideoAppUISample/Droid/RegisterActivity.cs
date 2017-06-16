@@ -8,22 +8,22 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 
 namespace VideoAppUISample.Droid
 {
 	[Activity(Label = "RegisterActivity")]
-	public class RegisterActivity : Activity
+	public class RegisterActivity : AppCompatActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.register_account);
+			SetContentView(Resource.Layout.activity_register_account);
 
 			// button more
-
 			Button btMore = FindViewById<Button>(Resource.Id.btMore);
 			btMore.Click += delegate
 			{
