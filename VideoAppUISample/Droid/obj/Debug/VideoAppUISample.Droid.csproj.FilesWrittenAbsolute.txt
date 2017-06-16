@@ -298,3 +298,4 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_register_account.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_account_info.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_select_user_group.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/project_view_pager_item.xml

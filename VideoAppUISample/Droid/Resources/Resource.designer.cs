@@ -1716,14 +1716,14 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f090030
 			public const int abc_text_size_title_material_toolbar = 2131296304;
 			
-			// aapt resource value: 0x7f09009e
-			public const int activity_horizontal_margin = 2131296414;
-			
 			// aapt resource value: 0x7f09009f
-			public const int activity_vertical_margin = 2131296415;
+			public const int activity_horizontal_margin = 2131296415;
 			
 			// aapt resource value: 0x7f0900a0
-			public const int appbar_padding_top = 2131296416;
+			public const int activity_vertical_margin = 2131296416;
+			
+			// aapt resource value: 0x7f0900a1
+			public const int appbar_padding_top = 2131296417;
 			
 			// aapt resource value: 0x7f090000
 			public const int cardview_compat_inset_shadow = 2131296256;
@@ -1854,14 +1854,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f09007b
 			public const int disabled_alpha_material_light = 2131296379;
 			
-			// aapt resource value: 0x7f090099
-			public const int fab_margin = 2131296409;
-			
-			// aapt resource value: 0x7f0900a1
-			public const int font_size_28sp = 2131296417;
+			// aapt resource value: 0x7f09009a
+			public const int fab_margin = 2131296410;
 			
 			// aapt resource value: 0x7f09008e
-			public const int font_size_32 = 2131296398;
+			public const int font_size_20 = 2131296398;
+			
+			// aapt resource value: 0x7f0900a2
+			public const int font_size_28sp = 2131296418;
+			
+			// aapt resource value: 0x7f09008f
+			public const int font_size_32 = 2131296399;
 			
 			// aapt resource value: 0x7f09007c
 			public const int highlight_alpha_material_colored = 2131296380;
@@ -1893,50 +1896,50 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f09002b
 			public const int item_touch_helper_swipe_escape_velocity = 2131296299;
 			
-			// aapt resource value: 0x7f0900a4
-			public const int margin_126dp = 2131296420;
-			
-			// aapt resource value: 0x7f090092
-			public const int margin_12dp = 2131296402;
-			
 			// aapt resource value: 0x7f0900a5
-			public const int margin_162dp = 2131296421;
-			
-			// aapt resource value: 0x7f09009d
-			public const int margin_16dp = 2131296413;
-			
-			// aapt resource value: 0x7f0900a6
-			public const int margin_180dp = 2131296422;
+			public const int margin_126dp = 2131296421;
 			
 			// aapt resource value: 0x7f090093
-			public const int margin_24dp = 2131296403;
+			public const int margin_12dp = 2131296403;
 			
-			// aapt resource value: 0x7f09009b
-			public const int margin_32dp = 2131296411;
+			// aapt resource value: 0x7f0900a6
+			public const int margin_162dp = 2131296422;
+			
+			// aapt resource value: 0x7f09009e
+			public const int margin_16dp = 2131296414;
+			
+			// aapt resource value: 0x7f0900a7
+			public const int margin_180dp = 2131296423;
 			
 			// aapt resource value: 0x7f090094
-			public const int margin_38dp = 2131296404;
+			public const int margin_24dp = 2131296404;
 			
 			// aapt resource value: 0x7f09009c
-			public const int margin_48dp = 2131296412;
+			public const int margin_32dp = 2131296412;
 			
-			// aapt resource value: 0x7f090091
-			public const int margin_4dp = 2131296401;
+			// aapt resource value: 0x7f090095
+			public const int margin_38dp = 2131296405;
 			
-			// aapt resource value: 0x7f09009a
-			public const int margin_56dp = 2131296410;
+			// aapt resource value: 0x7f09009d
+			public const int margin_48dp = 2131296413;
 			
-			// aapt resource value: 0x7f09008f
-			public const int margin_70dp = 2131296399;
+			// aapt resource value: 0x7f090092
+			public const int margin_4dp = 2131296402;
+			
+			// aapt resource value: 0x7f09009b
+			public const int margin_56dp = 2131296411;
 			
 			// aapt resource value: 0x7f090090
-			public const int margin_8dp = 2131296400;
+			public const int margin_70dp = 2131296400;
+			
+			// aapt resource value: 0x7f090091
+			public const int margin_8dp = 2131296401;
+			
+			// aapt resource value: 0x7f0900a4
+			public const int nav_header_height = 2131296420;
 			
 			// aapt resource value: 0x7f0900a3
-			public const int nav_header_height = 2131296419;
-			
-			// aapt resource value: 0x7f0900a2
-			public const int nav_header_vertical_spacing = 2131296418;
+			public const int nav_header_vertical_spacing = 2131296419;
 			
 			// aapt resource value: 0x7f090083
 			public const int notification_action_icon_size = 2131296387;
@@ -1983,17 +1986,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f09008d
 			public const int notification_top_pad_large_text = 2131296397;
 			
-			// aapt resource value: 0x7f090096
-			public const int size_body = 2131296406;
-			
-			// aapt resource value: 0x7f090095
-			public const int size_caption = 2131296405;
-			
 			// aapt resource value: 0x7f090097
-			public const int size_subheading = 2131296407;
+			public const int size_body = 2131296407;
+			
+			// aapt resource value: 0x7f090096
+			public const int size_caption = 2131296406;
 			
 			// aapt resource value: 0x7f090098
-			public const int size_title = 2131296408;
+			public const int size_subheading = 2131296408;
+			
+			// aapt resource value: 0x7f090099
+			public const int size_title = 2131296409;
 			
 			static Dimension()
 			{
@@ -2513,8 +2516,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b00c2
 			public const int action0 = 2131427522;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int action_attach = 2131427545;
+			// aapt resource value: 0x7f0b00db
+			public const int action_attach = 2131427547;
 			
 			// aapt resource value: 0x7f0b0064
 			public const int action_bar = 2131427428;
@@ -2564,8 +2567,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b0043
 			public const int action_mode_close_button = 2131427395;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int action_refresh = 2131427544;
+			// aapt resource value: 0x7f0b00da
+			public const int action_refresh = 2131427546;
 			
 			// aapt resource value: 0x7f0b00c1
 			public const int action_text = 2131427521;
@@ -2846,8 +2849,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b0078
 			public const int logoType = 2131427448;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int masked = 2131427543;
+			// aapt resource value: 0x7f0b00d9
+			public const int masked = 2131427545;
 			
 			// aapt resource value: 0x7f0b00c5
 			public const int media_actions = 2131427525;
@@ -2864,17 +2867,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b0093
 			public const int nameProject = 2131427475;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int nav_bisherige = 2131427547;
+			// aapt resource value: 0x7f0b00dd
+			public const int nav_bisherige = 2131427549;
+			
+			// aapt resource value: 0x7f0b00de
+			public const int nav_einstellungen = 2131427550;
+			
+			// aapt resource value: 0x7f0b00df
+			public const int nav_hilfe = 2131427551;
 			
 			// aapt resource value: 0x7f0b00dc
-			public const int nav_einstellungen = 2131427548;
-			
-			// aapt resource value: 0x7f0b00dd
-			public const int nav_hilfe = 2131427549;
-			
-			// aapt resource value: 0x7f0b00da
-			public const int nav_project = 2131427546;
+			public const int nav_project = 2131427548;
 			
 			// aapt resource value: 0x7f0b00be
 			public const int nav_view = 2131427518;
@@ -2885,8 +2888,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b003f
 			public const int never = 2131427391;
 			
-			// aapt resource value: 0x7f0b00b6
-			public const int next = 2131427510;
+			// aapt resource value: 0x7f0b00b5
+			public const int next_button = 2131427509;
 			
 			// aapt resource value: 0x7f0b001f
 			public const int none = 2131427359;
@@ -2916,13 +2919,22 @@ namespace VideoAppUISample.Droid
 			public const int pin = 2131427361;
 			
 			// aapt resource value: 0x7f0b00b4
-			public const int previous = 2131427508;
+			public const int previous_button = 2131427508;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int progress_circular = 2131427339;
 			
 			// aapt resource value: 0x7f0b000c
 			public const int progress_horizontal = 2131427340;
+			
+			// aapt resource value: 0x7f0b00d7
+			public const int project_desc_text_view = 2131427543;
+			
+			// aapt resource value: 0x7f0b00d6
+			public const int project_title_text_view = 2131427542;
+			
+			// aapt resource value: 0x7f0b00b6
+			public const int project_viewpager = 2131427510;
 			
 			// aapt resource value: 0x7f0b005d
 			public const int radio = 2131427421;
@@ -3098,9 +3110,6 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b0059
 			public const int titleDividerNoCustom = 2131427417;
 			
-			// aapt resource value: 0x7f0b00b5
-			public const int titleProject = 2131427509;
-			
 			// aapt resource value: 0x7f0b0057
 			public const int title_template = 2131427415;
 			
@@ -3158,8 +3167,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f0b0002
 			public const int view_offset_helper = 2131427330;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int visible = 2131427542;
+			// aapt resource value: 0x7f0b00d8
+			public const int visible = 2131427544;
 			
 			// aapt resource value: 0x7f0b0079
 			public const int welcomeParagraph = 2131427449;

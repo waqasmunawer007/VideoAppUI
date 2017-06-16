@@ -1,10 +1,7 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/layout/fragment_project.axml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Fragments/ProjectFragment.cs">
     <Files>
-      <File FileName="../../../MallSage-Xamarin/MallSage/Droid/views/fragments/ProductDetailFragment.cs" Line="33" Column="13" />
-      <File FileName="../../../MallSage-Xamarin/MallSage/Droid/Helper/ImagePagerAdapter.cs" Line="16" Column="15" />
-      <File FileName="Droid/Fragments/ProjectFragment.cs" Line="30" Column="21" />
-      <File FileName="Droid/Resources/layout/fragment_project.axml" Line="1" Column="1" />
+      <File FileName="Droid/Fragments/ProjectFragment.cs" Line="76" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

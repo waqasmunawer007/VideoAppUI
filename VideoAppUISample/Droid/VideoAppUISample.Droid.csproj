@@ -110,6 +110,8 @@
     <Compile Include="Fragments\HelpFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
     <Compile Include="Fragments\PreviousProjectsFragment.cs" />
+    <Compile Include="Adapters\ProjectViewPagerAdapter.cs" />
+    <Compile Include="Models\Project.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -376,6 +378,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
