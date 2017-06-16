@@ -26,8 +26,9 @@
         android:layout_toRightOf="@+id/previous_button"
         android:layout_toLeftOf="@+id/next_button"
         android:id="@+id/project_viewpager"
+        android:minHeight="100dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 <!--next button-->
     <ImageButton
         android:id="@+id/next_button"

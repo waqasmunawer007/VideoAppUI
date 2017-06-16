@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Fragments/ProjectFragment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Fragments/PreviousProjectsFragment.cs">
     <Files>
-      <File FileName="Droid/Fragments/ProjectFragment.cs" Line="76" Column="3" />
+      <File FileName="Droid/Fragments/PreviousProjectsFragment.cs" Line="65" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -14,5 +14,6 @@
     <Watch file="../../../MallSage-Xamarin/MallSage/Droid/views/fragments/HomeFragment.cs" line="299" offsetX="436" offsetY="4470" expression="FeaturedViewAdapter.Count" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.VideoAppUISample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DFD76B1A-D3A8-4A72-B0EE-90B96670B8EF" />
-  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.07da9a5702457f27" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_4_API_23" AndroidDesignerPreferredTheme="MyTheme" />
 </Properties>
