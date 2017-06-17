@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Fragments/PreviousProjectsFragment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Adapters/ProjectVideoRecyclerViewAdapter.cs">
     <Files>
-      <File FileName="Droid/Fragments/PreviousProjectsFragment.cs" Line="65" Column="65" />
+      <File FileName="Droid/DetailProjectActivity.cs" Line="40" Column="9" />
+      <File FileName="Droid/Adapters/ProjectVideoRecyclerViewAdapter.cs" Line="47" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -9,7 +9,9 @@
     <ResolvedResourceDirectory>/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.CardView/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.RecyclerView/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
-  <ResolvedAssetDirectories />
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Refractored.Controls.CircleImageView/library_project_imports/assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Refractored.Controls.CircleImageView.stamp</ResolvedResourceDirectoryStamp>

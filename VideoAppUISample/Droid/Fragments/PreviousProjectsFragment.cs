@@ -14,7 +14,9 @@ using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Java.IO;
 using VideoAppUISample.Droid.Adapters;
+using VideoAppUISample.Droid.Models;
 
 namespace VideoAppUISample.Droid
 {
@@ -74,6 +76,8 @@ namespace VideoAppUISample.Droid
         void OnVideoItemClick(object sender, int position)
         {
             Project selectedProject = mViewAdapter.GetSelectedProject(position);
+			//Todo correct way to pass the selected project through intent by implementing ISerializable or IParceable interface.
+            DetailProjectActivity.SelectedProject = selectedProject; 
 			Intent intent = new Intent(this.Activity, typeof(DetailProjectActivity));
 			StartActivity(intent);
 		}
@@ -81,19 +85,62 @@ namespace VideoAppUISample.Droid
 		//Todo Temp function
 		private List<Project> PrepareSampleProjects()
 		{
+            //project #1
 			Project project1 = new Project();
 			project1.Title = "Personal Spot1";
 			project1.Description = GetString(Resource.String.welcome_paragraph);
+            List<ProjectVideo> project1Videos = new List<ProjectVideo>();
+            ProjectVideo video1 = new ProjectVideo()
+            {
+                VideoDescription = GetString(Resource.String.welcome_paragraph),
+                VideoLength = "21:00",
+
+            };
+            project1Videos.Add(video1);
+			ProjectVideo video2 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "22:00",
+
+			};
+            project1Videos.Add(video2);
+			ProjectVideo video3 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "23:00",
+
+			};
+            project1Videos.Add(video3);
+
+            project1.ProjectVideos = project1Videos;
 			sampleProjectList.Add(project1);
 
+
+            //project #2
 			Project project2 = new Project();
 			project2.Title = "Personal Spot2";
 			project2.Description = GetString(Resource.String.welcome_paragraph);
+
+			List<ProjectVideo> project2Videos = new List<ProjectVideo>();
+			project2Videos.Add(video1);
+			project2Videos.Add(video2);
+			project2Videos.Add(video3);
+
+			project2.ProjectVideos = project2Videos;
 			sampleProjectList.Add(project2);
 
+            //project #3
 			Project project3 = new Project();
 			project3.Title = "Personal Spot3";
 			project3.Description = GetString(Resource.String.welcome_paragraph);
+
+			List<ProjectVideo> project3Videos = new List<ProjectVideo>();
+			project3Videos.Add(video1);
+			project3Videos.Add(video2);
+			project3Videos.Add(video3);
+
+			project3.ProjectVideos = project3Videos;
+
 			sampleProjectList.Add(project3);
 
 			return sampleProjectList;
