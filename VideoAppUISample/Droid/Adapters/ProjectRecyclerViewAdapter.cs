@@ -60,7 +60,7 @@ namespace VideoAppUISample.Droid.Adapters
         }
 		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
 		{
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.cardview_video, parent, false);
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.project_cell_item_layout, parent, false);
             ProjectViewHolder vh = new ProjectViewHolder(itemView, OnVideoThumbnailClick);
 			return vh;
 		}

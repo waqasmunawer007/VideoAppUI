@@ -115,6 +115,11 @@
     <Compile Include="Adapters\ProjectRecyclerViewAdapter.cs" />
     <Compile Include="Adapters\ProjectVideoRecyclerViewAdapter.cs" />
     <Compile Include="Models\ProjectVideo.cs" />
+    <Compile Include="Adapters\AnimationDropDownAdpater.cs" />
+    <Compile Include="Models\VideoAnimation.cs" />
+    <Compile Include="VideoWirdActivity.cs" />
+    <Compile Include="Models\SpinnerItem.cs" />
+    <Compile Include="Adapters\MusicSpinnerAdpater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -369,15 +374,18 @@
     <AndroidResource Include="Resources\layout\activity_account_info.axml" />
     <AndroidResource Include="Resources\layout\activity_select_user_group.axml" />
     <AndroidResource Include="Resources\layout\activity_detail_project.axml" />
-    <AndroidResource Include="Resources\layout\cardview_detail.axml" />
+    <AndroidResource Include="Resources\layout\project_video_cell_item_layout.axml" />
     <AndroidResource Include="Resources\layout\cardview_clip_hinzufugen.axml" />
     <AndroidResource Include="Resources\layout\cardview_musik_auswahlen.axml" />
     <AndroidResource Include="Resources\layout\cardview_logo_hochkladen.axml" />
     <AndroidResource Include="Resources\layout\fragment_hilfe.axml" />
     <AndroidResource Include="Resources\layout\fragment_bisherige.axml" />
-    <AndroidResource Include="Resources\layout\cardview_video.axml" />
+    <AndroidResource Include="Resources\layout\project_cell_item_layout.axml" />
     <AndroidResource Include="Resources\layout\fragment_einstenllungen.axml" />
-    <AndroidResource Include="Resources\layout\project_view_pager_item.axml" />
+    <AndroidResource Include="Resources\layout\project_view_pager_item_layout.axml" />
+    <AndroidResource Include="Resources\layout\animation_spiner_item_layout.axml" />
+    <AndroidResource Include="Resources\layout\activity_video_wird.axml" />
+    <AndroidResource Include="Resources\layout\music_spinner_item_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

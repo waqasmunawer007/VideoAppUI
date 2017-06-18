@@ -112,6 +112,14 @@ namespace VideoAppUISample.Droid
 			};
             project1Videos.Add(video3);
 
+			ProjectVideo video4 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "23:00",
+
+			};
+			project1Videos.Add(video4);
+
             project1.ProjectVideos = project1Videos;
 			sampleProjectList.Add(project1);
 
@@ -125,11 +133,12 @@ namespace VideoAppUISample.Droid
 			project2Videos.Add(video1);
 			project2Videos.Add(video2);
 			project2Videos.Add(video3);
+            project2Videos.Add(video4);
 
 			project2.ProjectVideos = project2Videos;
 			sampleProjectList.Add(project2);
 
-            //project #3
+			//project #3
 			Project project3 = new Project();
 			project3.Title = "Personal Spot3";
 			project3.Description = GetString(Resource.String.welcome_paragraph);
@@ -138,10 +147,27 @@ namespace VideoAppUISample.Droid
 			project3Videos.Add(video1);
 			project3Videos.Add(video2);
 			project3Videos.Add(video3);
+            project2Videos.Add(video4);
 
 			project3.ProjectVideos = project3Videos;
 
 			sampleProjectList.Add(project3);
+
+            //project #4
+			Project project4 = new Project();
+			project4.Title = "Personal Spot4";
+			project4.Description = GetString(Resource.String.welcome_paragraph);
+
+			List<ProjectVideo> project4Videos = new List<ProjectVideo>();
+			project4Videos.Add(video1);
+			project4Videos.Add(video2);
+			project4Videos.Add(video3);
+            project2Videos.Add(video4);
+
+			project4.ProjectVideos = project4Videos;
+
+			sampleProjectList.Add(project4);
+
 
 			return sampleProjectList;
 		}

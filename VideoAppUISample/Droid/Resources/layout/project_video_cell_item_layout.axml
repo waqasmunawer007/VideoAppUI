@@ -52,33 +52,24 @@
                     android:text="Dauer 00:08"
                     android:textSize="@dimen/size_caption" />
             </RelativeLayout>
-        <!--simulation drop down-->
             <RelativeLayout
+                android:background="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/pick"
+                android:layout_height="@dimen/dropdown_size">
+                <CheckBox
+                    android:id="@+id/animation_pick_checkbox"
                     android:layout_width="@dimen/margin_24dp"
                     android:layout_height="@dimen/margin_24dp"
-                    android:layout_margin="@dimen/margin_8dp"
-                    android:background="#d8d8d8" />
-                <TextView
-                    android:id="@+id/textview"
+                    android:layout_margin="@dimen/margin_8dp" />
+                <Spinner
+                    android:id="@+id/animation_spinner"
                     android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_toRightOf="@+id/animation_pick_checkbox"
                     android:layout_height="match_parent"
-                    android:layout_toEndOf="@+id/pick"
-                    android:layout_toRightOf="@+id/pick"
-                    android:gravity="center_vertical"
-                    android:text="Nock Keine Animation Gewählt" />
-            <!--button dropdown-->
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="@dimen/margin_8dp"
-                    android:src="@drawable/ic_drop_down" />
+                    android:spinnerMode="dropdown"
+                    android:layout_marginLeft="0.0dp" />
             </RelativeLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

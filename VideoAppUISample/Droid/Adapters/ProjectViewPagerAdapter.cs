@@ -35,7 +35,7 @@ namespace VideoAppUISample.Droid
 		public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
 		{
 			Project project = mItems[position];
-			View itemView = mLayoutInflater.Inflate(Resource.Layout.project_view_pager_item, container, false);
+			View itemView = mLayoutInflater.Inflate(Resource.Layout.project_view_pager_item_layout, container, false);
 			TextView projectTitleTextView = itemView.FindViewById<TextView>(Resource.Id.project_title_text_view);
 			TextView projectDescTextView = itemView.FindViewById<TextView>(Resource.Id.project_desc_text_view);
 			projectTitleTextView.Text = project.Title;
