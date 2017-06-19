@@ -19,6 +19,7 @@
     </activity>
     <activity android:label="DetailProjectActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.DetailProjectActivity" />
     <activity android:label="VideoWirdActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.VideoWirdActivity" />
+    <activity android:label="AccountInfoActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.ShareActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.videoappuisample.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

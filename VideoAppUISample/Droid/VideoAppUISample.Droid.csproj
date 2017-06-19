@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>VideoAppUISample.Droid</RootNamespace>
     <AssemblyName>VideoAppUISample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -120,6 +120,7 @@
     <Compile Include="VideoWirdActivity.cs" />
     <Compile Include="Models\SpinnerItem.cs" />
     <Compile Include="Adapters\MusicSpinnerAdpater.cs" />
+    <Compile Include="ShareActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -386,6 +387,7 @@
     <AndroidResource Include="Resources\layout\animation_spiner_item_layout.axml" />
     <AndroidResource Include="Resources\layout\activity_video_wird.axml" />
     <AndroidResource Include="Resources\layout\music_spinner_item_layout.axml" />
+    <AndroidResource Include="Resources\layout\activity_share.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />
