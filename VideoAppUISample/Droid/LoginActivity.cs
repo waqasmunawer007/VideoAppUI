@@ -41,9 +41,7 @@ namespace VideoAppUISample.Droid
 			Button logMail = FindViewById<Button>(Resource.Id.anmeldenEmail);
 			logMail.Click += delegate
 			{
-				Intent intent = new Intent(this, typeof(ShareActivity));
-				StartActivity(intent);
-				//StartActivity(typeof(LoginMailActivity));
+				StartActivity(typeof(LoginMailActivity));
 			};
 		}
 	}

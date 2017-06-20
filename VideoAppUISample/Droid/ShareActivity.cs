@@ -16,54 +16,54 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "AccountInfoActivity")]
+	[Activity(Label = "ShareActivity")]
 	public class ShareActivity : AppCompatActivity
 	{
-		ProgressDialog mProgressDialog;
 		ProgressBar mProgress;
-		int status = 0;
+		int progressStatus = 0;
+		ImageButton mBackButton;
 		Button mFBButton;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.activity_share);
+			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
 			mFBButton = FindViewById<Button>(Resource.Id.upload_video_facebook_button);
 			mProgress = FindViewById<ProgressBar>(Resource.Id.video_time_line_progressbar);
-			mFBButton.Click += delegate
-			{
-				createVideoProgressBar();
-				//CreateProgressDialog();
-				ShowProgressDialog();
-			};
-
+			SetUpToolbar();
+			SetupVideoProgressTimeBar();
 		}
 
-		private void createVideoProgressBar()
+		/// <summary>
+		/// Sets up toolbar.
+		/// </summary>
+		private void SetUpToolbar()
+		{
+			mBackButton.Click += delegate
+			{
+				base.OnBackPressed();
+			};
+		}
+
+		private void SetupVideoProgressTimeBar()
 		{ 
 			mProgress.Progress = 0;   // Main Progress
 			mProgress.Indeterminate = false;
 			mProgress.Max = 100; // Maximum Progress
+			UpdateTimeBarProgress();
 		}
-		public void CreateProgressDialog()
+		/// <summary>
+		/// Updates the video length timebar
+		/// </summary>
+		public void UpdateTimeBarProgress()
 		{
-			mProgressDialog = new ProgressDialog(this);
-			mProgressDialog.Indeterminate = false;
-			mProgressDialog.SetMessage("Downlaoding. Please wait...");
-			mProgressDialog.SetProgressStyle(ProgressDialogStyle.Horizontal);
-			mProgressDialog.SetCancelable(true);
-			mProgressDialog.Max = 100;
-			mProgressDialog.Progress = 0;
-			mProgressDialog.Show();
-		}
-		public void ShowProgressDialog()
-		{
-			status = 0;
+			progressStatus = 0;
 			new System.Threading.Thread(new ThreadStart(delegate
 			{
-				while (status < 100)
+				while (progressStatus < 100)
 				{
-					status += 1;
+					progressStatus += 1;
 					try
 					{
 						System.Threading.Thread.Sleep(100);
@@ -71,29 +71,19 @@ namespace VideoAppUISample.Droid
 					catch (InterruptedException e)
 					{
 						e.PrintStackTrace();
-					}            
+					}
 					RunOnUiThread(() =>
 					{
-
-						//Todo for timeline progressbar
-						mProgress.Progress = status;
-						if (status == 100)
+						mProgress.Progress = progressStatus;
+						if (progressStatus == 100)
 						{
 							mProgress.Progress = 0;
 						}
-						//Todo for ProgressDialog code
-						//mProgressDialog.Progress = status;
-						//if (status == 100)
-						//{
-						//	mProgressDialog.Hide();
-						//}
 					});
 				}
 			})).Start();
-
 		}
 	}
-
 }
 
 

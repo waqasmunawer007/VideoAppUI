@@ -8,17 +8,40 @@ using Android.Widget;
 
 namespace VideoAppUISample.Droid
 {
-	public class ProjectViewPagerAdapter: PagerAdapter
+	public class ProjectViewPagerAdapter : PagerAdapter
 	{
+		public event EventHandler<int> ItemClick;
 		public List<Project> mItems;
 		Context context;
 		LayoutInflater mLayoutInflater;
+
 		public ProjectViewPagerAdapter(Context context, List<Project> projectList)
 		{
 			mItems = projectList;
 			this.context = context;
 			mLayoutInflater = (LayoutInflater)this.context.GetSystemService(Context.LayoutInflaterService);
 		}
+
+		/// <summary>
+		/// Gets the selected project item.
+		/// </summary>
+		/// <returns>The selected project.</returns>
+		/// <param name="position">Position.</param>
+		public Project GetSelectedProject(int position)
+		{
+			return mItems[position];
+		}
+
+		/// <summary>
+		/// Handles Item view click
+		/// </summary>
+		/// <param name="position">Position.</param>
+		void OnItemClick(int position)
+		{
+			if (ItemClick != null)
+				ItemClick(this, position);
+		}
+
 		public override int Count
 		{
 			get
@@ -43,6 +66,7 @@ namespace VideoAppUISample.Droid
 			var viewPager = container.JavaCast<ViewPager>();
 			viewPager.AddView(itemView);
 
+			itemView.Click += (sender, e) => OnItemClick(position);
 			return itemView;
 		}
 

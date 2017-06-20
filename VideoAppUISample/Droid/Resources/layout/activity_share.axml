@@ -2,8 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_register">
+    android:background="@color/white">
+
+    <!--toolbar-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_56dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--icon navigation-->
+            <ImageButton
+                android:id="@+id/back_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="@dimen/margin_16dp"
+                android:src="@drawable/ic_arrow_back" />
+        <!--title project-->
+            <TextView
+                android:id="@+id/toolbar_title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/back_image_button"
+                android:layout_toRightOf="@+id/back_image_button"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
     <LinearLayout
+		android:layout_below="@+id/app_bar"	
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -35,13 +69,14 @@
                 android:layout_gravity="bottom"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:progress="0"
-                android:progressBackgroundTint="@color/primary"
-                android:progressTint="@color/colorAccent"
+                android:progressBackgroundTint="@color/colorBackgroundTimeProgressbar"
+                android:progressTint="@color/colorTintTimebar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_16dp" />
         </FrameLayout>
+    <!-- Sharing Options Layout -->
         <LinearLayout
-            android:gravity="bottom|center"
+            android:gravity="bottom"
             android:layout_marginBottom="@dimen/margin_24dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -53,8 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_38dp"
                 android:layout_marginBottom="@dimen/margin_16dp"
-                android:layout_marginLeft="?attr/actionBarSize"
-                android:layout_marginRight="?attr/actionBarSize"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
                 android:background="@drawable/button_facebook"
                 android:drawableLeft="@drawable/ic_facebook"
                 android:drawableStart="@drawable/ic_facebook"
@@ -70,8 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_38dp"
                 android:layout_marginBottom="@dimen/margin_16dp"
-                android:layout_marginLeft="?attr/actionBarSize"
-                android:layout_marginRight="?attr/actionBarSize"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
                 android:background="@drawable/button_google"
                 android:drawableLeft="@drawable/ic_google"
                 android:drawableStart="@drawable/ic_google"
@@ -87,8 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_38dp"
                 android:layout_marginBottom="@dimen/margin_16dp"
-                android:layout_marginLeft="?attr/actionBarSize"
-                android:layout_marginRight="?attr/actionBarSize"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
                 android:background="@drawable/button_email"
                 android:text="@string/mit_mail_anmelden"
                 android:textAllCaps="false"

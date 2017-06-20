@@ -51,5 +51,7 @@
   <string name="dein_video_wird">Dein Video wird erstellt</string>
   <string name="dein_video_small_text">Schalte dein Handy jetzt bitte nicht aus</string>
   <string name="wird_geladen_text">WIRD GELADEN...</string>
+  <string name="question_text">Hast du gewusst?...</string>
+  <string name="rotate_phone">Drehe fur ein beseres Ergebnis dein.</string> 	
 </resources>
 

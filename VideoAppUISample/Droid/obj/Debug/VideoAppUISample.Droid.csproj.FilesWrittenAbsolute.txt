@@ -298,3 +298,6 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Refractored.Controls.CircleImageView.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll.mdb
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_download_project.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_rotate_phone.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_introduction_video.xml
