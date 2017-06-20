@@ -34,6 +34,8 @@
                 android:textSize="@dimen/font_size_20" />
         </RelativeLayout>
     </android.support.design.widget.AppBarLayout>
+
+	<!-- Camera Preview layout -->
     <LinearLayout
         android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"
@@ -56,6 +58,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/login" />
+			<!-- next button -->
             <ImageButton
                 android:id="@+id/next_image_button"
                 android:layout_gravity="right|center"
@@ -63,8 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/margin_10dp"
                 android:src="@drawable/icon"
-                android:background="@null"
-                android:layout_centerInParent="true" />
+                android:background="@null" />
         <!-- Bottom Layout -->
             <RelativeLayout
                 android:layout_gravity="bottom"
@@ -92,7 +94,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+						<!-- timer button -->
                         <ImageButton
+							android:id="@+id/timer_image_button"	
                             android:layout_width="@dimen/margin_16dp"
                             android:layout_height="@dimen/margin_16dp"
                             android:src="@drawable/ic_input_black"
@@ -118,6 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/margin_16dp" />
                 </LinearLayout>
+				<!-- project preview button -->
                 <ImageButton
                     android:id="@+id/project_view_menu_button"
                     android:layout_alignParentRight="true"

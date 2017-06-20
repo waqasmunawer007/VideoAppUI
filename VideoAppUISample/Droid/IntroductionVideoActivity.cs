@@ -45,7 +45,8 @@ namespace VideoAppUISample.Droid
 			SetUpVideoProgressTimeBar();
 
 			mNextButton.Click+=delegate {
-				
+				Intent intent = new Intent(this, typeof(PreCaptureVideoActivity));
+				StartActivity(intent);
 			};
 
 			mProjectPreviewButton.Click += delegate {
@@ -64,7 +65,9 @@ namespace VideoAppUISample.Droid
 				base.OnBackPressed();
 			};
 		}
-
+		/// <summary>
+		/// Sets up video progress time bar.
+		/// </summary>
 		private void SetUpVideoProgressTimeBar()
 		{ 
 			mProgress.Progress = 0;   // Main Progress

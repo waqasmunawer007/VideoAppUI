@@ -124,6 +124,7 @@
     <Compile Include="DownloadProjectActivity.cs" />
     <Compile Include="RotatePhoneActivity.cs" />
     <Compile Include="IntroductionVideoActivity.cs" />
+    <Compile Include="PreCaptureVideoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -394,6 +395,8 @@
     <AndroidResource Include="Resources\layout\activity_download_project.axml" />
     <AndroidResource Include="Resources\layout\activity_rotate_phone.axml" />
     <AndroidResource Include="Resources\layout\activity_introduction_video.axml" />
+    <AndroidResource Include="Resources\layout\activity_pre_capture_video.axml" />
+    <AndroidResource Include="Resources\menu\popup_menu.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

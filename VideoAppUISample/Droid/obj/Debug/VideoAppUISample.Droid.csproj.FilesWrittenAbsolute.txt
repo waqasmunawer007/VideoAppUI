@@ -301,3 +301,5 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_download_project.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_rotate_phone.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_introduction_video.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_pre_capture_video.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/menu/popup_menu.xml
