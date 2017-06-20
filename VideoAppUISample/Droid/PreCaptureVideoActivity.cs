@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -26,6 +27,8 @@ namespace VideoAppUISample.Droid
 		ImageButton mCameraSwitchButton;
 		ImageButton mCameraFocusButton;
 		ImageButton mDottedMenuButton;
+        LinearLayout mVideoTimerLayout;
+        TextView mVideoTimeTextView;
 
 		int progressStatus = 0;
 
@@ -41,10 +44,13 @@ namespace VideoAppUISample.Droid
 			mCameraFocusButton = FindViewById<ImageButton>(Resource.Id.camera_focus_image_button);
 			mProjectPreviewButton = FindViewById<ImageButton>(Resource.Id.project_preview_image_button);
 			mProgress = FindViewById<ProgressBar>(Resource.Id.video_time_line_progressbar);
+            mVideoTimerLayout = FindViewById<LinearLayout>(Resource.Id.video_timer_layout);
+            mVideoTimeTextView = FindViewById<TextView>(Resource.Id.video_time_text_view);
 
 			SetUpToolbar();
 
 			mRecordingButton.Click+=delegate {
+                mVideoTimerLayout.Visibility = ViewStates.Visible;
 				SetUpVideoProgressTimeBar();
 			};
 
@@ -125,10 +131,17 @@ namespace VideoAppUISample.Droid
 					RunOnUiThread(() =>
 					{
 						mProgress.Progress = progressStatus;
+                        mVideoTimeTextView.Text = progressStatus + " Seconds";
 						if (progressStatus == 100)
 						{
+                            mVideoTimerLayout.Visibility = ViewStates.Invisible;
 							mProgress.Progress = 0;
 						}
+                        if (progressStatus > 30)
+                        {
+							mProgress.ProgressDrawable.SetColorFilter(
+                                Android.Graphics.Color.Red, Android.Graphics.PorterDuff.Mode.Multiply);
+                        }
 					});
 				}
 			})).Start();

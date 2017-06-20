@@ -18,5 +18,7 @@
   <color name="colorVideoLength">#e8e8e8</color>
   <color name="colorBackgroundTimeProgressbar">#66E0F7FA</color>
   <color name="colorTintTimebar">#18FFFF</color>
+  <color name="colorRed">#F44336</color>
+  <color name="colorRedTransparent">#66F44336</color>
 </resources>
 

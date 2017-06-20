@@ -34,8 +34,7 @@
                 android:textSize="@dimen/font_size_20" />
         </RelativeLayout>
     </android.support.design.widget.AppBarLayout>
-
-	<!-- Camera Preview layout -->
+<!-- Camera Preview layout -->
     <LinearLayout
         android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"
@@ -58,7 +57,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/login" />
-			<!-- next button -->
+        <!-- next button -->
             <ImageButton
                 android:id="@+id/next_image_button"
                 android:layout_gravity="right|center"
@@ -74,7 +73,7 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:id="@+id/time_video_detail_layout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
@@ -94,23 +93,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-						<!-- timer button -->
+                    <!-- timer button -->
                         <ImageButton
-							android:id="@+id/timer_image_button"	
+                            android:id="@+id/timer_image_button"
                             android:layout_width="@dimen/margin_16dp"
                             android:layout_height="@dimen/margin_16dp"
                             android:src="@drawable/ic_input_black"
                             android:background="@null"
                             android:layout_centerInParent="true" />
                         <TextView
-                            android:layout_marginLeft="@dimen/margin_10dp"
+                            android:gravity="center"
                             android:id="@+id/video_time_text_view"
+                            android:paddingLeft="@dimen/margin_5dp"
+                            android:paddingTop="3dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="15 Seconds"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/size_caption" />
+                            android:textSize="@dimen/font_size_9" />
                     </LinearLayout>
                 <!-- Timebar -->
                     <ProgressBar
@@ -122,7 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/margin_16dp" />
                 </LinearLayout>
-				<!-- project preview button -->
+            <!-- project preview button -->
                 <ImageButton
                     android:id="@+id/project_view_menu_button"
                     android:layout_alignParentRight="true"

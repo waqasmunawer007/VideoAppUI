@@ -22,6 +22,7 @@ namespace VideoAppUISample.Droid
 		View mRootView;
 		ImageButton mNextButton;
 		ImageButton mPreviousButton;
+        Button mStartButton;
 		ViewPager mViewPager { get; set; }
 		ProjectViewPagerAdapter mPagerAdapter;
 		private int currentPage = 0;
@@ -37,7 +38,13 @@ namespace VideoAppUISample.Droid
 			mRootView = inflater.Inflate(Resource.Layout.fragment_project, container, false);
 			mPreviousButton = mRootView.FindViewById<ImageButton>(Resource.Id.previous_button);
 			mNextButton = mRootView.FindViewById<ImageButton>(Resource.Id.next_button);
+            mNextButton = mRootView.FindViewById<ImageButton>(Resource.Id.next_button);
+            mStartButton = mRootView.FindViewById<Button>(Resource.Id.start_project_button);
 			SetUpViewPager();
+
+            mStartButton.Click += delegate {
+                LoadDownLoadProjectActivity();
+            };
 			return mRootView;
 		}
 		/// <summary>
@@ -103,7 +110,7 @@ namespace VideoAppUISample.Droid
 
 		private void LoadDownLoadProjectActivity()
 		{
-			Intent intent = new Intent(this.Activity, typeof(RotatePhoneActivity));
+            Intent intent = new Intent(this.Activity, typeof(PreCaptureVideoActivity));
 			//Intent intent = new Intent(this.Activity, typeof(DownloadProjectActivity));
 			//Todo Pass Selected Project Item to DownloadProjectActivity screen here
 			StartActivity(intent);

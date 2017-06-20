@@ -1,0 +1,13 @@
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/bin/iPhoneSimulator/Debug/VideoAppUISample.iOS.exe
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/bin/iPhoneSimulator/Debug/VideoAppUISample.iOS.pdb
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/bin/iPhoneSimulator/Debug/VideoAppUISample.dll
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/bin/iPhoneSimulator/Debug/VideoAppUISample.pdb
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/bin/iPhoneSimulator/Debug/VideoAppUISample.dll.mdb
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/VideoAppUISample.iOS.csprojResolveAssemblyReference.cache
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/VideoAppUISample.iOS.csproj.CoreCompileInputs.cache
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/VideoAppUISample.iOS.exe
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/iOS/obj/iPhoneSimulator/Debug/VideoAppUISample.iOS.pdb

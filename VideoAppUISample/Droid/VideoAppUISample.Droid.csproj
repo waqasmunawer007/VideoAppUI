@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>VideoAppUISample.Droid</RootNamespace>
     <AssemblyName>VideoAppUISample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -125,6 +125,7 @@
     <Compile Include="RotatePhoneActivity.cs" />
     <Compile Include="IntroductionVideoActivity.cs" />
     <Compile Include="PreCaptureVideoActivity.cs" />
+    <Compile Include="PostCaptureVideoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -397,6 +398,8 @@
     <AndroidResource Include="Resources\layout\activity_introduction_video.axml" />
     <AndroidResource Include="Resources\layout\activity_pre_capture_video.axml" />
     <AndroidResource Include="Resources\menu\popup_menu.xml" />
+    <AndroidResource Include="Resources\drawable\red_dot_circle.xml" />
+    <AndroidResource Include="Resources\layout\activity_post_capture_video.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />
