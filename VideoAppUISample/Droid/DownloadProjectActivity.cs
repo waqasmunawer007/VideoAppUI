@@ -108,7 +108,6 @@ namespace VideoAppUISample.Droid
 		{
 			Intent intent = new Intent(this, typeof(RotatePhoneActivity));
 			StartActivity(intent);
-
 		}
 	}
 }

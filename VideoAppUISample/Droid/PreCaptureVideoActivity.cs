@@ -31,7 +31,7 @@ namespace VideoAppUISample.Droid
         TextView mVideoTimeTextView;
 
 		int progressStatus = 0;
-
+		bool isVideoRecordingMode = false;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -50,8 +50,21 @@ namespace VideoAppUISample.Droid
 			SetUpToolbar();
 
 			mRecordingButton.Click+=delegate {
-                mVideoTimerLayout.Visibility = ViewStates.Visible;
-				SetUpVideoProgressTimeBar();
+				if (!isVideoRecordingMode)
+				{
+					mRecordingButton.SetBackgroundResource(Resource.Drawable.bt_download);//TOdo replace button with stop video buttton
+					isVideoRecordingMode = true;
+					mVideoTimerLayout.Visibility = ViewStates.Visible;
+					SetUpVideoProgressTimeBar();
+				}
+				else
+				{ 
+					//launch Post Video Capture screen
+					Intent intent = new Intent(this, typeof(PostCaptureVideoActivity));
+					StartActivity(intent);
+
+				}
+              
 			};
 
 			mProjectPreviewButton.Click += delegate {

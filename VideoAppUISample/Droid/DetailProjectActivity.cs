@@ -60,7 +60,10 @@ namespace VideoAppUISample.Droid
         /// </summary>
         private void SetUpToolbar()
         {
-            mToolbarTitleTextView.Text = SelectedProject.Title;
+			if (SelectedProject != null)
+			{ 
+				mToolbarTitleTextView.Text = SelectedProject.Title;
+			}
 			mBackButton.Click += delegate
 			{
 				base.OnBackPressed();

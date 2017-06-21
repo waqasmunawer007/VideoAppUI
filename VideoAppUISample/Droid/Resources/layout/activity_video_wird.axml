@@ -48,8 +48,7 @@
             android:textStyle="bold"
             android:textColor="@color/colorVideoDesc" />
     </LinearLayout>
-<!-- Bottom layout -->
-    <LinearLayout
+<!--  <LinearLayout
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/margin_56dp"
@@ -71,5 +70,5 @@
             android:textSize="@dimen/font_size_16"
             android:textAllCaps="false"
             android:textColor="@color/white" />
-    </LinearLayout>
+    </LinearLayout>-->
 </RelativeLayout>

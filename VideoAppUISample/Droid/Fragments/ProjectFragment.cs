@@ -26,6 +26,7 @@ namespace VideoAppUISample.Droid
 		ViewPager mViewPager { get; set; }
 		ProjectViewPagerAdapter mPagerAdapter;
 		private int currentPage = 0;
+		public static Project selectedProject; //Todo temprary  declaration
 		List<Project> sampleProjectList = new List<Project>(); //temparary list
 
 		public override void OnCreate(Bundle savedInstanceState)
@@ -43,7 +44,7 @@ namespace VideoAppUISample.Droid
 			SetUpViewPager();
 
             mStartButton.Click += delegate {
-                LoadDownLoadProjectActivity();
+               // LoadDownLoadProjectActivity();
             };
 			return mRootView;
 		}
@@ -82,7 +83,7 @@ namespace VideoAppUISample.Droid
 		/// <param name="position">Position.</param>
 		private void OnProjectItemClickHandler(object sender, int position)
 		{
-			Project selectedProjectItem = mPagerAdapter.GetSelectedProject(position);
+			selectedProject = mPagerAdapter.GetSelectedProject(position);
 			ShowConfirmationDialog();
 
 		}
@@ -110,8 +111,7 @@ namespace VideoAppUISample.Droid
 
 		private void LoadDownLoadProjectActivity()
 		{
-            Intent intent = new Intent(this.Activity, typeof(PreCaptureVideoActivity));
-			//Intent intent = new Intent(this.Activity, typeof(DownloadProjectActivity));
+			Intent intent = new Intent(this.Activity, typeof(DownloadProjectActivity));
 			//Todo Pass Selected Project Item to DownloadProjectActivity screen here
 			StartActivity(intent);
 

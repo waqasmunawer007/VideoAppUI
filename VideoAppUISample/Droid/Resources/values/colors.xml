@@ -19,6 +19,7 @@
   <color name="colorBackgroundTimeProgressbar">#66E0F7FA</color>
   <color name="colorTintTimebar">#18FFFF</color>
   <color name="colorRed">#F44336</color>
+  <color name="colorGreen">#69F0AE</color>
   <color name="colorRedTransparent">#66F44336</color>
 </resources>
 

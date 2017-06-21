@@ -20,15 +20,12 @@ namespace VideoAppUISample.Droid
 	[Activity(Label = "ShareActivity")]
 	public class PostCaptureVideoActivity : AppCompatActivity
 	{
-		ProgressBar mProgress;
+		
 		ImageButton mBackButton;
 		ImageButton mTrimOkButton;
 		ImageButton mResetButton;
 		ImageButton mDottedMenuButton;
-        LinearLayout mVideoTimerLayout;
-        TextView mVideoTimeTextView;
-
-		int progressStatus = 0;
+      
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -39,16 +36,11 @@ namespace VideoAppUISample.Droid
 			mDottedMenuButton = FindViewById<ImageButton>(Resource.Id.dotted_menu_image_button);
 			mTrimOkButton = FindViewById<ImageButton>(Resource.Id.video_trim_ok_button);
 			mResetButton = FindViewById<ImageButton>(Resource.Id.reset_image_button);
-			
-			mProgress = FindViewById<ProgressBar>(Resource.Id.video_time_line_progressbar);
-            mVideoTimerLayout = FindViewById<LinearLayout>(Resource.Id.video_timer_layout);
-            mVideoTimeTextView = FindViewById<TextView>(Resource.Id.video_time_text_view);
 
 			SetUpToolbar();
-
 			mTrimOkButton.Click+=delegate {
-                mVideoTimerLayout.Visibility = ViewStates.Visible;
-				SetUpVideoProgressTimeBar();
+				Intent intent = new Intent(this, typeof(PostCaptureVideoSuccessActivity));
+				StartActivity(intent);
 			};
 
 			mResetButton.Click += delegate {
@@ -91,53 +83,7 @@ namespace VideoAppUISample.Droid
 			};
 		}
 
-		/// <summary>
-		/// Sets up video progress time bar.
-		/// </summary>
-		private void SetUpVideoProgressTimeBar()
-		{ 
-			mProgress.Progress = 0;   // Main Progress
-			mProgress.Indeterminate = false;
-			mProgress.Max = 100; // Maximum Progress
-			UpdateTimeBarProgress();
-		}
-		/// <summary>
-		/// Updates the video length timebar
-		/// </summary>
-		public void UpdateTimeBarProgress()
-		{
-			progressStatus = 0;
-			new System.Threading.Thread(new ThreadStart(delegate
-			{
-				while (progressStatus < 100)
-				{
-					progressStatus += 1;
-					try
-					{
-						System.Threading.Thread.Sleep(100);
-					}
-					catch (InterruptedException e)
-					{
-						e.PrintStackTrace();
-					}
-					RunOnUiThread(() =>
-					{
-						mProgress.Progress = progressStatus;
-                        mVideoTimeTextView.Text = progressStatus + " Seconds";
-						if (progressStatus == 100)
-						{
-                            mVideoTimerLayout.Visibility = ViewStates.Invisible;
-							mProgress.Progress = 0;
-						}
-                        if (progressStatus > 30)
-                        {
-							mProgress.ProgressDrawable.SetColorFilter(
-                                Android.Graphics.Color.Red, Android.Graphics.PorterDuff.Mode.Multiply);
-                        }
-					});
-				}
-			})).Start();
-		}
+
 	}
 }
 

@@ -276,6 +276,13 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_video_wird.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/music_spinner_item_layout.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_share.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_download_project.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_rotate_phone.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_introduction_video.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_pre_capture_video.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/menu/popup_menu.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/red_dot_circle.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_post_capture_video.xml
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/R.cs.flag
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/com.companyname.videoappuisample-Signed.apk
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/uploadflags.txt
@@ -298,8 +305,4 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Refractored.Controls.CircleImageView.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll.mdb
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_download_project.xml
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_rotate_phone.xml
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_introduction_video.xml
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_pre_capture_video.xml
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/menu/popup_menu.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_post_capture_video_success.xml

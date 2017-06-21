@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/VideoWirdActivity.cs">
     <Files>
-      <File FileName="Droid/PostCaptureVideoActivity.cs" Line="57" Column="13" />
+      <File FileName="Droid/VideoWirdActivity.cs" Line="81" Column="34" />
+      <File FileName="Droid/DownloadProjectActivity.cs" Line="99" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -15,5 +16,5 @@
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.VideoAppUISample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DFD76B1A-D3A8-4A72-B0EE-90B96670B8EF" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_4_API_23" AndroidDesignerPreferredTheme="MyTheme" />
+  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.07da9a5702457f27" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>
