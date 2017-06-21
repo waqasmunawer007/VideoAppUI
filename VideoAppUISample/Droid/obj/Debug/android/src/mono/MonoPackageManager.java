@@ -116,6 +116,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.CardView.dll",
 		"Refractored.Controls.CircleImageView.dll",
 		"VideoAppUISample.dll",
+		"SwipeBinding.dll",
 		"System.Threading.dll",
 		"System.Collections.dll",
 		"System.Collections.Concurrent.dll",

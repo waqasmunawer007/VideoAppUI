@@ -21,6 +21,7 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v7.CardView.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/Refractored.Controls.CircleImageView.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/VideoAppUISample.dll
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/SwipeBinding.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/mscorlib.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/System.Net.Http.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/android/assets/System.Runtime.Serialization.dll

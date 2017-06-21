@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/AndroidEasingFunctions/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/AndroidViewAnimations/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/RecyclerViewAnimators/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/AndroidSwipeLayout/library_project_imports/res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/AndroidEasingFunctions/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/AndroidViewAnimations/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/RecyclerViewAnimators/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/AndroidSwipeLayout/library_project_imports/assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/AndroidEasingFunctions.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/AndroidViewAnimations.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/RecyclerViewAnimators.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Components/AndroidSwipeLayout-1.2.0.0/samples/AndroidSwipeLayoutSample/AndroidSwipeLayoutSample/obj/Debug/__library_projects__/AndroidSwipeLayout.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>

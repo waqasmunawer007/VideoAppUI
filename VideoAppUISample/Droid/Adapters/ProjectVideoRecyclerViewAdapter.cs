@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using VideoAppUISample.Droid.Models;
 
+
 namespace VideoAppUISample.Droid.Adapters
 {
     public class ProjectVideoRecyclerViewAdapter : RecyclerView.Adapter 
@@ -77,6 +78,18 @@ namespace VideoAppUISample.Droid.Adapters
 			{ 
 				vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
 			}
+
+			vh.mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.LayDown);
+			var bottomView = vh.mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
+			//vh.mSwipeLayout.FindViewById<LinearLayout>(Resource.Id.bottom_wrapper)
+			
+			vh.mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Left,bottomView);
+
+			vh.mSwipeLayout.LeftSwipeEnabled = false;
+			vh.mSwipeLayout.RightSwipeEnabled = true;
+
+
+
         }
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
@@ -94,6 +107,7 @@ namespace VideoAppUISample.Droid.Adapters
 			public TextView mVideoCounterTextView { get; private set; }
             public Spinner mAnimationSpiner { get; set; }
             public CheckBox mAnimationPickCheckbox { get; private set; }
+			public Com.Daimajia.Swipe.SwipeLayout mSwipeLayout;
             public ProjectVideoViewHolder(View itemView) : base(itemView)
             {
                 // Locate and cache view references:
@@ -104,6 +118,7 @@ namespace VideoAppUISample.Droid.Adapters
                 mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
 				mVideoCounterTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
 				mVideoOKButton = itemView.FindViewById<ImageButton>(Resource.Id.video_selected_button_imagebutton);
+				mSwipeLayout = itemView.FindViewById<Com.Daimajia.Swipe.SwipeLayout>(Resource.Id.swipe_layout);
             }
         }
 

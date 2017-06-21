@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="com.daimajia.swipe">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="com.daimajia.swipe.BuildConfig" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.daimajia.swipe&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SimpleSwipeListener" static="false" visibility="public">
+<implements name="com.daimajia.swipe.SwipeLayout.SwipeListener" name-generic-aware="com.daimajia.swipe.SwipeLayout.SwipeListener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="SimpleSwipeListener" static="false" type="com.daimajia.swipe.SimpleSwipeListener" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onClose" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onHandRelease" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+<parameter name="p1" type="float">
+</parameter>
+<parameter name="p2" type="float">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onOpen" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onStartClose" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onStartOpen" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SwipeLayout.2" static="false" visibility="">
+<implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.View">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SwipeLayout.3" static="false" visibility="">
+<implements name="android.view.View.OnLongClickListener" name-generic-aware="android.view.View.OnLongClickListener">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLongClick" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.View">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SwipeLayout.4" static="true" visibility=""/>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeLayout.DoubleClickListener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onDoubleClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.daimajia.swipe.SwipeLayout.DragEdge&gt;" final="true" name="SwipeLayout.DragEdge" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.daimajia.swipe.SwipeLayout.DragEdge" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.daimajia.swipe.SwipeLayout.DragEdge[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="Bottom" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.DragEdge" type-generic-aware="com.daimajia.swipe.SwipeLayout.DragEdge" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="Left" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.DragEdge" type-generic-aware="com.daimajia.swipe.SwipeLayout.DragEdge" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="Right" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.DragEdge" type-generic-aware="com.daimajia.swipe.SwipeLayout.DragEdge" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="Top" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.DragEdge" type-generic-aware="com.daimajia.swipe.SwipeLayout.DragEdge" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeLayout.OnLayout" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onLayout" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeLayout.OnRevealListener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onReveal" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.View">
+</parameter>
+<parameter name="p1" type="com.daimajia.swipe.SwipeLayout.DragEdge">
+</parameter>
+<parameter name="p2" type="float">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.daimajia.swipe.SwipeLayout.ShowMode&gt;" final="true" name="SwipeLayout.ShowMode" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.daimajia.swipe.SwipeLayout.ShowMode" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.daimajia.swipe.SwipeLayout.ShowMode[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="LayDown" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.ShowMode" type-generic-aware="com.daimajia.swipe.SwipeLayout.ShowMode" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PullOut" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.ShowMode" type-generic-aware="com.daimajia.swipe.SwipeLayout.ShowMode" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.daimajia.swipe.SwipeLayout.Status&gt;" final="true" name="SwipeLayout.Status" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.daimajia.swipe.SwipeLayout.Status" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.daimajia.swipe.SwipeLayout.Status[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="Close" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.Status" type-generic-aware="com.daimajia.swipe.SwipeLayout.Status" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="Middle" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.Status" type-generic-aware="com.daimajia.swipe.SwipeLayout.Status" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="Open" static="true" transient="false" type="com.daimajia.swipe.SwipeLayout.Status" type-generic-aware="com.daimajia.swipe.SwipeLayout.Status" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeLayout.SwipeDenier" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="shouldDenySwipe" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.MotionEvent">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="android.view.GestureDetector.SimpleOnGestureListener" extends-generic-aware="android.view.GestureDetector.SimpleOnGestureListener" final="false" name="SwipeLayout.SwipeDetector" static="false" visibility=""/>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeLayout.SwipeListener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onClose" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onHandRelease" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+<parameter name="p1" type="float">
+</parameter>
+<parameter name="p2" type="float">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onOpen" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onStartClose" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onStartOpen" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.daimajia.swipe.adapters">
+<class abstract="true" deprecated="not deprecated" extends="android.widget.ArrayAdapter" extends-generic-aware="android.widget.ArrayAdapter" final="false" name="ArraySwipeAdapter" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="com.daimajia.swipe.interfaces.SwipeAdapterInterface" name-generic-aware="com.daimajia.swipe.interfaces.SwipeAdapterInterface">
+</implements>
+<implements name="com.daimajia.swipe.interfaces.SwipeItemMangerInterface" name-generic-aware="com.daimajia.swipe.interfaces.SwipeItemMangerInterface">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ArraySwipeAdapter" static="false" type="com.daimajia.swipe.adapters.ArraySwipeAdapter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="java.util.List&lt;T&gt;">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ArraySwipeAdapter" static="false" type="com.daimajia.swipe.adapters.ArraySwipeAdapter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.util.List&lt;T&gt;">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ArraySwipeAdapter" static="false" type="com.daimajia.swipe.adapters.ArraySwipeAdapter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="T[]">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ArraySwipeAdapter" static="false" type="com.daimajia.swipe.adapters.ArraySwipeAdapter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ArraySwipeAdapter" static="false" type="com.daimajia.swipe.adapters.ArraySwipeAdapter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ArraySwipeAdapter" static="false" type="com.daimajia.swipe.adapters.ArraySwipeAdapter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="T[]">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="closeAllExcept" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="closeAllItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="closeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMode" native="false" return="com.daimajia.swipe.util.Attributes.Mode" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOpenItems" native="false" return="java.util.List&lt;java.lang.Integer&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOpenLayouts" native="false" return="java.util.List&lt;com.daimajia.swipe.SwipeLayout&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isOpen" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="openItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeShownLayouts" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.util.Attributes.Mode">
+</parameter>
+</method>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="android.widget.BaseAdapter" extends-generic-aware="android.widget.BaseAdapter" final="false" name="BaseSwipeAdapter" static="false" visibility="public">
+<implements name="com.daimajia.swipe.interfaces.SwipeAdapterInterface" name-generic-aware="com.daimajia.swipe.interfaces.SwipeAdapterInterface">
+</implements>
+<implements name="com.daimajia.swipe.interfaces.SwipeItemMangerInterface" name-generic-aware="com.daimajia.swipe.interfaces.SwipeItemMangerInterface">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="BaseSwipeAdapter" static="false" type="com.daimajia.swipe.adapters.BaseSwipeAdapter" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="closeAllExcept" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="closeAllItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="closeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="fillValues" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="generateView" native="false" return="android.view.View" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="android.view.ViewGroup">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMode" native="false" return="com.daimajia.swipe.util.Attributes.Mode" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOpenItems" native="false" return="java.util.List&lt;java.lang.Integer&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOpenLayouts" native="false" return="java.util.List&lt;com.daimajia.swipe.SwipeLayout&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getSwipeLayoutResourceId" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="getView" native="false" return="android.view.View" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+<parameter name="p2" type="android.view.ViewGroup">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isOpen" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="openItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeShownLayouts" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.util.Attributes.Mode">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="mItemManger" static="false" transient="false" type="com.daimajia.swipe.implments.SwipeItemAdapterMangerImpl" type-generic-aware="com.daimajia.swipe.implments.SwipeItemAdapterMangerImpl" visibility="protected" volatile="false">
+</field>
+</class>
+</package>
+<package name="com.daimajia.swipe.implments">
+<class abstract="false" deprecated="not deprecated" extends="com.daimajia.swipe.implments.SwipeItemMangerImpl" extends-generic-aware="com.daimajia.swipe.implments.SwipeItemMangerImpl" final="false" name="SwipeItemAdapterMangerImpl" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="SwipeItemAdapterMangerImpl" static="false" type="com.daimajia.swipe.implments.SwipeItemAdapterMangerImpl" visibility="public">
+<parameter name="p0" type="android.widget.BaseAdapter">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="bindView" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.View">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.View">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updateConvertView" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.View">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="mAdapter" static="false" transient="false" type="android.widget.BaseAdapter" type-generic-aware="android.widget.BaseAdapter" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SwipeItemMangerImpl.OnLayoutListener" static="false" visibility="">
+<implements name="com.daimajia.swipe.SwipeLayout.OnLayout" name-generic-aware="com.daimajia.swipe.SwipeLayout.OnLayout">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLayout" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.daimajia.swipe.SimpleSwipeListener" extends-generic-aware="com.daimajia.swipe.SimpleSwipeListener" final="false" name="SwipeItemMangerImpl.SwipeMemory" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="setPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SwipeItemMangerImpl.ValueBox" static="false" visibility=""/>
+</package>
+<package name="com.daimajia.swipe.interfaces">
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeAdapterInterface" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="getSwipeLayoutResourceId" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SwipeItemMangerInterface" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="closeAllExcept" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="closeAllItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="closeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getMode" native="false" return="com.daimajia.swipe.util.Attributes.Mode" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getOpenItems" native="false" return="java.util.List&lt;java.lang.Integer&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getOpenLayouts" native="false" return="java.util.List&lt;com.daimajia.swipe.SwipeLayout&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="isOpen" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="openItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeShownLayouts" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.SwipeLayout">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="setMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.daimajia.swipe.util.Attributes.Mode">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.daimajia.swipe.util">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Attributes" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Attributes" static="false" type="com.daimajia.swipe.util.Attributes" visibility="public">
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.daimajia.swipe.util.Attributes.Mode&gt;" final="true" name="Attributes.Mode" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.daimajia.swipe.util.Attributes.Mode" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.daimajia.swipe.util.Attributes.Mode[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="Multiple" static="true" transient="false" type="com.daimajia.swipe.util.Attributes.Mode" type-generic-aware="com.daimajia.swipe.util.Attributes.Mode" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="Single" static="true" transient="false" type="com.daimajia.swipe.util.Attributes.Mode" type-generic-aware="com.daimajia.swipe.util.Attributes.Mode" visibility="public" volatile="false">
+</field>
+</class>
+</package>
+</api>

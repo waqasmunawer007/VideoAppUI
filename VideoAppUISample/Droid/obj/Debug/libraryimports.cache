@@ -3,6 +3,7 @@
   <ManifestDocuments>
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.Controls.CircleImageView/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.Controls.CircleImageView/library_project_imports/aapt/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/__library_projects__/SwipeBinding/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Animated.Vector.Drawable/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Core.UI/library_project_imports/AndroidManifest.xml</ManifestDocument>
@@ -20,6 +21,7 @@
   <NativeLibraries />
   <Jars>
     <Jar>obj/Debug/__library_projects__/Refractored.Controls.CircleImageView/library_project_imports/bin/classes.jar</Jar>
+    <Jar>obj/Debug/__library_projects__/SwipeBinding/library_project_imports/bin/classes.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Xamarin.Android.Support.Animated.Vector.Drawable/library_project_imports/classes.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Xamarin.Android.Support.Annotations/library_project_imports/support-annotations.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/classes.jar</Jar>

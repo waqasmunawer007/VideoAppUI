@@ -8,9 +8,11 @@
     <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Design/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.CardView/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Refractored.Controls.CircleImageView/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/SwipeBinding/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Refractored.Controls.CircleImageView/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/SwipeBinding/library_project_imports/assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
@@ -20,5 +22,6 @@
     <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Design.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.CardView.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/Refractored.Controls.CircleImageView.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/__library_projects__/SwipeBinding.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

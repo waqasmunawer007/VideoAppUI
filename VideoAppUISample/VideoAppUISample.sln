@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppUISample.Droid", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppUISample.iOS", "iOS\VideoAppUISample.iOS.csproj", "{BC6AB2C6-9C44-42F3-9EBC-6E9F565EDF60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwipeBinding", "SwipeBinding\SwipeBinding.csproj", "{6B271753-E669-46DB-B706-A6E6571343CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,17 @@ Global
 		{BC6AB2C6-9C44-42F3-9EBC-6E9F565EDF60}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{BC6AB2C6-9C44-42F3-9EBC-6E9F565EDF60}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{BC6AB2C6-9C44-42F3-9EBC-6E9F565EDF60}.Debug|iPhone.Build.0 = Debug|iPhone
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Release|iPhone.Build.0 = Release|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{6B271753-E669-46DB-B706-A6E6571343CF}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

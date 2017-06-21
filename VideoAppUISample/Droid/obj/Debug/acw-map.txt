@@ -326,3 +326,15 @@ Refractored.Controls.CircleImageView, Refractored.Controls.CircleImageView;md5ea
 Refractored.Controls.CircleImageView, Refractored.Controls.CircleImageView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5eae3ad6ed1b7f6713979aa7524906105.CircleImageView
 Refractored.Controls.CircleImageView;md5eae3ad6ed1b7f6713979aa7524906105.CircleImageView
 refractored.controls.CircleImageView;md5eae3ad6ed1b7f6713979aa7524906105.CircleImageView
+Com.Daimajia.Swipe.SwipeLayout/IDoubleClickListenerImplementor, SwipeBinding;mono.com.daimajia.swipe.SwipeLayout_DoubleClickListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout+IDoubleClickListenerImplementor, SwipeBinding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.daimajia.swipe.SwipeLayout_DoubleClickListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout.IDoubleClickListenerImplementor;mono.com.daimajia.swipe.SwipeLayout_DoubleClickListenerImplementor
+mono.com.daimajia.swipe.SwipeLayout_DoubleClickListenerImplementor;mono.com.daimajia.swipe.SwipeLayout_DoubleClickListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout/IOnRevealListenerImplementor, SwipeBinding;mono.com.daimajia.swipe.SwipeLayout_OnRevealListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout+IOnRevealListenerImplementor, SwipeBinding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.daimajia.swipe.SwipeLayout_OnRevealListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout.IOnRevealListenerImplementor;mono.com.daimajia.swipe.SwipeLayout_OnRevealListenerImplementor
+mono.com.daimajia.swipe.SwipeLayout_OnRevealListenerImplementor;mono.com.daimajia.swipe.SwipeLayout_OnRevealListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout/ISwipeListenerImplementor, SwipeBinding;mono.com.daimajia.swipe.SwipeLayout_SwipeListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout+ISwipeListenerImplementor, SwipeBinding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.daimajia.swipe.SwipeLayout_SwipeListenerImplementor
+Com.Daimajia.Swipe.SwipeLayout.ISwipeListenerImplementor;mono.com.daimajia.swipe.SwipeLayout_SwipeListenerImplementor
+mono.com.daimajia.swipe.SwipeLayout_SwipeListenerImplementor;mono.com.daimajia.swipe.SwipeLayout_SwipeListenerImplementor
