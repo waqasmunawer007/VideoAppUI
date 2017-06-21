@@ -21,21 +21,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_70dp"
                 android:orientation="horizontal">
-            <!--cover video-->
-                <ImageView
-                    android:id="@+id/cover_video_image_view"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/login" />
+                <FrameLayout
+                    android:id="@+id/image_thumbnail_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <!--video thumbnail image-->
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/cover_video_image_view"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/login" />
+                <!--Circle Textview represent video counter -->
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="@dimen/font_size_20"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/video_counter" />
+                <!--Circle ok button represent video selection -->
+                    <ImageButton
+                        android:layout_gravity="center"
+                        android:id="@+id/video_selected_button_imagebutton"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/margin_48dp"
+                        android:layout_height="@dimen/margin_48dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bt_done" />
+                </FrameLayout>
             <!--description-->
                 <TextView
                     android:id="@+id/video_desc_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_toEndOf="@+id/cover_video_image_view"
+                    android:layout_toEndOf="@+id/image_thumbnail_layout"
                     android:layout_toLeftOf="@+id/video_length_text_view"
-                    android:layout_toRightOf="@+id/cover_video_image_view"
+                    android:layout_toRightOf="@+id/image_thumbnail_layout"
                     android:layout_toStartOf="@+id/video_length_text_view"
                     android:background="@color/colorVideoDesc"
                     android:gravity="center"

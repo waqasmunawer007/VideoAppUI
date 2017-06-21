@@ -402,6 +402,8 @@
     <AndroidResource Include="Resources\drawable\red_dot_circle.xml" />
     <AndroidResource Include="Resources\layout\activity_post_capture_video.axml" />
     <AndroidResource Include="Resources\layout\activity_post_capture_video_success.axml" />
+    <AndroidResource Include="Resources\drawable\circle.xml" />
+    <AndroidResource Include="Resources\drawable\rounded_textview.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

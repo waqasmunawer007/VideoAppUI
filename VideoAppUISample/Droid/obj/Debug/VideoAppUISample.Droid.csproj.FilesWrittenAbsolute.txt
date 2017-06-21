@@ -306,3 +306,5 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll.mdb
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_post_capture_video_success.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/circle.xml
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/rounded_textview.xml

@@ -19,6 +19,24 @@ namespace VideoAppUISample.Droid.Adapters
             mItems = itemList;
             PrepareSampleAnimations();
         }
+
+		/// <summary>
+		/// Returns all selected project video.
+		/// </summary>
+		/// <returns>The all selected project video.</returns>
+		public List<ProjectVideo> GetAllSelectedProjectVideo()
+		{
+			List<ProjectVideo> selectedVideos = new List<ProjectVideo>();
+			foreach (ProjectVideo video in mItems)
+			{
+				if (video.isVideoSelected)
+				{
+					selectedVideos.Add(video);
+				}
+			}
+			return selectedVideos;
+		}
+
         public override int ItemCount
         {
             get
@@ -32,11 +50,11 @@ namespace VideoAppUISample.Droid.Adapters
             ProjectVideo projectVideo = mItems[position];
             vh.mVideoDescTextView.Text = projectVideo.VideoDescription;
             vh.mVideoLengthTextView.Text = "Dauer " + projectVideo.VideoLength;
+			vh.mVideoCounterTextView.Text = ++position + "";
 
             AnimationDropDownAdpater spinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, animations);
             vh.mAnimationSpiner.Adapter = spinnerAdapter;
             vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-
             vh.mAnimationPickCheckbox.Click += (o, e) =>
 			{
                 if (vh.mAnimationPickCheckbox.Checked)
@@ -44,6 +62,21 @@ namespace VideoAppUISample.Droid.Adapters
                   string selectedAnimation = (string)vh.mAnimationSpiner.SelectedItem;  
                 }
 			};
+			vh.mVideoCounterTextView.Click += delegate {
+				projectVideo.isVideoSelected = true;
+				vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
+				vh.mVideoOKButton.Visibility = ViewStates.Visible;
+			};
+
+			if (projectVideo.isVideoSelected)
+			{
+				vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
+				vh.mVideoOKButton.Visibility = ViewStates.Visible;
+			}
+			else
+			{ 
+				vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
+			}
         }
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
@@ -55,8 +88,10 @@ namespace VideoAppUISample.Droid.Adapters
         public class ProjectVideoViewHolder : RecyclerView.ViewHolder
         {
             public ImageView mVideoThumbnailImageView { get; private set; }
+			public ImageView mVideoOKButton { get; private set; }
             public TextView mVideoDescTextView { get; private set; }
             public TextView mVideoLengthTextView { get; private set; }
+			public TextView mVideoCounterTextView { get; private set; }
             public Spinner mAnimationSpiner { get; set; }
             public CheckBox mAnimationPickCheckbox { get; private set; }
             public ProjectVideoViewHolder(View itemView) : base(itemView)
@@ -67,6 +102,8 @@ namespace VideoAppUISample.Droid.Adapters
                 mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.cover_video_image_view);
                 mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
                 mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
+				mVideoCounterTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
+				mVideoOKButton = itemView.FindViewById<ImageButton>(Resource.Id.video_selected_button_imagebutton);
             }
         }
 
