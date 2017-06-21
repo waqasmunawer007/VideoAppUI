@@ -1,27 +1,26 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/values/colors.xml">
     <Files>
-      <File FileName="Droid/Adapters/ProjectVideoRecyclerViewAdapter.cs" Line="98" Column="16" />
+      <File FileName="Droid/PostCaptureVideoActivity.cs" Line="88" Column="2" />
+      <File FileName="Droid/Adapters/ProjectVideoRecyclerViewAdapter.cs" Line="95" Column="48" />
+      <File FileName="Droid/Resources/values/colors.xml" Line="24" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AndroidSwipeLayoutSample" expanded="True">
-            <Node name="AndroidSwipeLayoutSample" expanded="True" />
-          </Node>
           <Node name="VideoAppUISample" expanded="True">
             <Node name="SwipeBinding" expanded="True">
-              <Node name="Additions" expanded="True" />
               <Node name="Jars" expanded="True" />
-              <Node name="Properties" expanded="True" />
             </Node>
             <Node name="VideoAppUISample.Droid" expanded="True">
-              <Node name="References" expanded="True">
-                <Node name="SwipeBinding" selected="True" />
-              </Node>
+              <Node name="References" expanded="True" />
               <Node name="Adapters" expanded="True" />
               <Node name="Resources" expanded="True">
+                <Node name="drawable-hdpi" expanded="True" />
                 <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True">
+                  <Node name="Strings.xml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

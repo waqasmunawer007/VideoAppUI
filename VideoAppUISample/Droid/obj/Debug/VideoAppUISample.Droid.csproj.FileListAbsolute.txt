@@ -3,6 +3,7 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/com.companyname.videoappuisample.apk
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/com.companyname.videoappuisample-Signed.apk
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Refractored.Controls.CircleImageView.dll
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/SwipeBinding.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Xamarin.Android.Support.Animated.Vector.Drawable.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Xamarin.Android.Support.Annotations.dll
@@ -20,6 +21,8 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Xamarin.Android.Support.Vector.Drawable.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.pdb
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/VideoAppUISample.dll.mdb
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/SwipeBinding.pdb
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/SwipeBinding.dll.mdb
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/bin/Debug/Refractored.Controls.CircleImageView.xml
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/VideoAppUISample.Droid.csprojResolveAssemblyReference.cache
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Annotations.dll.stamp
@@ -304,7 +307,10 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_introduction_video.xml
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_pre_capture_video.xml
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/menu/popup_menu.xml
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/R.cs.flag
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/uploadflags.txt
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/red_dot_circle.xml
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_post_capture_video.xml
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout/activity_post_capture_video_success.xml
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/circle.xml
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/rounded_textview.xml
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/R.cs.flag
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/uploadflags.txt

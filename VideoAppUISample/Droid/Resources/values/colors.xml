@@ -21,5 +21,6 @@
   <color name="colorRed">#F44336</color>
   <color name="colorGreen">#69F0AE</color>
   <color name="colorRedTransparent">#66F44336</color>
+  <color name="colorGrayTransparent">#9F9E9E9E</color>	
 </resources>
 
