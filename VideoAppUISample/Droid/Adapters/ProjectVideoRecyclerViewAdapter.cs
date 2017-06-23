@@ -51,7 +51,7 @@ namespace VideoAppUISample.Droid.Adapters
             ProjectVideo projectVideo = mItems[position];
             vh.mVideoDescTextView.Text = projectVideo.VideoDescription;
             vh.mVideoLengthTextView.Text = "Dauer " + projectVideo.VideoLength;
-			vh.mVideoCounterTextView.Text = ++position + "";
+            vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
 			
             if (projectVideo.isVideoSelected)
 			{
@@ -68,6 +68,12 @@ namespace VideoAppUISample.Droid.Adapters
 				vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
 				vh.mVideoOKButton.Visibility = ViewStates.Visible;
 			};
+            vh.mVideoOKButton.Click +=delegate {
+				projectVideo.isVideoSelected = false;
+				vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
+				vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
+				vh.mVideoOKButton.Visibility = ViewStates.Gone;
+            };
 
             //Setting Animation dropdown
             AnimationDropDownAdpater spinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, animations);

@@ -7,6 +7,7 @@ namespace VideoAppUISample.Droid.Models
         public string VideoLength;
         public string VideoURL;
 		public bool isVideoSelected;
+        public int Counter;
 
     }
 }
