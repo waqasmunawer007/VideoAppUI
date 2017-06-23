@@ -44,7 +44,7 @@ namespace VideoAppUISample.Droid
 			SetUpViewPager();
 
             mStartButton.Click += delegate {
-               // LoadDownLoadProjectActivity();
+                ShowConfirmationDialog();
             };
 			return mRootView;
 		}
