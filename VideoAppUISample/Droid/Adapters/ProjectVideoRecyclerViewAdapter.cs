@@ -13,7 +13,9 @@ namespace VideoAppUISample.Droid.Adapters
     {
         List<ProjectVideo> mItems;
         List<String> mMusicItems;
+        List<String> mAnimationItems;
         public MusicSpinnerAdapter mMusicSpinnerAdapter;
+        public AnimationDropDownAdpater mAnimationSpinnerAdapter;
         public event EventHandler<int> VorschauButtonClick;
         public event EventHandler<int> AddNewMusicButtonClick;
         public event EventHandler<int> HinzufugenButtonClick;
@@ -21,15 +23,13 @@ namespace VideoAppUISample.Droid.Adapters
         Context mContext;
 		private const int Type_Item = 1;
         private  const int Type_Footer = 2;
-        List<string> animations = new List<string>();
 
-
-        public ProjectVideoRecyclerViewAdapter(List<ProjectVideo> itemList,List<String>musicItems,Context context)
+        public ProjectVideoRecyclerViewAdapter(List<ProjectVideo> itemList,List<String>musicItems,List<string> animations,Context context)
         {
             mContext = context;
             mItems = itemList;
             mMusicItems = musicItems;
-            PrepareSampleAnimations();
+            mAnimationItems = animations;
         }
 
         public void AddNewVideo(ProjectVideo projectVideo)
@@ -123,71 +123,79 @@ namespace VideoAppUISample.Droid.Adapters
         {
             if (holder is ProjectVideoViewHolder)
             {
-				ProjectVideoViewHolder vh = holder as ProjectVideoViewHolder;
-				ProjectVideo projectVideo = mItems[position];
+                ProjectVideoViewHolder vh = holder as ProjectVideoViewHolder;
+                ProjectVideo projectVideo = mItems[position];
 
-				vh.mVideoDescTextView.Text = projectVideo.VideoDescription;
-				vh.mVideoLengthTextView.Text = "Dauer " + projectVideo.VideoLength;
-				vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
-
+                vh.mVideoDescTextView.Text = projectVideo.VideoDescription;
+                vh.mVideoLengthTextView.Text = "Dauer " + projectVideo.VideoLength;
+				
+                #region numbers or check icon in Circle
                 if (projectVideo.isVideoCompleted)
-				{
-					vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
-					vh.mVideoOKButton.Visibility = ViewStates.Visible;
-				}
-				else
-				{
-					vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
-				}
-				vh.mVideoCounterTextView.Click += delegate
-				{
-					projectVideo.isVideoCompleted = true;
-					vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
-					vh.mVideoOKButton.Visibility = ViewStates.Visible;
-				};
-				vh.mVideoOKButton.Click += delegate
-				{
-					projectVideo.isVideoCompleted = false;
-					vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
-					vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
-					vh.mVideoOKButton.Visibility = ViewStates.Gone;
-				};
+                {
+                    vh.mVideoThumbnailImageView.SetBackgroundResource(Resource.Drawable.login);
+                    vh.mVideoCounterCircleTextView.Visibility = ViewStates.Gone;
+                    vh.mVideoCompleteCircleButton.Visibility = ViewStates.Visible;
+                }
+                else
+                {
+					vh.mVideoCompleteCircleButton.Visibility = ViewStates.Gone;
+					vh.mVideoCounterCircleTextView.Visibility = ViewStates.Visible;
+                    vh.mVideoCounterCircleTextView.Text = projectVideo.Counter + "";
+                    vh.mVideoThumbnailImageView.SetBackgroundResource(Resource.Drawable.video_rect_placeholder);
+                   
+                }
+                vh.mVideoCounterCircleTextView.Click += delegate
+                {
+                    Intent intent = new Intent(mContext, typeof(IntroductionVideoActivity));
+                    mContext.StartActivity(intent);
+                };
+                vh.mVideoCompleteCircleButton.Click += delegate
+                {
+                    Intent intent = new Intent(mContext, typeof(PostCaptureVideoActivity));
+                    mContext.StartActivity(intent);
+                };
+                #endregion
 
-				//Setting Animation dropdown
-				AnimationDropDownAdpater spinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, animations);
-				vh.mAnimationSpiner.Adapter = spinnerAdapter;
-				vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-				vh.mAnimationPickCheckbox.Click += (o, e) =>
-				{
-					if (vh.mAnimationPickCheckbox.Checked)
-					{
-						string selectedAnimation = (string)vh.mAnimationSpiner.SelectedItem;
-					}
-				};
-				//Setting rigt swipe on cell item
-				vh.mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
-				var bottomView = vh.mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
-				vh.mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
-				vh.mSwipeLayout.LeftSwipeEnabled = false;
-				vh.mSwipeLayout.RightSwipeEnabled = true;
-				vh.mSwipeLayout.StartOpen += (sender, e) =>
-				{
+                #region Animations
+                if (mAnimationSpinnerAdapter == null)
+                {
+                    mAnimationSpinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, mAnimationItems);
 
-				};
-				vh.mSwipeLayout.OpenEvent += (sender, e) =>
-			   {
-				   Android.Util.Log.Info("Open", "open event");
-				   vh.mDisabledLayout.Visibility = ViewStates.Visible;
-				   vh.mDisbaledRowTextView.Visibility = ViewStates.Visible;
-			   };
+                }
+                vh.mAnimationSpiner.Adapter = mAnimationSpinnerAdapter;
+                vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
 
-				vh.mUnlockDisabledCellButton.Click += delegate
-				{
-					vh.mDisabledLayout.Visibility = ViewStates.Gone;
-					vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
-				};
+                //vh.mAnimationPickCheckbox.Click += (o, e) =>
+                //{
+                //	if (vh.mAnimationPickCheckbox.Checked)
+                //	{
+                //		string selectedAnimation = (string)vh.mAnimationSpiner.SelectedItem;
+                //	}
+                //};
+                #endregion
 
-			}
+                #region Right Swipe settings
+                vh.mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
+                var bottomView = vh.mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
+                vh.mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
+                vh.mSwipeLayout.LeftSwipeEnabled = false;
+                vh.mSwipeLayout.RightSwipeEnabled = true;
+                vh.mSwipeLayout.StartOpen += (sender, e) => { };
+                vh.mSwipeLayout.OpenEvent += (sender, e) =>
+               {
+                   Android.Util.Log.Info("Open", "open event");
+                   vh.mDisabledLayout.Visibility = ViewStates.Visible;
+                   vh.mDisbaledRowTextView.Visibility = ViewStates.Visible;
+               };
+                // unlock disabled cell 
+                vh.mUnlockDisabledCellButton.Click += delegate
+                {
+                    vh.mDisabledLayout.Visibility = ViewStates.Gone;
+                    vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
+                };
+                #endregion
+
+            }
             else
             {
 				//footer layout binding
@@ -250,12 +258,12 @@ namespace VideoAppUISample.Droid.Adapters
         public class ProjectVideoViewHolder : RecyclerView.ViewHolder
         {
             public ImageView mVideoThumbnailImageView { get; private set; }
-			public ImageView mVideoOKButton { get; private set; }
+			public ImageView mVideoCompleteCircleButton { get; private set; }
             public TextView mVideoDescTextView { get; private set; }
             public TextView mVideoLengthTextView { get; private set; }
-			public TextView mVideoCounterTextView { get; private set; }
+			public TextView mVideoCounterCircleTextView { get; private set; }
             public Spinner mAnimationSpiner { get; set; }
-            public CheckBox mAnimationPickCheckbox { get; private set; }
+            public ImageView mAnimationPickImageView { get; private set; }
 			public Com.Daimajia.Swipe.SwipeLayout mSwipeLayout;
             public LinearLayout mDisabledLayout;
             public ImageButton mUnlockDisabledCellButton;
@@ -264,21 +272,19 @@ namespace VideoAppUISample.Droid.Adapters
             public ProjectVideoViewHolder(View itemView) : base(itemView)
             {
                 // Locate and cache view references:
-                mAnimationPickCheckbox = itemView.FindViewById<CheckBox>(Resource.Id.animation_pick_checkbox);
+                mAnimationPickImageView = itemView.FindViewById<ImageView>(Resource.Id.animation_pick_imageview);
                 mAnimationSpiner = itemView.FindViewById<Spinner>(Resource.Id.animation_spinner);
                 mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.cover_video_image_view);
                 mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
                 mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
-				mVideoCounterTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
-				mVideoOKButton = itemView.FindViewById<ImageButton>(Resource.Id.video_selected_button_imagebutton);
+				mVideoCounterCircleTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
+				mVideoCompleteCircleButton = itemView.FindViewById<ImageButton>(Resource.Id.video_complete_status_imagebutton);
 				mSwipeLayout = itemView.FindViewById<Com.Daimajia.Swipe.SwipeLayout>(Resource.Id.swipe_layout);
                 mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
                 mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);
 				mDisbaledRowTextView = itemView.FindViewById<TextView>(Resource.Id.disabled_row_textview);
             }
         }
-
-
         /// <summary>
         /// click listener for spinner the item selected.
         /// </summary>
@@ -289,14 +295,7 @@ namespace VideoAppUISample.Droid.Adapters
 			Spinner spinner = (Spinner)sender;
             string selectedAnimation = (string)spinner.GetItemAtPosition(e.Position);	
 		}
-        private void PrepareSampleAnimations()
-        {
-            animations.Add("StandardAnimation");
-			animations.Add("Animation1");
-			animations.Add("Animation2");
-			animations.Add("Animation3");
-        }
-
+       
     }
 
 }

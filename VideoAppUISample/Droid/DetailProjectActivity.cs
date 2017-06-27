@@ -76,7 +76,7 @@ namespace VideoAppUISample.Droid
 			mLayoutManager = new LinearLayoutManager(mPrjectRecyclerView.Context);
 			mPrjectRecyclerView.SetLayoutManager(mLayoutManager);
 			mPrjectRecyclerView.HasFixedSize = true;
-            mViewAdapter = new ProjectVideoRecyclerViewAdapter(SelectedProject.ProjectVideos,PrepareSampleMusic(),this);
+            mViewAdapter = new ProjectVideoRecyclerViewAdapter(SelectedProject.ProjectVideos,PrepareSampleMusic(),PrepareSampleAnimations(),this);
             mViewAdapter.VorschauButtonClick += VorschauButtonClickHandler;
             mViewAdapter.AddNewMusicButtonClick += AddNewMusicButtonClickHandler;
             mViewAdapter.HinzufugenButtonClick += HinzufugenButtonClickHandler;
@@ -122,6 +122,15 @@ namespace VideoAppUISample.Droid
 			sampleMusicList.Add("Music 2");
 			sampleMusicList.Add("Music 3");
 			return sampleMusicList;
+		}
+		private List<String> PrepareSampleAnimations()
+		{
+            List<string> animations = new List<string>();
+			animations.Add("StandardAnimation");
+			animations.Add("Animation1");
+			animations.Add("Animation2");
+			animations.Add("Animation3");
+            return animations;
 		}
 #endregion
 

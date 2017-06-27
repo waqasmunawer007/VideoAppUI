@@ -27,7 +27,22 @@ namespace VideoAppUISample.Droid.Adapters
 		{
 			View row = inflater.Inflate(resourceLayout, parent, false);
 			TextView animationText = (TextView)row.FindViewById(Resource.Id.animation_title_text_view);
-            animationText.Text = animations[position];
+			animationText.Text = animations[position];
+			ImageView animationIcon = (ImageView)row.FindViewById(Resource.Id.animation_icon_image_view);
+
+			//set icon for each animation
+			if (position == 0)
+			{
+				animationIcon.SetBackgroundResource(Resource.Drawable.ic_arrow_black);
+			}
+			else if (position == 1)
+			{
+				animationIcon.SetBackgroundResource(Resource.Drawable.ic_arrow_black);
+			}
+			else
+			{
+				animationIcon.SetBackgroundResource(Resource.Drawable.ic_arrow_black);
+			}
 			return row;
 		}
       
@@ -45,8 +60,24 @@ namespace VideoAppUISample.Droid.Adapters
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
 			View row = inflater.Inflate(resourceLayout, parent, false);
-			TextView make = (TextView)row.FindViewById(Resource.Id.animation_title_text_view);
-			make.Text = animations[position];
+			TextView animationText = (TextView)row.FindViewById(Resource.Id.animation_title_text_view);
+            animationText.Text = animations[position];
+			ImageView animationIcon = (ImageView)row.FindViewById(Resource.Id.animation_icon_image_view);
+
+            //set icon for each animation
+			if (position == 0)
+            {
+                animationIcon.SetBackgroundResource(Resource.Drawable.ic_arrow_black);
+            }
+            else if (position == 1)
+            {
+				animationIcon.SetBackgroundResource(Resource.Drawable.ic_arrow_black); 
+            }
+            else
+            {
+				animationIcon.SetBackgroundResource(Resource.Drawable.ic_arrow_black);
+            }
+           
 			return row;
         }
 

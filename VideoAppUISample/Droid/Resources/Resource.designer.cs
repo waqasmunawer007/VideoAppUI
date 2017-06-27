@@ -2516,70 +2516,79 @@ namespace VideoAppUISample.Droid
 			public const int Icon = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int img_logotype = 2130837648;
+			public const int image_circle = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int imgBg = 2130837649;
+			public const int img_logotype = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int login = 2130837650;
+			public const int imgBg = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int navigation_empty_icon = 2130837651;
+			public const int login = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int notification_action_background = 2130837652;
+			public const int navigation_empty_icon = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int notification_bg = 2130837653;
+			public const int notification_action_background = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int notification_bg_low = 2130837654;
+			public const int notification_bg = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int notification_bg_low_normal = 2130837655;
+			public const int notification_bg_low = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int notification_bg_low_pressed = 2130837656;
+			public const int notification_bg_low_normal = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int notification_bg_normal = 2130837657;
+			public const int notification_bg_low_pressed = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int notification_bg_normal_pressed = 2130837658;
+			public const int notification_bg_normal = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int notification_icon_background = 2130837659;
-			
-			// aapt resource value: 0x7f0200a4
-			public const int notification_template_icon_bg = 2130837668;
-			
-			// aapt resource value: 0x7f0200a5
-			public const int notification_template_icon_low_bg = 2130837669;
+			public const int notification_bg_normal_pressed = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int notification_tile_bg = 2130837660;
+			public const int notification_icon_background = 2130837660;
+			
+			// aapt resource value: 0x7f0200a7
+			public const int notification_template_icon_bg = 2130837671;
+			
+			// aapt resource value: 0x7f0200a8
+			public const int notification_template_icon_low_bg = 2130837672;
 			
 			// aapt resource value: 0x7f02009d
-			public const int notify_panel_notification_icon_bg = 2130837661;
+			public const int notification_tile_bg = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int red_dot_circle = 2130837662;
+			public const int notify_panel_notification_icon_bg = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int rounded_textview = 2130837663;
+			public const int red_dot_circle = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int side_nav_bar = 2130837664;
+			public const int rounded_imageview = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int splash_logo = 2130837665;
+			public const int rounded_textview = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int splash_screen = 2130837666;
+			public const int side_nav_bar = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int videoimagen = 2130837667;
+			public const int splash_logo = 2130837667;
+			
+			// aapt resource value: 0x7f0200a4
+			public const int splash_screen = 2130837668;
+			
+			// aapt resource value: 0x7f0200a5
+			public const int video_rect_placeholder = 2130837669;
+			
+			// aapt resource value: 0x7f0200a6
+			public const int videoimagen = 2130837670;
 			
 			static Drawable()
 			{
@@ -2685,7 +2694,7 @@ namespace VideoAppUISample.Droid
 			public const int animation_icon_image_view = 2131230895;
 			
 			// aapt resource value: 0x7f080104
-			public const int animation_pick_checkbox = 2131230980;
+			public const int animation_pick_imageview = 2131230980;
 			
 			// aapt resource value: 0x7f080105
 			public const int animation_spinner = 2131230981;
@@ -3374,6 +3383,9 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080018
 			public const int useLogo = 2131230744;
 			
+			// aapt resource value: 0x7f080102
+			public const int video_complete_status_imagebutton = 2131230978;
+			
 			// aapt resource value: 0x7f080101
 			public const int video_counter = 2131230977;
 			
@@ -3385,9 +3397,6 @@ namespace VideoAppUISample.Droid
 			
 			// aapt resource value: 0x7f08009f
 			public const int video_recording_image_button = 2131230879;
-			
-			// aapt resource value: 0x7f080102
-			public const int video_selected_button_imagebutton = 2131230978;
 			
 			// aapt resource value: 0x7f080085
 			public const int video_thumbnail_image_view = 2131230853;

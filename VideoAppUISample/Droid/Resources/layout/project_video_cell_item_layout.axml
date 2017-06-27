@@ -47,28 +47,28 @@
                                 android:id="@+id/cover_video_image_view"
                                 android:layout_width="100dp"
                                 android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/login" />
+                                android:scaleType="centerCrop" />
                         <!--Circle Textview represent video counter -->
                             <TextView
                                 android:layout_gravity="center"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/size_50dp"
+                                android:layout_height="@dimen/size_50dp"
                                 android:text="1"
+                                android:visibility="visible"
                                 android:textSize="@dimen/font_size_20"
                                 android:background="@drawable/rounded_textview"
                                 android:textColor="@android:color/white"
                                 android:gravity="center"
                                 android:id="@+id/video_counter" />
-                        <!--Circle ok button represent video selection -->
+                        <!--Circle green button represents video completed status -->
                             <ImageButton
                                 android:layout_gravity="center"
-                                android:id="@+id/video_selected_button_imagebutton"
+                                android:id="@+id/video_complete_status_imagebutton"
                                 android:visibility="gone"
-                                android:layout_width="@dimen/margin_48dp"
-                                android:layout_height="@dimen/margin_48dp"
+                                android:layout_width="@dimen/size_50dp"
+                                android:layout_height="@dimen/size_50dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/bt_done" />
+                                android:background="@drawable/rounded_imageview" />
                         </FrameLayout>
                     <!--description-->
                         <TextView
@@ -94,21 +94,26 @@
                             android:text="Dauer 00:08"
                             android:textSize="@dimen/size_caption" />
                     </RelativeLayout>
+                <!-- Animations -->
                     <RelativeLayout
                         android:background="@color/white"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dropdown_size">
-                        <CheckBox
-                            android:id="@+id/animation_pick_checkbox"
+                        <ImageView
+                            android:id="@+id/animation_pick_imageview"
                             android:layout_width="@dimen/margin_24dp"
                             android:layout_height="@dimen/margin_24dp"
-                            android:layout_margin="@dimen/margin_8dp" />
+                            android:src="@drawable/video_rect_placeholder"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:layout_marginLeft="@dimen/margin_8dp"
+                            android:layout_marginRight="-8dp"
+                            android:layout_marginBottom="@dimen/margin_8dp" />
                         <Spinner
                             android:id="@+id/animation_spinner"
                             android:layout_width="match_parent"
-                            android:gravity="center"
+                            android:gravity="center|left"
                             android:textAlignment="center"
-                            android:layout_toRightOf="@+id/animation_pick_checkbox"
+                            android:layout_toRightOf="@+id/animation_pick_imageview"
                             android:layout_height="match_parent"
                             android:spinnerMode="dropdown"
                             android:layout_marginLeft="0.0dp" />
