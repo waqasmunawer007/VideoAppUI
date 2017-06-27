@@ -330,3 +330,4 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xhdpi/video_rect_placeholder.png
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xxhdpi/video_rect_placeholder.png
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xxxhdpi/video_rect_placeholder.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/layout-land/activity_login.xml
