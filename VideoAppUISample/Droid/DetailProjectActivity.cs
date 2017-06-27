@@ -16,7 +16,7 @@ using VideoAppUISample.Droid.Models;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "DetailProjectActivity")]
+	[Activity(Label = "DetailProjectActivity" ,ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class DetailProjectActivity : Activity
 	{
 
@@ -25,33 +25,19 @@ namespace VideoAppUISample.Droid
 		ProjectVideoRecyclerViewAdapter mViewAdapter { get; set; }
         TextView mToolbarTitleTextView;
         ImageButton mBackButton;
-       
-
         public static Project SelectedProject;
-		
-
+	
  		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.activity_detail_project);
-           
             mPrjectRecyclerView = FindViewById<RecyclerView>(Resource.Id.project_video_recycler_view);
 			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
-
             mToolbarTitleTextView = FindViewById<TextView>(Resource.Id.toolbar_title_text_view);
-         
             SetUpToolbar();
             SetUpProjectVideoRecyclerView();
-            //SetupMusicPicker();
-
-   //         mClipHinzufugenButton.Click += delegate
-   //         {
-   //             Intent intent = new Intent(this, typeof(VideoWirdActivity));
-   //             StartActivity(intent);
-   //         };
-			//mAddNewMusicButton.Click += delegate{};
+ 
 		}
-
         /// <summary>
         /// Sets up toolbar.
         /// </summary>
@@ -66,8 +52,7 @@ namespace VideoAppUISample.Droid
 				base.OnBackPressed();
 			};
         }
-
-#region Project Video RecyclerView Setup
+        #region Project Video RecyclerView Setup
         /// <summary>
         /// Sets up project videos recycler view.
         /// </summary>
@@ -87,7 +72,7 @@ namespace VideoAppUISample.Droid
 		{
             //add new music item into the existing music list
             mViewAdapter.mMusicSpinnerAdapter.AddNewMusic("new song");
-            Toast.MakeText(this, "new song added", ToastLength.Short).Show();
+            //Toast.MakeText(this, "new song added", ToastLength.Short).Show();
 		}
 		void VorschauButtonClickHandler(object sender, int position)
 		{
@@ -111,7 +96,7 @@ namespace VideoAppUISample.Droid
 		void Music_ItemSelected(object sender, int position)
 		{
             string selectedMusic = (string)mViewAdapter.mMusicSpinnerAdapter.GetSelectedMusicItem(position);
-            Toast.MakeText(this, "Selected Music "+ selectedMusic, ToastLength.Short).Show();
+            //Toast.MakeText(this, "Selected Music "+ selectedMusic, ToastLength.Short).Show();
 		}
 
 		private List<String> PrepareSampleMusic()
@@ -132,7 +117,7 @@ namespace VideoAppUISample.Droid
 			animations.Add("Animation3");
             return animations;
 		}
-#endregion
+    #endregion
 
 		
 	}

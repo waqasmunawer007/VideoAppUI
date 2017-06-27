@@ -17,7 +17,7 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "ShareActivity")]
+	[Activity(Label = "PostCaptureVideoActivity")]
 	public class PostCaptureVideoActivity : AppCompatActivity
 	{
 		

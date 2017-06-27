@@ -163,7 +163,7 @@ namespace VideoAppUISample.Droid.Adapters
 
                 }
                 vh.mAnimationSpiner.Adapter = mAnimationSpinnerAdapter;
-                vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+                vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(AnimationSpinner_ItemSelected);
 
                 //vh.mAnimationPickCheckbox.Click += (o, e) =>
                 //{
@@ -194,7 +194,6 @@ namespace VideoAppUISample.Droid.Adapters
                     vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
                 };
                 #endregion
-
             }
             else
             {
@@ -218,9 +217,7 @@ namespace VideoAppUISample.Droid.Adapters
                 FooterViewHolder vh = new FooterViewHolder(footerView,OnVorschauButtonClick,OnAddNewMusicButtonClick,OnHinzufugenButtonClick,OnMusicSpinnerClick);
 				return vh;
 			}
-           
         }
-
 		public class FooterViewHolder : RecyclerView.ViewHolder
 		{
 			public Button mClipHinzufugenButton;
@@ -254,7 +251,6 @@ namespace VideoAppUISample.Droid.Adapters
 				#pragma warning restore CS0618 // Type or member is obsolete
 			}
 		}
-
         public class ProjectVideoViewHolder : RecyclerView.ViewHolder
         {
             public ImageView mVideoThumbnailImageView { get; private set; }
@@ -285,12 +281,12 @@ namespace VideoAppUISample.Droid.Adapters
 				mDisbaledRowTextView = itemView.FindViewById<TextView>(Resource.Id.disabled_row_textview);
             }
         }
-        /// <summary>
-        /// click listener for spinner the item selected.
-        /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
-		private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+       /// <summary>
+       /// Animations the spinner item selected.
+       /// </summary>
+       /// <param name="sender">Sender.</param>
+       /// <param name="e">E.</param>
+		private void AnimationSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
 		{
 			Spinner spinner = (Spinner)sender;
             string selectedAnimation = (string)spinner.GetItemAtPosition(e.Position);	
