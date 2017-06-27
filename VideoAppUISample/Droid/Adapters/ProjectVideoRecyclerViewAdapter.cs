@@ -12,15 +12,31 @@ namespace VideoAppUISample.Droid.Adapters
     public class ProjectVideoRecyclerViewAdapter : RecyclerView.Adapter 
     {
         List<ProjectVideo> mItems;
+        List<String> mMusicItems;
+        public MusicSpinnerAdapter mMusicSpinnerAdapter;
+        public event EventHandler<int> VorschauButtonClick;
+        public event EventHandler<int> AddNewMusicButtonClick;
+        public event EventHandler<int> HinzufugenButtonClick;
+        public event EventHandler<int> MusicSpinnerClick;
         Context mContext;
+		private const int Type_Item = 1;
+        private  const int Type_Footer = 2;
         List<string> animations = new List<string>();
-        public ProjectVideoRecyclerViewAdapter(List<ProjectVideo> itemList,Context context)
+
+
+        public ProjectVideoRecyclerViewAdapter(List<ProjectVideo> itemList,List<String>musicItems,Context context)
         {
             mContext = context;
             mItems = itemList;
+            mMusicItems = musicItems;
             PrepareSampleAnimations();
         }
 
+        public void AddNewVideo(ProjectVideo projectVideo)
+        {
+			mItems.Add(projectVideo);
+			NotifyItemInserted(ItemCount - 1);
+        }
 		/// <summary>
 		/// Returns all selected project video.
 		/// </summary>
@@ -30,7 +46,7 @@ namespace VideoAppUISample.Droid.Adapters
 			List<ProjectVideo> selectedVideos = new List<ProjectVideo>();
 			foreach (ProjectVideo video in mItems)
 			{
-				if (video.isVideoSelected)
+                if (video.isVideoCompleted)
 				{
 					selectedVideos.Add(video);
 				}
@@ -38,85 +54,198 @@ namespace VideoAppUISample.Droid.Adapters
 			return selectedVideos;
 		}
 
+        /// <summary>
+        /// Ons the music spinner click.
+        /// </summary>
+        /// <param name="position">Position.</param>
+		void OnMusicSpinnerClick(int position)
+		{
+			if (MusicSpinnerClick != null)
+				MusicSpinnerClick(this, position);
+		}
+        /// <summary>
+        /// Ons the vorschau button click.
+        /// </summary>
+        /// <param name="position">Position.</param>
+		void OnVorschauButtonClick(int position)
+		{
+            if (VorschauButtonClick != null)
+                VorschauButtonClick(this, position);
+		}
+        /// <summary>
+        /// Ons the add new music button click.
+        /// </summary>
+        /// <param name="position">Position.</param>
+		void OnAddNewMusicButtonClick(int position)
+		{
+			if (AddNewMusicButtonClick != null)
+				AddNewMusicButtonClick(this, position);
+		}
+        /// <summary>
+        /// Ons the hinzufugen button click.
+        /// </summary>
+        /// <param name="position">Position.</param>
+		void OnHinzufugenButtonClick(int position)
+		{
+			if (HinzufugenButtonClick != null)
+				HinzufugenButtonClick(this, position);
+		}
+
+        /// <summary>
+        /// Is the position footer.
+        /// </summary>
+        /// <returns><c>true</c>, if position footer was found, <c>false</c> otherwise.</returns>
+        /// <param name="position">Position.</param>
+        private Boolean isPositionFooter(int position)
+		{
+            return position >= mItems.Count;
+		}
+
+		public override int GetItemViewType(int position)
+		{
+			if (isPositionFooter(position))
+			{
+                return Type_Footer;
+			}
+            else
+            {
+                return Type_Item;
+            }
+		}
         public override int ItemCount
         {
             get
             {
-                return mItems.Count;
+                return mItems.Count+1; //add 1 for footer layout
             }
         }
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            ProjectVideoViewHolder vh = holder as ProjectVideoViewHolder;
-            ProjectVideo projectVideo = mItems[position];
-            vh.mVideoDescTextView.Text = projectVideo.VideoDescription;
-            vh.mVideoLengthTextView.Text = "Dauer " + projectVideo.VideoLength;
-            vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
-			
-            if (projectVideo.isVideoSelected)
-			{
-				vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
-				vh.mVideoOKButton.Visibility = ViewStates.Visible;
-			}
-			else
-			{
-				vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
-			}
-			vh.mVideoCounterTextView.Click += delegate
-			{
-				projectVideo.isVideoSelected = true;
-				vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
-				vh.mVideoOKButton.Visibility = ViewStates.Visible;
-			};
-            vh.mVideoOKButton.Click +=delegate {
-				projectVideo.isVideoSelected = false;
-				vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
+            if (holder is ProjectVideoViewHolder)
+            {
+				ProjectVideoViewHolder vh = holder as ProjectVideoViewHolder;
+				ProjectVideo projectVideo = mItems[position];
+
+				vh.mVideoDescTextView.Text = projectVideo.VideoDescription;
+				vh.mVideoLengthTextView.Text = "Dauer " + projectVideo.VideoLength;
 				vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
-				vh.mVideoOKButton.Visibility = ViewStates.Gone;
-            };
 
-            //Setting Animation dropdown
-            AnimationDropDownAdpater spinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, animations);
-            vh.mAnimationSpiner.Adapter = spinnerAdapter;
-            vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-            vh.mAnimationPickCheckbox.Click += (o, e) =>
-			{
-                if (vh.mAnimationPickCheckbox.Checked)
-                {
-                  string selectedAnimation = (string)vh.mAnimationSpiner.SelectedItem;  
-                }
-			};
-            //Setting rigt swipe on cell item
-            vh.mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
-			var bottomView = vh.mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
-            vh.mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right,bottomView);
-			vh.mSwipeLayout.LeftSwipeEnabled = false;
-			vh.mSwipeLayout.RightSwipeEnabled = true;
-            vh.mSwipeLayout.StartOpen += (sender, e) =>
-			{
-                
-			};
-			vh.mSwipeLayout.OpenEvent += (sender, e) =>
-		   {
-			   Android.Util.Log.Info("Open", "open event");
-			   vh.mDisabledLayout.Visibility = ViewStates.Visible;
-			   vh.mDisbaledRowTextView.Visibility = ViewStates.Visible;
-		   };
+                if (projectVideo.isVideoCompleted)
+				{
+					vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
+					vh.mVideoOKButton.Visibility = ViewStates.Visible;
+				}
+				else
+				{
+					vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
+				}
+				vh.mVideoCounterTextView.Click += delegate
+				{
+					projectVideo.isVideoCompleted = true;
+					vh.mVideoCounterTextView.Visibility = ViewStates.Gone;
+					vh.mVideoOKButton.Visibility = ViewStates.Visible;
+				};
+				vh.mVideoOKButton.Click += delegate
+				{
+					projectVideo.isVideoCompleted = false;
+					vh.mVideoCounterTextView.Visibility = ViewStates.Visible;
+					vh.mVideoCounterTextView.Text = projectVideo.Counter + "";
+					vh.mVideoOKButton.Visibility = ViewStates.Gone;
+				};
 
-            vh.mUnlockDisabledCellButton.Click+=delegate {
-                vh.mDisabledLayout.Visibility = ViewStates.Gone;
-                vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
-            };
+				//Setting Animation dropdown
+				AnimationDropDownAdpater spinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, animations);
+				vh.mAnimationSpiner.Adapter = spinnerAdapter;
+				vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+				vh.mAnimationPickCheckbox.Click += (o, e) =>
+				{
+					if (vh.mAnimationPickCheckbox.Checked)
+					{
+						string selectedAnimation = (string)vh.mAnimationSpiner.SelectedItem;
+					}
+				};
+				//Setting rigt swipe on cell item
+				vh.mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
+				var bottomView = vh.mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
+				vh.mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
+				vh.mSwipeLayout.LeftSwipeEnabled = false;
+				vh.mSwipeLayout.RightSwipeEnabled = true;
+				vh.mSwipeLayout.StartOpen += (sender, e) =>
+				{
 
+				};
+				vh.mSwipeLayout.OpenEvent += (sender, e) =>
+			   {
+				   Android.Util.Log.Info("Open", "open event");
+				   vh.mDisabledLayout.Visibility = ViewStates.Visible;
+				   vh.mDisbaledRowTextView.Visibility = ViewStates.Visible;
+			   };
 
+				vh.mUnlockDisabledCellButton.Click += delegate
+				{
+					vh.mDisabledLayout.Visibility = ViewStates.Gone;
+					vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
+				};
 
+			}
+            else
+            {
+				//footer layout binding
+                FooterViewHolder footerViewHolder = holder as FooterViewHolder;
+                mMusicSpinnerAdapter = new MusicSpinnerAdapter(mContext, Resource.Layout.music_spinner_item_layout, mMusicItems);
+                footerViewHolder.mMusicPickerSpinner.Adapter = mMusicSpinnerAdapter;
+			}
         }
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.project_video_cell_item_layout, parent, false);
-            ProjectVideoViewHolder vh = new ProjectVideoViewHolder(itemView);
-            return vh;
+            if (viewType == Type_Item)
+            {
+				View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.project_video_cell_item_layout, parent, false);
+				ProjectVideoViewHolder vh = new ProjectVideoViewHolder(itemView);
+				return vh; 
+            }
+            else
+            {
+                View footerView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.list_footer_layout, parent, false);
+                FooterViewHolder vh = new FooterViewHolder(footerView,OnVorschauButtonClick,OnAddNewMusicButtonClick,OnHinzufugenButtonClick,OnMusicSpinnerClick);
+				return vh;
+			}
+           
         }
+
+		public class FooterViewHolder : RecyclerView.ViewHolder
+		{
+			public Button mClipHinzufugenButton;
+			public Button mAddNewMusicButton;
+            public Button mVorschauButton;
+			public Spinner mMusicPickerSpinner;
+
+			public FooterViewHolder(View footerView, Action<int> vorschauButtonClickListener, Action<int> newMusicButtonClickListener
+										 , Action<int> hinzufugenButtonClickListener, Action<int> musicSpinnerClickListener) : base(footerView)
+			{
+				// Locate and cache view references:
+				mMusicPickerSpinner = footerView.FindViewById<Spinner>(Resource.Id.music_picker_spinner);
+				mClipHinzufugenButton = footerView.FindViewById<Button>(Resource.Id.clip_hinzufugen_button);
+				mAddNewMusicButton = footerView.FindViewById<Button>(Resource.Id.add_new_music_button);
+                mVorschauButton = footerView.FindViewById<Button>(Resource.Id.vorschau_button);
+
+				#pragma warning disable CS0618 // Type or member is obsolete
+				mVorschauButton.Click += (sender, e) => vorschauButtonClickListener(base.Position);
+				#pragma warning restore CS0618 // Type or member is obsolete
+				
+                #pragma warning disable CS0618 // Type or member is obsolete
+				mAddNewMusicButton.Click += (sender, e) => newMusicButtonClickListener(base.Position);
+				#pragma warning restore CS0618 // Type or member is obsolete
+				
+                #pragma warning disable CS0618 // Type or member is obsolete
+				mClipHinzufugenButton.Click += (sender, e) => hinzufugenButtonClickListener(base.Position);
+				#pragma warning restore CS0618 // Type or member is obsolete
+
+				#pragma warning disable CS0618 // Type or member is obsolete
+				mMusicPickerSpinner.ItemSelected += (sender, e) => musicSpinnerClickListener(e.Position);
+				#pragma warning restore CS0618 // Type or member is obsolete
+			}
+		}
 
         public class ProjectVideoViewHolder : RecyclerView.ViewHolder
         {

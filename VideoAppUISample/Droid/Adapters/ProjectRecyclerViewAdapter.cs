@@ -11,7 +11,6 @@ namespace VideoAppUISample.Droid.Adapters
 		public event EventHandler<int> VideoThumbnailClick;
         List<Project> mItems;
 
-
 		/// <summary>
         /// Adds the new project.
         /// </summary>

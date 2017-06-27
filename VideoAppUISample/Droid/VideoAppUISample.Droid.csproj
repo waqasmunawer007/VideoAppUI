@@ -408,6 +408,19 @@
     <AndroidResource Include="Resources\layout\activity_post_capture_video_success.axml" />
     <AndroidResource Include="Resources\drawable\circle.xml" />
     <AndroidResource Include="Resources\drawable\rounded_textview.xml" />
+    <AndroidResource Include="Resources\layout\list_footer_layout.axml" />
+    <AndroidResource Include="Resources\drawable\ic_file_upload.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_file_upload.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_file_upload.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_file_upload.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_file_upload.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_file_upload.png" />
+    <AndroidResource Include="Resources\drawable\ic_done_video_completed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_done_video_completed.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_done_video_completed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_done_video_completed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_done_video_completed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_done_video_completed.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

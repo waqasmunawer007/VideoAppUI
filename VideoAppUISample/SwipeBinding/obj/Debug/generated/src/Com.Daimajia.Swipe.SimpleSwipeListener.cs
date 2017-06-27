@@ -35,9 +35,9 @@ namespace Com.Daimajia.Swipe {
 				return;
 
 			try {
-				if (GetType () != typeof (SimpleSwipeListener)) {
+				if (((object) this).GetType () != typeof (SimpleSwipeListener)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
 					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
@@ -81,7 +81,7 @@ namespace Com.Daimajia.Swipe {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
 
-				if (GetType () == ThresholdType)
+				if (((object) this).GetType () == ThresholdType)
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onClose_Lcom_daimajia_swipe_SwipeLayout_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "onClose", "(Lcom/daimajia/swipe/SwipeLayout;)V"), __args);
@@ -119,7 +119,7 @@ namespace Com.Daimajia.Swipe {
 				__args [1] = new JValue (p1);
 				__args [2] = new JValue (p2);
 
-				if (GetType () == ThresholdType)
+				if (((object) this).GetType () == ThresholdType)
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onHandRelease_Lcom_daimajia_swipe_SwipeLayout_FF, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "onHandRelease", "(Lcom/daimajia/swipe/SwipeLayout;FF)V"), __args);
@@ -155,7 +155,7 @@ namespace Com.Daimajia.Swipe {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
 
-				if (GetType () == ThresholdType)
+				if (((object) this).GetType () == ThresholdType)
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onOpen_Lcom_daimajia_swipe_SwipeLayout_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "onOpen", "(Lcom/daimajia/swipe/SwipeLayout;)V"), __args);
@@ -191,7 +191,7 @@ namespace Com.Daimajia.Swipe {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
 
-				if (GetType () == ThresholdType)
+				if (((object) this).GetType () == ThresholdType)
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onStartClose_Lcom_daimajia_swipe_SwipeLayout_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "onStartClose", "(Lcom/daimajia/swipe/SwipeLayout;)V"), __args);
@@ -227,7 +227,7 @@ namespace Com.Daimajia.Swipe {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
 
-				if (GetType () == ThresholdType)
+				if (((object) this).GetType () == ThresholdType)
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onStartOpen_Lcom_daimajia_swipe_SwipeLayout_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "onStartOpen", "(Lcom/daimajia/swipe/SwipeLayout;)V"), __args);
@@ -265,7 +265,7 @@ namespace Com.Daimajia.Swipe {
 				__args [1] = new JValue (p1);
 				__args [2] = new JValue (p2);
 
-				if (GetType () == ThresholdType)
+				if (((object) this).GetType () == ThresholdType)
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onUpdate_Lcom_daimajia_swipe_SwipeLayout_II, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "onUpdate", "(Lcom/daimajia/swipe/SwipeLayout;II)V"), __args);

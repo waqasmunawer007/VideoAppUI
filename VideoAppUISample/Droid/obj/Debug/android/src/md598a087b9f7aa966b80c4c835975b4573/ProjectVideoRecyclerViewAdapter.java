@@ -10,6 +10,7 @@ public class ProjectVideoRecyclerViewAdapter
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_getItemViewType:(I)I:GetGetItemViewType_IHandler\n" +
 			"n_getItemCount:()I:GetGetItemCountHandler\n" +
 			"n_onBindViewHolder:(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroid_support_v7_widget_RecyclerView_ViewHolder_IHandler\n" +
 			"n_onCreateViewHolder:(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;:GetOnCreateViewHolder_Landroid_view_ViewGroup_IHandler\n" +
@@ -24,6 +25,14 @@ public class ProjectVideoRecyclerViewAdapter
 		if (getClass () == ProjectVideoRecyclerViewAdapter.class)
 			mono.android.TypeManager.Activate ("VideoAppUISample.Droid.Adapters.ProjectVideoRecyclerViewAdapter, VideoAppUISample.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
+
+
+	public int getItemViewType (int p0)
+	{
+		return n_getItemViewType (p0);
+	}
+
+	private native int n_getItemViewType (int p0);
 
 
 	public int getItemCount ()

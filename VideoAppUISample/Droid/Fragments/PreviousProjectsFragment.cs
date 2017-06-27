@@ -94,7 +94,7 @@ namespace VideoAppUISample.Droid
             {
                 VideoDescription = GetString(Resource.String.welcome_paragraph),
                 VideoLength = "21:00",
-				isVideoSelected = true,
+				isVideoCompleted = true,
                 Counter = 1
 
             };
@@ -103,7 +103,7 @@ namespace VideoAppUISample.Droid
 			{
 				VideoDescription = GetString(Resource.String.welcome_paragraph),
 				VideoLength = "22:00",
-                isVideoSelected = false,
+                isVideoCompleted = false,
                 Counter = 2   
 
 			};
@@ -112,7 +112,7 @@ namespace VideoAppUISample.Droid
 			{
 				VideoDescription = GetString(Resource.String.welcome_paragraph),
 				VideoLength = "23:00",
-				isVideoSelected = true,
+				isVideoCompleted = true,
                 Counter = 3
 
 			};
@@ -122,7 +122,7 @@ namespace VideoAppUISample.Droid
 			{
 				VideoDescription = GetString(Resource.String.welcome_paragraph),
 				VideoLength = "23:00",
-				isVideoSelected = false,
+				isVideoCompleted = false,
                 Counter = 4
 
 			};

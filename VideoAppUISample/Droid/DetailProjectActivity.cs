@@ -25,34 +25,31 @@ namespace VideoAppUISample.Droid
 		ProjectVideoRecyclerViewAdapter mViewAdapter { get; set; }
         TextView mToolbarTitleTextView;
         ImageButton mBackButton;
-        Button mClipHinzufugenButton;
-        Button mAddNewMusicButton;
-        Spinner mMusicPickerSpinner;
+       
 
         public static Project SelectedProject;
-		List<string> sampleMusicList = new List<string>();
+		
 
  		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.activity_detail_project);
-            mMusicPickerSpinner = FindViewById<Spinner>(Resource.Id.music_picker_spinner);
+           
             mPrjectRecyclerView = FindViewById<RecyclerView>(Resource.Id.project_video_recycler_view);
 			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
-            mClipHinzufugenButton = FindViewById<Button>(Resource.Id.clip_hinzufugen_button);
-			mAddNewMusicButton = FindViewById<Button>(Resource.Id.add_new_music_button);
+
             mToolbarTitleTextView = FindViewById<TextView>(Resource.Id.toolbar_title_text_view);
          
             SetUpToolbar();
             SetUpProjectVideoRecyclerView();
-            SetupMusicPicker();
+            //SetupMusicPicker();
 
-            mClipHinzufugenButton.Click += delegate
-            {
-                Intent intent = new Intent(this, typeof(VideoWirdActivity));
-                StartActivity(intent);
-            };
-			mAddNewMusicButton.Click += delegate{};
+   //         mClipHinzufugenButton.Click += delegate
+   //         {
+   //             Intent intent = new Intent(this, typeof(VideoWirdActivity));
+   //             StartActivity(intent);
+   //         };
+			//mAddNewMusicButton.Click += delegate{};
 		}
 
         /// <summary>
@@ -69,39 +66,65 @@ namespace VideoAppUISample.Droid
 				base.OnBackPressed();
 			};
         }
-		/// <summary>
-		/// Sets up project videos recycler view.
-		/// </summary>
-		private void SetUpProjectVideoRecyclerView()
+
+#region Project Video RecyclerView Setup
+        /// <summary>
+        /// Sets up project videos recycler view.
+        /// </summary>
+        private void SetUpProjectVideoRecyclerView()
 		{
 			mLayoutManager = new LinearLayoutManager(mPrjectRecyclerView.Context);
 			mPrjectRecyclerView.SetLayoutManager(mLayoutManager);
 			mPrjectRecyclerView.HasFixedSize = true;
-            mViewAdapter = new ProjectVideoRecyclerViewAdapter(SelectedProject.ProjectVideos,this);
+            mViewAdapter = new ProjectVideoRecyclerViewAdapter(SelectedProject.ProjectVideos,PrepareSampleMusic(),this);
+            mViewAdapter.VorschauButtonClick += VorschauButtonClickHandler;
+            mViewAdapter.AddNewMusicButtonClick += AddNewMusicButtonClickHandler;
+            mViewAdapter.HinzufugenButtonClick += HinzufugenButtonClickHandler;
+            mViewAdapter.MusicSpinnerClick += Music_ItemSelected;
 			mPrjectRecyclerView.SetAdapter(mViewAdapter);
 		}
-        /// <summary>
-        /// Setups the music picker.
-        /// </summary>
-        private void SetupMusicPicker()
-        {
-            PrepareSampleMusic();
-			mMusicPickerSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Music_ItemSelected);
-            MusicSpinnerAdapter spinnerAdapter = new MusicSpinnerAdapter(this, Resource.Layout.music_spinner_item_layout, sampleMusicList);
-			mMusicPickerSpinner.Adapter = spinnerAdapter;
-           
-        }
-		private void Music_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+		void AddNewMusicButtonClickHandler(object sender, int position)
 		{
-			Spinner spinner = (Spinner)sender;
-            string selectedMusic = (string)mMusicPickerSpinner.GetItemAtPosition(e.Position);
+            //add new music item into the existing music list
+            mViewAdapter.mMusicSpinnerAdapter.AddNewMusic("new song");
+            Toast.MakeText(this, "new song added", ToastLength.Short).Show();
 		}
-		private void PrepareSampleMusic()
+		void VorschauButtonClickHandler(object sender, int position)
 		{
+			Intent intent = new Intent(this, typeof(VideoWirdActivity));
+            StartActivity(intent);
+		}
+		void HinzufugenButtonClickHandler(object sender, int position)
+		{
+            //add new video into existing project videos list
+            int videoCount = mViewAdapter.ItemCount - 1; //minus 1 to exclude Footer Layout 
+			ProjectVideo dummyVieo = new ProjectVideo()
+            {
+                VideoDescription = "Dummy new video",
+                VideoLength = "10:00",
+                isVideoCompleted = false,
+				Counter = videoCount+1
+
+			};
+            mViewAdapter.AddNewVideo(dummyVieo);
+		}
+		void Music_ItemSelected(object sender, int position)
+		{
+            string selectedMusic = (string)mViewAdapter.mMusicSpinnerAdapter.GetSelectedMusicItem(position);
+            Toast.MakeText(this, "Selected Music "+ selectedMusic, ToastLength.Short).Show();
+		}
+
+		private List<String> PrepareSampleMusic()
+		{
+			List<string> sampleMusicList = new List<string>();
 			sampleMusicList.Add("Pick Music");
 			sampleMusicList.Add("Music 1");
 			sampleMusicList.Add("Music 2");
 			sampleMusicList.Add("Music 3");
+			return sampleMusicList;
 		}
+#endregion
+
+		
 	}
 }

@@ -59,9 +59,9 @@ namespace Com.Daimajia.Swipe {
 				return;
 
 			try {
-				if (GetType () != typeof (BuildConfig)) {
+				if (((object) this).GetType () != typeof (BuildConfig)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
 					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
