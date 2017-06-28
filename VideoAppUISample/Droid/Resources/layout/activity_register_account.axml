@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_register">
-
 <!--register account-->
     <LinearLayout
         android:orientation="vertical"
@@ -33,7 +32,7 @@
             android:textSize="@dimen/size_caption" />
     <!--add email-->
         <EditText
-            android:id="@+id/editEmailAccount"
+            android:id="@+id/email_account_edittext"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_38dp"
             android:layout_marginLeft="@dimen/margin_56dp"
@@ -52,7 +51,7 @@
             android:textColorHint="@color/white" />
     <!--add pass-->
         <EditText
-            android:id="@+id/editPassAccount"
+            android:id="@+id/password_account_edittext"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_38dp"
             android:layout_marginLeft="@dimen/margin_56dp"
@@ -70,27 +69,40 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
     <!--text AGBs-->
-        <TextView
-            android:id="@+id/TextTerms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_marginTop="@dimen/margin_24dp"
-            android:drawableLeft="@drawable/ic_done"
-            android:drawablePadding="@dimen/margin_16dp"
-            android:drawableStart="@drawable/ic_done"
-            android:text="@string/agbs"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_caption" />
+            android:layout_width="wrap_content"
+            android:padding="@dimen/margin_10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/terms_imageview"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_check_circle_deactivate"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:id="@+id/terms_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agbs"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_caption" />
+        </LinearLayout>
     <!--Button more-->
         <Button
-            android:id="@+id/btMore"
+            android:id="@+id/weiter_button"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_38dp"
             android:layout_marginLeft="?attr/actionBarSize"
             android:layout_marginRight="?attr/actionBarSize"
             android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginBottom="@dimen/margin_10dp"
             android:background="@drawable/button_white"
             android:text="@string/weiter"
+            android:alpha="0.7"
+            android:enabled="false"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="@dimen/size_body" />

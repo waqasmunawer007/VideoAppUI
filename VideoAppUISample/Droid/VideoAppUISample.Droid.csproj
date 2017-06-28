@@ -131,6 +131,8 @@
     <Compile Include="PreCaptureVideoActivity.cs" />
     <Compile Include="PostCaptureVideoActivity.cs" />
     <Compile Include="PostCaptureVideoSuccessActivity.cs" />
+    <Compile Include="Adapters\GroupPickerSpinnerAdapter.cs" />
+    <Compile Include="Models\Group.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -425,6 +427,23 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\video_rect_placeholder.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\video_rect_placeholder.png" />
     <AndroidResource Include="Resources\layout-land\activity_login.axml" />
+    <AndroidResource Include="Resources\layout-land\activity_login_mail.axml" />
+    <AndroidResource Include="Resources\drawable\ic_check_circle_activate.png" />
+    <AndroidResource Include="Resources\drawable\ic_check_circle_deactivate.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_circle_activate.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_circle_deactivate.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_circle_activate.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_circle_deactivate.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_circle_activate.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_circle_deactivate.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check_circle_activate.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check_circle_deactivate.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check_circle_activate.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check_circle_deactivate.png" />
+    <AndroidResource Include="Resources\layout\group_spinner_item_layout.axml" />
+    <AndroidResource Include="Resources\drawable\ic_landscape.png" />
+    <AndroidResource Include="Resources\drawable\ic_send.png" />
+    <AndroidResource Include="Resources\drawable\ic_thumb_up.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

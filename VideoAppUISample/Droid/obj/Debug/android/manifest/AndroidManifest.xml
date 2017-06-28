@@ -8,9 +8,9 @@
     <activity android:label="VideoAppUISample" android:name="md5db99e0f44738b1df054820e68a30bd22.MainActivity" />
     <activity android:label="LoginActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.LoginActivity" />
     <activity android:label="LoginMainActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.LoginMailActivity" />
-    <activity android:label="RegisterActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.RegisterActivity" />
-    <activity android:label="AccountInfoActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.AccountInfoActivity" />
-    <activity android:label="SelectUserGroupActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.SelectUserGroupActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="RegisterActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.RegisterActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="AccountInfoActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.AccountInfoActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="SelectUserGroupActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.SelectUserGroupActivity" />
     <activity android:icon="@drawable/icon" android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="md5db99e0f44738b1df054820e68a30bd22.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

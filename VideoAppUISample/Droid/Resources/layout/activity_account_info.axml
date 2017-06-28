@@ -12,7 +12,6 @@
         android:orientation="vertical">
     <!--text willkommen-->
         <TextView
-			
             android:id="@+id/textWillkommen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +33,7 @@
             android:textSize="@dimen/size_caption" />
     <!--add vorname-->
         <EditText
-            android:id="@+id/editVorname"
+            android:id="@+id/vorname_edittext"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_38dp"
             android:layout_marginLeft="@dimen/margin_56dp"
@@ -50,7 +49,7 @@
             android:textColorHint="@color/white" />
     <!--add pass-->
         <EditText
-            android:id="@+id/editNachname"
+            android:id="@+id/nachname_edittext"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_38dp"
             android:layout_marginLeft="@dimen/margin_56dp"
@@ -66,7 +65,7 @@
             android:textColorHint="@color/white" />
     <!--Button more-->
         <Button
-            android:id="@+id/btMore"
+            android:id="@+id/weiter_button"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_38dp"
             android:layout_marginLeft="?attr/actionBarSize"
@@ -75,6 +74,8 @@
             android:background="@drawable/button_white"
             android:text="@string/weiter"
             android:textAllCaps="true"
+            android:enabled="false"
+            android:alpha="0.7"
             android:textColor="@color/black"
             android:textSize="@dimen/size_body" />
     </LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--background-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login"
+        tools:ignore="ContentDescription" />
+<!--return activity-->
+<!--<ImageButton
+        android:id="@+id/backActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="16dp"
+        android:src="@drawable/ic_arrow_back" />-->
+<!--logotipo-->
+    <ImageView
+        android:id="@+id/logoType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_above="@+id/txtNameApp"
+        android:src="@drawable/img_logotype" />
+<!--name app-->
+    <TextView
+        android:id="@+id/txtNameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:text="@string/oficial_name"
+        android:textColor="@color/white"
+        android:layout_above="@+id/user_email_edittext"
+        android:textSize="@dimen/font_size_32" />
+<!--add email-->
+    <EditText
+        android:id="@+id/user_email_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_38dp"
+        android:layout_marginLeft="@dimen/margin_56dp"
+        android:layout_marginRight="@dimen/margin_56dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/background_edit_text"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="@dimen/margin_16dp"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/margin_8dp"
+        android:paddingRight="@dimen/margin_8dp"
+        android:text=""
+        android:layout_above="@+id/user_password_edittext"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+<!--add pass-->
+    <EditText
+        android:id="@+id/user_password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_38dp"
+        android:layout_marginLeft="@dimen/margin_56dp"
+        android:layout_marginRight="@dimen/margin_56dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/background_edit_text"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="@dimen/margin_16dp"
+        android:drawableStart="@drawable/ic_lock"
+        android:hint="@string/passwort"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/margin_8dp"
+        android:paddingRight="@dimen/margin_8dp"
+        android:text=""
+        android:layout_above="@+id/login_button"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+<!--click login-->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_38dp"
+        android:layout_marginLeft="?attr/actionBarSize"
+        android:layout_marginRight="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/button_email"
+        android:text="@string/login"
+        android:textAllCaps="true"
+        android:alpha="0.7"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:layout_above="@+id/registriereAccount"
+        android:textSize="@dimen/size_body" />
+<!--create account-->
+    <TextView
+        android:id="@+id/registriereAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:text="@string/registriere_dich_jetzt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_caption" />
+</RelativeLayout>

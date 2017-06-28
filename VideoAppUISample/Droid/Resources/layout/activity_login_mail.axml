@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <!--background-->
-  <ImageView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
@@ -12,7 +12,7 @@
         android:src="@drawable/login"
         tools:ignore="ContentDescription" />
 <!--return activity-->
-    <!--<ImageButton
+<!--<ImageButton
         android:id="@+id/backActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:textSize="@dimen/font_size_32" />
 <!--add email-->
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/user_email_edittext"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_38dp"
         android:layout_below="@+id/txtNameApp"
@@ -60,10 +60,10 @@
         android:textColorHint="@color/white" />
 <!--add pass-->
     <EditText
-        android:id="@+id/editPass"
+        android:id="@+id/user_password_edittext"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_38dp"
-        android:layout_below="@+id/editEmail"
+        android:layout_below="@+id/user_email_edittext"
         android:layout_marginLeft="@dimen/margin_56dp"
         android:layout_marginRight="@dimen/margin_56dp"
         android:layout_marginTop="@dimen/margin_24dp"
@@ -80,16 +80,18 @@
         android:textColorHint="@color/white" />
 <!--click login-->
     <Button
-        android:id="@+id/btLogin"
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_38dp"
-        android:layout_below="@+id/editPass"
+        android:layout_below="@+id/user_password_edittext"
         android:layout_marginLeft="?attr/actionBarSize"
         android:layout_marginRight="?attr/actionBarSize"
         android:layout_marginTop="@dimen/margin_24dp"
         android:background="@drawable/button_email"
         android:text="@string/login"
         android:textAllCaps="true"
+        android:alpha="0.7"
+        android:enabled="false"
         android:textColor="@color/white"
         android:textSize="@dimen/size_body" />
 <!--create account-->
