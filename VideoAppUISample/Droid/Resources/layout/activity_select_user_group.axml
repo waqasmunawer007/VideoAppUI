@@ -50,6 +50,7 @@
             android:id="@+id/group_picker_spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_10dp"
             android:layout_toEndOf="@+id/iconAttach"
             android:layout_toRightOf="@+id/iconAttach" />
     </RelativeLayout>
