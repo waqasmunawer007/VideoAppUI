@@ -61,8 +61,24 @@ namespace VideoAppUISample.Droid
 			View itemView = mLayoutInflater.Inflate(Resource.Layout.project_view_pager_item_layout, container, false);
 			TextView projectTitleTextView = itemView.FindViewById<TextView>(Resource.Id.project_title_text_view);
 			TextView projectDescTextView = itemView.FindViewById<TextView>(Resource.Id.project_desc_text_view);
+            ImageView projectImageView = itemView.FindViewById<ImageView>(Resource.Id.project_imageview);
 			projectTitleTextView.Text = project.Title;
 			projectDescTextView.Text = project.Description;
+
+            //TODO replace this logic with yours code
+            if (position == 0)
+            {
+                projectImageView.SetBackgroundResource(Resource.Drawable.template);
+            }
+            else if (position == 1)
+            {
+                projectImageView.SetBackgroundResource(Resource.Drawable.login);
+            }
+            else
+            {
+                projectImageView.SetBackgroundResource(Resource.Drawable.template);
+            }
+
 			var viewPager = container.JavaCast<ViewPager>();
 			viewPager.AddView(itemView);
 

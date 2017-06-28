@@ -348,3 +348,9 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/ic_landscape.png
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/ic_send.png
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/ic_thumb_up.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/template.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-hdpi/template.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-mdpi/template.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xhdpi/template.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xxhdpi/template.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xxxhdpi/template.png

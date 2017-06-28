@@ -444,6 +444,12 @@
     <AndroidResource Include="Resources\drawable\ic_landscape.png" />
     <AndroidResource Include="Resources\drawable\ic_send.png" />
     <AndroidResource Include="Resources\drawable\ic_thumb_up.png" />
+    <AndroidResource Include="Resources\drawable\template.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\template.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\template.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\template.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\template.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\template.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

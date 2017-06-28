@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using SupportFragment = Android.Support.V4.App.Fragment;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
+using Android.Graphics;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "VideoAppUISample", MainLauncher = false)]
+	[Activity(Label = "VideoAppUISample", MainLauncher = false, ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class MainActivity : AppCompatActivity
 	{
 		ProjectFragment mFragmentProject;
@@ -17,7 +18,7 @@ namespace VideoAppUISample.Droid
 		SettingsFragment mFragmentEinstenllungen;
 		HelpFragment mFragmentHilfe;
 		DrawerLayout mDrawerLayout;
-		Android.Support.V7.Widget.Toolbar mToolbar;
+		public Android.Support.V7.Widget.Toolbar mToolbar;
 
 		private SupportFragment mCurrentFragment = new SupportFragment();
 		private Stack<SupportFragment> mStackFragments;
@@ -43,7 +44,9 @@ namespace VideoAppUISample.Droid
 		/// Setups the toolbar.
 		/// </summary>
 		private void SetupToolbar()
-		{ 
+		{
+            mToolbar.Background.SetAlpha(0);
+            //mToolbar.SetBackgroundResource(Resource.Color.transparent);
 			SetSupportActionBar(mToolbar);
 			SupportActionBar.SetTitle(Resource.String.projectk);
 			SupportActionBar.SetDisplayHomeAsUpEnabled(true);

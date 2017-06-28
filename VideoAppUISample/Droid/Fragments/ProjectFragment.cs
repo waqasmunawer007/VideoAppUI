@@ -84,7 +84,7 @@ namespace VideoAppUISample.Droid
 		private void OnProjectItemClickHandler(object sender, int position)
 		{
 			selectedProject = mPagerAdapter.GetSelectedProject(position);
-			ShowConfirmationDialog();
+			//ShowConfirmationDialog();
 
 		}
 

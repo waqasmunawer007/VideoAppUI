@@ -2987,8 +2987,8 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f02009f;
         public static final int notification_bg_normal_pressed=0x7f0200a0;
         public static final int notification_icon_background=0x7f0200a1;
-        public static final int notification_template_icon_bg=0x7f0200ac;
-        public static final int notification_template_icon_low_bg=0x7f0200ad;
+        public static final int notification_template_icon_bg=0x7f0200ad;
+        public static final int notification_template_icon_low_bg=0x7f0200ae;
         public static final int notification_tile_bg=0x7f0200a2;
         public static final int notify_panel_notification_icon_bg=0x7f0200a3;
         public static final int red_dot_circle=0x7f0200a4;
@@ -2997,13 +2997,14 @@ containing a value of this type.
         public static final int side_nav_bar=0x7f0200a7;
         public static final int splash_logo=0x7f0200a8;
         public static final int splash_screen=0x7f0200a9;
-        public static final int video_rect_placeholder=0x7f0200aa;
-        public static final int videoimagen=0x7f0200ab;
+        public static final int template=0x7f0200aa;
+        public static final int video_rect_placeholder=0x7f0200ab;
+        public static final int videoimagen=0x7f0200ac;
     }
     public static final class id {
         public static final int Name=0x7f0800db;
         public static final int action0=0x7f0800ea;
-        public static final int action_attach=0x7f080111;
+        public static final int action_attach=0x7f080112;
         public static final int action_bar=0x7f080066;
         public static final int action_bar_activity_content=0x7f080001;
         public static final int action_bar_container=0x7f080065;
@@ -3020,7 +3021,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f080063;
         public static final int action_mode_bar_stub=0x7f080062;
         public static final int action_mode_close_button=0x7f080045;
-        public static final int action_refresh=0x7f080110;
+        public static final int action_refresh=0x7f080111;
         public static final int action_text=0x7f0800e9;
         public static final int actions=0x7f0800f7;
         public static final int activity_chooser_view_content=0x7f080046;
@@ -3133,7 +3134,7 @@ containing a value of this type.
         public static final int list_item=0x7f08004a;
         public static final int login_button=0x7f080097;
         public static final int logoType=0x7f08008d;
-        public static final int masked=0x7f08010f;
+        public static final int masked=0x7f080110;
         public static final int media_actions=0x7f0800ed;
         public static final int middle=0x7f080022;
         public static final int mini=0x7f08003e;
@@ -3142,10 +3143,10 @@ containing a value of this type.
         public static final int music_picker_spinner=0x7f0800df;
         public static final int music_title_text_view=0x7f0800e6;
         public static final int nachname_edittext=0x7f080078;
-        public static final int nav_bisherige=0x7f080113;
-        public static final int nav_einstellungen=0x7f080114;
-        public static final int nav_hilfe=0x7f080115;
-        public static final int nav_project=0x7f080112;
+        public static final int nav_bisherige=0x7f080114;
+        public static final int nav_einstellungen=0x7f080115;
+        public static final int nav_hilfe=0x7f080116;
+        public static final int nav_project=0x7f080113;
         public static final int nav_view=0x7f0800e5;
         public static final int navigation_header_container=0x7f0800ba;
         public static final int never=0x7f080026;
@@ -3157,7 +3158,7 @@ containing a value of this type.
         public static final int notification_main_column=0x7f0800f0;
         public static final int notification_main_column_container=0x7f0800ef;
         public static final int ok_image_button=0x7f08009f;
-        public static final int one=0x7f080116;
+        public static final int one=0x7f080117;
         public static final int parallax=0x7f080037;
         public static final int parentPanel=0x7f08004f;
         public static final int password_account_edittext=0x7f0800a8;
@@ -3167,6 +3168,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f080006;
         public static final int progress_horizontal=0x7f080007;
         public static final int project_desc_text_view=0x7f080082;
+        public static final int project_imageview=0x7f08010e;
         public static final int project_name=0x7f0800ff;
         public static final int project_preview_image_button=0x7f0800a5;
         public static final int project_title_text_view=0x7f080081;
@@ -3234,7 +3236,7 @@ containing a value of this type.
         public static final int text_input_password_toggle=0x7f0800bf;
         public static final int textinput_counter=0x7f08000c;
         public static final int textinput_error=0x7f08000d;
-        public static final int three=0x7f080118;
+        public static final int three=0x7f080119;
         public static final int time=0x7f0800f2;
         public static final int time_video_detail_layout=0x7f080087;
         public static final int timer_image_button=0x7f080089;
@@ -3247,7 +3249,7 @@ containing a value of this type.
         public static final int touch_outside=0x7f0800b6;
         public static final int transition_current_scene=0x7f08000a;
         public static final int transition_scene_layoutid_cache=0x7f08000b;
-        public static final int two=0x7f080117;
+        public static final int two=0x7f080118;
         public static final int txtAbmelden=0x7f0800cd;
         public static final int txtAccountParagraph=0x7f080076;
         public static final int txtEmail=0x7f0800c4;
@@ -3275,7 +3277,7 @@ containing a value of this type.
         public static final int video_timer_layout=0x7f0800a3;
         public static final int video_trim_ok_button=0x7f08009b;
         public static final int view_offset_helper=0x7f08000e;
-        public static final int visible=0x7f08010e;
+        public static final int visible=0x7f08010f;
         public static final int vorname_edittext=0x7f080077;
         public static final int vorschau_button=0x7f0800e1;
         public static final int weiter_button=0x7f080079;

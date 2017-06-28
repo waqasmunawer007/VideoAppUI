@@ -5,7 +5,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:theme="@style/MyTheme" android:label="VideoAppUISample" android:name="android.app.Application" android:debuggable="true">
-    <activity android:label="VideoAppUISample" android:name="md5db99e0f44738b1df054820e68a30bd22.MainActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="VideoAppUISample" android:name="md5db99e0f44738b1df054820e68a30bd22.MainActivity" />
     <activity android:label="LoginActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.LoginActivity" />
     <activity android:label="LoginMainActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.LoginMailActivity" />
     <activity android:configChanges="orientation|screenSize" android:label="RegisterActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.RegisterActivity" />
