@@ -56,5 +56,6 @@
   <string name="disabled_row_text">disbaled row text</string>	
   <string name="vorschau_text">vorschau</string>
   <string name="hochkladen_text">Logo Hochkladen</string>
+  <string name="user_gruppe_andern">User Gruppe andern</string>	
 </resources>
 

@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/VideoWirdActivity.cs">
     <Files>
-      <File FileName="Droid/MainActivity.cs" Line="31" Column="37" />
-      <File FileName="Droid/Resources/values/colors.xml" Line="8" Column="31" />
-      <File FileName="Droid/Resources/values/Styles.xml" Line="1" Column="1" />
+      <File FileName="Droid/VideoWirdActivity.cs" Line="96" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -17,5 +15,5 @@
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.VideoAppUISample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DFD76B1A-D3A8-4A72-B0EE-90B96670B8EF" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.4C3HMQ1612017682" AndroidDesignerPreferredTheme="MyTheme" />
+  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_4_API_23" AndroidDesignerPreferredTheme="MyTheme" />
 </Properties>

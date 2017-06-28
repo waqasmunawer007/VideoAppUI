@@ -2621,14 +2621,14 @@ namespace VideoAppUISample.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0800db
-			public const int Name = 2131230939;
+			// aapt resource value: 0x7f0800dc
+			public const int Name = 2131230940;
 			
-			// aapt resource value: 0x7f0800ea
-			public const int action0 = 2131230954;
+			// aapt resource value: 0x7f0800eb
+			public const int action0 = 2131230955;
 			
-			// aapt resource value: 0x7f080112
-			public const int action_attach = 2131230994;
+			// aapt resource value: 0x7f080113
+			public const int action_attach = 2131230995;
 			
 			// aapt resource value: 0x7f080066
 			public const int action_bar = 2131230822;
@@ -2651,17 +2651,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080043
 			public const int action_bar_title = 2131230787;
 			
-			// aapt resource value: 0x7f0800e7
-			public const int action_container = 2131230951;
+			// aapt resource value: 0x7f0800e8
+			public const int action_container = 2131230952;
 			
 			// aapt resource value: 0x7f080067
 			public const int action_context_bar = 2131230823;
 			
-			// aapt resource value: 0x7f0800ee
-			public const int action_divider = 2131230958;
+			// aapt resource value: 0x7f0800ef
+			public const int action_divider = 2131230959;
 			
-			// aapt resource value: 0x7f0800e8
-			public const int action_image = 2131230952;
+			// aapt resource value: 0x7f0800e9
+			public const int action_image = 2131230953;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2678,14 +2678,14 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080045
 			public const int action_mode_close_button = 2131230789;
 			
-			// aapt resource value: 0x7f080111
-			public const int action_refresh = 2131230993;
+			// aapt resource value: 0x7f080112
+			public const int action_refresh = 2131230994;
 			
-			// aapt resource value: 0x7f0800e9
-			public const int action_text = 2131230953;
+			// aapt resource value: 0x7f0800ea
+			public const int action_text = 2131230954;
 			
-			// aapt resource value: 0x7f0800f7
-			public const int actions = 2131230967;
+			// aapt resource value: 0x7f0800f8
+			public const int actions = 2131230968;
 			
 			// aapt resource value: 0x7f080046
 			public const int activity_chooser_view_content = 2131230790;
@@ -2693,8 +2693,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080019
 			public const int add = 2131230745;
 			
-			// aapt resource value: 0x7f0800e0
-			public const int add_new_music_button = 2131230944;
+			// aapt resource value: 0x7f0800e1
+			public const int add_new_music_button = 2131230945;
 			
 			// aapt resource value: 0x7f08005a
 			public const int alertTitle = 2131230810;
@@ -2705,17 +2705,20 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080023
 			public const int always = 2131230755;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int animation_icon_image_view = 2131230898;
+			// aapt resource value: 0x7f0800c5
+			public const int andern_textview = 2131230917;
 			
-			// aapt resource value: 0x7f080109
-			public const int animation_pick_imageview = 2131230985;
+			// aapt resource value: 0x7f0800b4
+			public const int animation_icon_image_view = 2131230900;
 			
 			// aapt resource value: 0x7f08010a
-			public const int animation_spinner = 2131230986;
+			public const int animation_pick_imageview = 2131230986;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int animation_title_text_view = 2131230899;
+			// aapt resource value: 0x7f08010b
+			public const int animation_spinner = 2131230987;
+			
+			// aapt resource value: 0x7f0800b5
+			public const int animation_title_text_view = 2131230901;
 			
 			// aapt resource value: 0x7f080091
 			public const int anmeldenEmail = 2131230865;
@@ -2732,29 +2735,32 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080092
 			public const int app_official_name = 2131230866;
 			
-			// aapt resource value: 0x7f0800ce
-			public const int arrowAbmelden = 2131230926;
+			// aapt resource value: 0x7f0800cf
+			public const int arrowAbmelden = 2131230927;
 			
-			// aapt resource value: 0x7f0800cb
-			public const int arrowLock = 2131230923;
+			// aapt resource value: 0x7f0800cc
+			public const int arrowLock = 2131230924;
 			
-			// aapt resource value: 0x7f0800c5
-			public const int arrowProfile = 2131230917;
+			// aapt resource value: 0x7f0800c9
+			public const int arrowProfile = 2131230921;
 			
 			// aapt resource value: 0x7f08002f
 			public const int auto = 2131230767;
 			
-			// aapt resource value: 0x7f0800d9
-			public const int avatarUser = 2131230937;
+			// aapt resource value: 0x7f0800da
+			public const int avatarUser = 2131230938;
+			
+			// aapt resource value: 0x7f080094
+			public const int back_button_imagebutton = 2131230868;
 			
 			// aapt resource value: 0x7f08007b
 			public const int back_image_button = 2131230843;
 			
-			// aapt resource value: 0x7f0800d2
-			public const int backgroundProject = 2131230930;
+			// aapt resource value: 0x7f0800d3
+			public const int backgroundProject = 2131230931;
 			
-			// aapt resource value: 0x7f08009d
-			public const int bar_layout = 2131230877;
+			// aapt resource value: 0x7f08009e
+			public const int bar_layout = 2131230878;
 			
 			// aapt resource value: 0x7f080020
 			public const int beginning = 2131230752;
@@ -2765,23 +2771,23 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08007d
 			public const int bottom_layout = 2131230845;
 			
-			// aapt resource value: 0x7f080102
-			public const int bottom_wrapper = 2131230978;
+			// aapt resource value: 0x7f080103
+			public const int bottom_wrapper = 2131230979;
 			
 			// aapt resource value: 0x7f08004d
 			public const int buttonPanel = 2131230797;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int camera_focus_image_button = 2131230882;
+			// aapt resource value: 0x7f0800a3
+			public const int camera_focus_image_button = 2131230883;
 			
 			// aapt resource value: 0x7f080084
 			public const int camera_surfaceview = 2131230852;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int camera_switch_image_button = 2131230884;
+			// aapt resource value: 0x7f0800a5
+			public const int camera_switch_image_button = 2131230885;
 			
-			// aapt resource value: 0x7f0800eb
-			public const int cancel_action = 2131230955;
+			// aapt resource value: 0x7f0800ec
+			public const int cancel_action = 2131230956;
 			
 			// aapt resource value: 0x7f080030
 			public const int center = 2131230768;
@@ -2798,11 +2804,11 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08005d
 			public const int checkbox = 2131230813;
 			
-			// aapt resource value: 0x7f0800f3
-			public const int chronometer = 2131230963;
+			// aapt resource value: 0x7f0800f4
+			public const int chronometer = 2131230964;
 			
-			// aapt resource value: 0x7f0800dd
-			public const int clip_hinzufugen_button = 2131230941;
+			// aapt resource value: 0x7f0800de
+			public const int clip_hinzufugen_button = 2131230942;
 			
 			// aapt resource value: 0x7f080039
 			public const int clip_horizontal = 2131230777;
@@ -2813,14 +2819,14 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080024
 			public const int collapseActionView = 2131230756;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int contentGruppe = 2131230894;
+			// aapt resource value: 0x7f0800af
+			public const int contentGruppe = 2131230895;
 			
 			// aapt resource value: 0x7f080050
 			public const int contentPanel = 2131230800;
 			
-			// aapt resource value: 0x7f080105
-			public const int cover_video_image_view = 2131230981;
+			// aapt resource value: 0x7f080106
+			public const int cover_video_image_view = 2131230982;
 			
 			// aapt resource value: 0x7f080057
 			public const int custom = 2131230807;
@@ -2828,8 +2834,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080056
 			public const int customPanel = 2131230806;
 			
-			// aapt resource value: 0x7f0800fe
-			public const int cv_video = 2131230974;
+			// aapt resource value: 0x7f0800ff
+			public const int cv_video = 2131230975;
 			
 			// aapt resource value: 0x7f080064
 			public const int decor_content_parent = 2131230820;
@@ -2837,59 +2843,56 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080049
 			public const int default_activity_button = 2131230793;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int design_bottom_sheet = 2131230903;
+			// aapt resource value: 0x7f0800b9
+			public const int design_bottom_sheet = 2131230905;
+			
+			// aapt resource value: 0x7f0800c0
+			public const int design_menu_item_action_area = 2131230912;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int design_menu_item_action_area_stub = 2131230911;
 			
 			// aapt resource value: 0x7f0800be
-			public const int design_menu_item_action_area = 2131230910;
+			public const int design_menu_item_text = 2131230910;
 			
 			// aapt resource value: 0x7f0800bd
-			public const int design_menu_item_action_area_stub = 2131230909;
-			
-			// aapt resource value: 0x7f0800bc
-			public const int design_menu_item_text = 2131230908;
-			
-			// aapt resource value: 0x7f0800bb
-			public const int design_navigation_view = 2131230907;
+			public const int design_navigation_view = 2131230909;
 			
 			// aapt resource value: 0x7f080012
 			public const int disableHome = 2131230738;
 			
-			// aapt resource value: 0x7f08010b
-			public const int disabled_row_layout = 2131230987;
+			// aapt resource value: 0x7f08010c
+			public const int disabled_row_layout = 2131230988;
 			
-			// aapt resource value: 0x7f08010d
-			public const int disabled_row_textview = 2131230989;
+			// aapt resource value: 0x7f08010e
+			public const int disabled_row_textview = 2131230990;
 			
-			// aapt resource value: 0x7f080099
-			public const int dotted_menu_image_button = 2131230873;
+			// aapt resource value: 0x7f08009a
+			public const int dotted_menu_image_button = 2131230874;
 			
 			// aapt resource value: 0x7f080080
 			public const int download_image_button = 2131230848;
 			
-			// aapt resource value: 0x7f0800e2
-			public const int drawer_layout = 2131230946;
+			// aapt resource value: 0x7f0800e3
+			public const int drawer_layout = 2131230947;
 			
-			// aapt resource value: 0x7f0800c8
-			public const int dropGruppe = 2131230920;
-			
-			// aapt resource value: 0x7f080100
-			public const int edit_project_text_view = 2131230976;
+			// aapt resource value: 0x7f080101
+			public const int edit_project_text_view = 2131230977;
 			
 			// aapt resource value: 0x7f080068
 			public const int edit_query = 2131230824;
 			
-			// aapt resource value: 0x7f0800dc
-			public const int emailUser = 2131230940;
+			// aapt resource value: 0x7f0800dd
+			public const int emailUser = 2131230941;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int email_account_edittext = 2131230887;
+			// aapt resource value: 0x7f0800a8
+			public const int email_account_edittext = 2131230888;
 			
 			// aapt resource value: 0x7f080021
 			public const int end = 2131230753;
 			
-			// aapt resource value: 0x7f0800fd
-			public const int end_padder = 2131230973;
+			// aapt resource value: 0x7f0800fe
+			public const int end_padder = 2131230974;
 			
 			// aapt resource value: 0x7f08002a
 			public const int enterAlways = 2131230762;
@@ -2906,8 +2909,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08005c
 			public const int expanded_menu = 2131230812;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int fab = 2131230913;
+			// aapt resource value: 0x7f0800c3
+			public const int fab = 2131230915;
 			
 			// aapt resource value: 0x7f08003b
 			public const int fill = 2131230779;
@@ -2921,17 +2924,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08003f
 			public const int @fixed = 2131230783;
 			
-			// aapt resource value: 0x7f0800da
-			public const int goProfile = 2131230938;
-			
-			// aapt resource value: 0x7f0800d7
-			public const int group_icon_imageview = 2131230935;
-			
-			// aapt resource value: 0x7f0800b0
-			public const int group_picker_spinner = 2131230896;
+			// aapt resource value: 0x7f0800db
+			public const int goProfile = 2131230939;
 			
 			// aapt resource value: 0x7f0800d8
-			public const int group_title_textview = 2131230936;
+			public const int group_icon_imageview = 2131230936;
+			
+			// aapt resource value: 0x7f0800b1
+			public const int group_picker_spinner = 2131230897;
+			
+			// aapt resource value: 0x7f0800d9
+			public const int group_title_textview = 2131230937;
 			
 			// aapt resource value: 0x7f080093
 			public const int hello_text = 2131230867;
@@ -2942,32 +2945,29 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080013
 			public const int homeAsUp = 2131230739;
 			
-			// aapt resource value: 0x7f0800e4
-			public const int home_frame_layout = 2131230948;
+			// aapt resource value: 0x7f0800e5
+			public const int home_frame_layout = 2131230949;
 			
-			// aapt resource value: 0x7f0800cc
-			public const int icAbmelden = 2131230924;
+			// aapt resource value: 0x7f0800cd
+			public const int icAbmelden = 2131230925;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int icLock = 2131230922;
 			
 			// aapt resource value: 0x7f0800c6
-			public const int icGruppe = 2131230918;
+			public const int icProfile = 2131230918;
 			
-			// aapt resource value: 0x7f0800c9
-			public const int icLock = 2131230921;
-			
-			// aapt resource value: 0x7f0800c2
-			public const int icProfile = 2131230914;
-			
-			// aapt resource value: 0x7f0800cf
-			public const int icVersion = 2131230927;
+			// aapt resource value: 0x7f0800d0
+			public const int icVersion = 2131230928;
 			
 			// aapt resource value: 0x7f08004b
 			public const int icon = 2131230795;
 			
-			// aapt resource value: 0x7f0800af
-			public const int iconAttach = 2131230895;
+			// aapt resource value: 0x7f0800b0
+			public const int iconAttach = 2131230896;
 			
-			// aapt resource value: 0x7f0800f8
-			public const int icon_group = 2131230968;
+			// aapt resource value: 0x7f0800f9
+			public const int icon_group = 2131230969;
 			
 			// aapt resource value: 0x7f080025
 			public const int ifRoom = 2131230757;
@@ -2975,35 +2975,35 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080048
 			public const int image = 2131230792;
 			
-			// aapt resource value: 0x7f080104
-			public const int image_thumbnail_layout = 2131230980;
+			// aapt resource value: 0x7f080105
+			public const int image_thumbnail_layout = 2131230981;
 			
-			// aapt resource value: 0x7f0800f4
-			public const int info = 2131230964;
+			// aapt resource value: 0x7f0800f5
+			public const int info = 2131230965;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int largeLabel = 2131230901;
+			// aapt resource value: 0x7f0800b7
+			public const int largeLabel = 2131230903;
 			
 			// aapt resource value: 0x7f080041
 			public const int lay_down = 2131230785;
 			
-			// aapt resource value: 0x7f0800e3
-			public const int layout_main = 2131230947;
+			// aapt resource value: 0x7f0800e4
+			public const int layout_main = 2131230948;
 			
 			// aapt resource value: 0x7f080034
 			public const int left = 2131230772;
 			
-			// aapt resource value: 0x7f08009c
-			public const int left_arrow_image_button = 2131230876;
+			// aapt resource value: 0x7f08009d
+			public const int left_arrow_image_button = 2131230877;
 			
-			// aapt resource value: 0x7f0800f9
-			public const int line1 = 2131230969;
+			// aapt resource value: 0x7f0800fa
+			public const int line1 = 2131230970;
 			
-			// aapt resource value: 0x7f0800fb
-			public const int line3 = 2131230971;
+			// aapt resource value: 0x7f0800fc
+			public const int line3 = 2131230972;
 			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
@@ -3011,17 +3011,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08004a
 			public const int list_item = 2131230794;
 			
-			// aapt resource value: 0x7f080097
-			public const int login_button = 2131230871;
+			// aapt resource value: 0x7f080098
+			public const int login_button = 2131230872;
 			
 			// aapt resource value: 0x7f08008d
 			public const int logoType = 2131230861;
 			
-			// aapt resource value: 0x7f080110
-			public const int masked = 2131230992;
+			// aapt resource value: 0x7f080111
+			public const int masked = 2131230993;
 			
-			// aapt resource value: 0x7f0800ed
-			public const int media_actions = 2131230957;
+			// aapt resource value: 0x7f0800ee
+			public const int media_actions = 2131230958;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -3032,41 +3032,41 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08001a
 			public const int multiply = 2131230746;
 			
-			// aapt resource value: 0x7f0800de
-			public const int music_icon_image_view = 2131230942;
-			
 			// aapt resource value: 0x7f0800df
-			public const int music_picker_spinner = 2131230943;
+			public const int music_icon_image_view = 2131230943;
 			
-			// aapt resource value: 0x7f0800e6
-			public const int music_title_text_view = 2131230950;
+			// aapt resource value: 0x7f0800e0
+			public const int music_picker_spinner = 2131230944;
+			
+			// aapt resource value: 0x7f0800e7
+			public const int music_title_text_view = 2131230951;
 			
 			// aapt resource value: 0x7f080078
 			public const int nachname_edittext = 2131230840;
 			
-			// aapt resource value: 0x7f080114
-			public const int nav_bisherige = 2131230996;
-			
 			// aapt resource value: 0x7f080115
-			public const int nav_einstellungen = 2131230997;
+			public const int nav_bisherige = 2131230997;
 			
 			// aapt resource value: 0x7f080116
-			public const int nav_hilfe = 2131230998;
+			public const int nav_einstellungen = 2131230998;
 			
-			// aapt resource value: 0x7f080113
-			public const int nav_project = 2131230995;
+			// aapt resource value: 0x7f080117
+			public const int nav_hilfe = 2131230999;
 			
-			// aapt resource value: 0x7f0800e5
-			public const int nav_view = 2131230949;
+			// aapt resource value: 0x7f080114
+			public const int nav_project = 2131230996;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int navigation_header_container = 2131230906;
+			// aapt resource value: 0x7f0800e6
+			public const int nav_view = 2131230950;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int navigation_header_container = 2131230908;
 			
 			// aapt resource value: 0x7f080026
 			public const int never = 2131230758;
 			
-			// aapt resource value: 0x7f0800d4
-			public const int next_button = 2131230932;
+			// aapt resource value: 0x7f0800d5
+			public const int next_button = 2131230933;
 			
 			// aapt resource value: 0x7f080086
 			public const int next_image_button = 2131230854;
@@ -3077,20 +3077,20 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080010
 			public const int normal = 2131230736;
 			
-			// aapt resource value: 0x7f0800f6
-			public const int notification_background = 2131230966;
+			// aapt resource value: 0x7f0800f7
+			public const int notification_background = 2131230967;
+			
+			// aapt resource value: 0x7f0800f1
+			public const int notification_main_column = 2131230961;
 			
 			// aapt resource value: 0x7f0800f0
-			public const int notification_main_column = 2131230960;
+			public const int notification_main_column_container = 2131230960;
 			
-			// aapt resource value: 0x7f0800ef
-			public const int notification_main_column_container = 2131230959;
+			// aapt resource value: 0x7f0800a0
+			public const int ok_image_button = 2131230880;
 			
-			// aapt resource value: 0x7f08009f
-			public const int ok_image_button = 2131230879;
-			
-			// aapt resource value: 0x7f080117
-			public const int one = 2131230999;
+			// aapt resource value: 0x7f080118
+			public const int one = 2131231000;
 			
 			// aapt resource value: 0x7f080037
 			public const int parallax = 2131230775;
@@ -3098,17 +3098,20 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08004f
 			public const int parentPanel = 2131230799;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int password_account_edittext = 2131230888;
+			// aapt resource value: 0x7f0800a9
+			public const int password_account_edittext = 2131230889;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int phone_image_view = 2131230891;
+			// aapt resource value: 0x7f0800ac
+			public const int phone_image_view = 2131230892;
 			
 			// aapt resource value: 0x7f080038
 			public const int pin = 2131230776;
 			
-			// aapt resource value: 0x7f0800d3
-			public const int previous_button = 2131230931;
+			// aapt resource value: 0x7f0800d4
+			public const int previous_button = 2131230932;
+			
+			// aapt resource value: 0x7f0800c4
+			public const int profile_picture_imageview = 2131230916;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -3119,14 +3122,14 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080082
 			public const int project_desc_text_view = 2131230850;
 			
-			// aapt resource value: 0x7f08010e
-			public const int project_imageview = 2131230990;
+			// aapt resource value: 0x7f08010f
+			public const int project_imageview = 2131230991;
 			
-			// aapt resource value: 0x7f0800ff
-			public const int project_name = 2131230975;
+			// aapt resource value: 0x7f080100
+			public const int project_name = 2131230976;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int project_preview_image_button = 2131230885;
+			// aapt resource value: 0x7f0800a6
+			public const int project_preview_image_button = 2131230886;
 			
 			// aapt resource value: 0x7f080081
 			public const int project_title_text_view = 2131230849;
@@ -3137,11 +3140,11 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08008c
 			public const int project_view_menu_button = 2131230860;
 			
-			// aapt resource value: 0x7f0800d5
-			public const int project_viewpager = 2131230933;
+			// aapt resource value: 0x7f0800d6
+			public const int project_viewpager = 2131230934;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int projects_recycler_view = 2131230912;
+			// aapt resource value: 0x7f0800c2
+			public const int projects_recycler_view = 2131230914;
 			
 			// aapt resource value: 0x7f080042
 			public const int pull_out = 2131230786;
@@ -3152,23 +3155,23 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08005f
 			public const int radio = 2131230815;
 			
-			// aapt resource value: 0x7f080098
-			public const int registriereAccount = 2131230872;
+			// aapt resource value: 0x7f080099
+			public const int registriereAccount = 2131230873;
 			
-			// aapt resource value: 0x7f08009a
-			public const int reset_image_button = 2131230874;
+			// aapt resource value: 0x7f08009b
+			public const int reset_image_button = 2131230875;
 			
 			// aapt resource value: 0x7f080035
 			public const int right = 2131230773;
 			
-			// aapt resource value: 0x7f08009e
-			public const int right_arrow_image_button = 2131230878;
+			// aapt resource value: 0x7f08009f
+			public const int right_arrow_image_button = 2131230879;
 			
-			// aapt resource value: 0x7f0800f5
-			public const int right_icon = 2131230965;
+			// aapt resource value: 0x7f0800f6
+			public const int right_icon = 2131230966;
 			
-			// aapt resource value: 0x7f0800f1
-			public const int right_side = 2131230961;
+			// aapt resource value: 0x7f0800f2
+			public const int right_side = 2131230962;
 			
 			// aapt resource value: 0x7f08001b
 			public const int screen = 2131230747;
@@ -3233,17 +3236,17 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080017
 			public const int showTitle = 2131230743;
 			
-			// aapt resource value: 0x7f080103
-			public const int showVideo = 2131230979;
+			// aapt resource value: 0x7f080104
+			public const int showVideo = 2131230980;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int smallLabel = 2131230900;
+			// aapt resource value: 0x7f0800b6
+			public const int smallLabel = 2131230902;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int snackbar_action = 2131230905;
+			// aapt resource value: 0x7f0800bb
+			public const int snackbar_action = 2131230907;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int snackbar_text = 2131230904;
+			// aapt resource value: 0x7f0800ba
+			public const int snackbar_text = 2131230906;
 			
 			// aapt resource value: 0x7f08002e
 			public const int snap = 2131230766;
@@ -3266,11 +3269,11 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080036
 			public const int start = 2131230774;
 			
-			// aapt resource value: 0x7f0800d6
-			public const int start_project_button = 2131230934;
+			// aapt resource value: 0x7f0800d7
+			public const int start_project_button = 2131230935;
 			
-			// aapt resource value: 0x7f0800ec
-			public const int status_bar_latest_event_content = 2131230956;
+			// aapt resource value: 0x7f0800ed
+			public const int status_bar_latest_event_content = 2131230957;
 			
 			// aapt resource value: 0x7f080060
 			public const int submenuarrow = 2131230816;
@@ -3278,32 +3281,32 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080071
 			public const int submit_area = 2131230833;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int success_message_text_view = 2131230880;
+			// aapt resource value: 0x7f0800a1
+			public const int success_message_text_view = 2131230881;
 			
-			// aapt resource value: 0x7f080101
-			public const int swipe_layout = 2131230977;
+			// aapt resource value: 0x7f080102
+			public const int swipe_layout = 2131230978;
 			
 			// aapt resource value: 0x7f080011
 			public const int tabMode = 2131230737;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int terms_imageview = 2131230889;
-			
 			// aapt resource value: 0x7f0800aa
-			public const int terms_textview = 2131230890;
+			public const int terms_imageview = 2131230890;
 			
-			// aapt resource value: 0x7f0800fc
-			public const int text = 2131230972;
+			// aapt resource value: 0x7f0800ab
+			public const int terms_textview = 2131230891;
 			
-			// aapt resource value: 0x7f0800fa
-			public const int text2 = 2131230970;
+			// aapt resource value: 0x7f0800fd
+			public const int text = 2131230973;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int textAccount = 2131230886;
+			// aapt resource value: 0x7f0800fb
+			public const int text2 = 2131230971;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int textGrub = 2131230892;
+			// aapt resource value: 0x7f0800a7
+			public const int textAccount = 2131230887;
+			
+			// aapt resource value: 0x7f0800ad
+			public const int textGrub = 2131230893;
 			
 			// aapt resource value: 0x7f080054
 			public const int textSpacerNoButtons = 2131230804;
@@ -3314,8 +3317,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080075
 			public const int textWillkommen = 2131230837;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int text_input_password_toggle = 2131230911;
+			// aapt resource value: 0x7f0800c1
+			public const int text_input_password_toggle = 2131230913;
 			
 			// aapt resource value: 0x7f08000c
 			public const int textinput_counter = 2131230732;
@@ -3323,11 +3326,11 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08000d
 			public const int textinput_error = 2131230733;
 			
-			// aapt resource value: 0x7f080119
-			public const int three = 2131231001;
+			// aapt resource value: 0x7f08011a
+			public const int three = 2131231002;
 			
-			// aapt resource value: 0x7f0800f2
-			public const int time = 2131230962;
+			// aapt resource value: 0x7f0800f3
+			public const int time = 2131230963;
 			
 			// aapt resource value: 0x7f080087
 			public const int time_video_detail_layout = 2131230855;
@@ -3353,8 +3356,8 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f080058
 			public const int topPanel = 2131230808;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int touch_outside = 2131230902;
+			// aapt resource value: 0x7f0800b8
+			public const int touch_outside = 2131230904;
 			
 			// aapt resource value: 0x7f08000a
 			public const int transition_current_scene = 2131230730;
@@ -3362,71 +3365,71 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08000b
 			public const int transition_scene_layoutid_cache = 2131230731;
 			
-			// aapt resource value: 0x7f080118
-			public const int two = 2131231000;
+			// aapt resource value: 0x7f080119
+			public const int two = 2131231001;
 			
-			// aapt resource value: 0x7f0800cd
-			public const int txtAbmelden = 2131230925;
+			// aapt resource value: 0x7f0800ce
+			public const int txtAbmelden = 2131230926;
 			
 			// aapt resource value: 0x7f080076
 			public const int txtAccountParagraph = 2131230838;
 			
-			// aapt resource value: 0x7f0800c4
-			public const int txtEmail = 2131230916;
+			// aapt resource value: 0x7f0800c8
+			public const int txtEmail = 2131230920;
+			
+			// aapt resource value: 0x7f0800ae
+			public const int txtGruppeParagraph = 2131230894;
+			
+			// aapt resource value: 0x7f0800cb
+			public const int txtLock = 2131230923;
 			
 			// aapt resource value: 0x7f0800c7
-			public const int txtGruppe = 2131230919;
+			public const int txtName = 2131230919;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int txtGruppeParagraph = 2131230893;
-			
-			// aapt resource value: 0x7f0800ca
-			public const int txtLock = 2131230922;
-			
-			// aapt resource value: 0x7f0800c3
-			public const int txtName = 2131230915;
-			
-			// aapt resource value: 0x7f080094
-			public const int txtNameApp = 2131230868;
-			
-			// aapt resource value: 0x7f0800d0
-			public const int txtVersion = 2131230928;
+			// aapt resource value: 0x7f080095
+			public const int txtNameApp = 2131230869;
 			
 			// aapt resource value: 0x7f0800d1
-			public const int txtVersionData = 2131230929;
+			public const int txtVersion = 2131230929;
 			
-			// aapt resource value: 0x7f08010c
-			public const int unlock_disabled_row_imagebutton = 2131230988;
+			// aapt resource value: 0x7f0800d2
+			public const int txtVersionData = 2131230930;
+			
+			// aapt resource value: 0x7f08010d
+			public const int unlock_disabled_row_imagebutton = 2131230989;
 			
 			// aapt resource value: 0x7f080009
 			public const int up = 2131230729;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int upload_video_facebook_button = 2131230897;
+			// aapt resource value: 0x7f0800b2
+			public const int upload_video_facebook_button = 2131230898;
 			
 			// aapt resource value: 0x7f080018
 			public const int useLogo = 2131230744;
 			
-			// aapt resource value: 0x7f080095
-			public const int user_email_edittext = 2131230869;
-			
 			// aapt resource value: 0x7f080096
-			public const int user_password_edittext = 2131230870;
+			public const int user_email_edittext = 2131230870;
+			
+			// aapt resource value: 0x7f080097
+			public const int user_password_edittext = 2131230871;
+			
+			// aapt resource value: 0x7f080108
+			public const int video_complete_status_imagebutton = 2131230984;
 			
 			// aapt resource value: 0x7f080107
-			public const int video_complete_status_imagebutton = 2131230983;
-			
-			// aapt resource value: 0x7f080106
-			public const int video_counter = 2131230982;
+			public const int video_counter = 2131230983;
 			
 			// aapt resource value: 0x7f080088
 			public const int video_desc_text_view = 2131230856;
 			
-			// aapt resource value: 0x7f080108
-			public const int video_length_text_view = 2131230984;
+			// aapt resource value: 0x7f080109
+			public const int video_length_text_view = 2131230985;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int video_recording_image_button = 2131230881;
+			// aapt resource value: 0x7f0800b3
+			public const int video_progressbar = 2131230899;
+			
+			// aapt resource value: 0x7f0800a2
+			public const int video_recording_image_button = 2131230882;
 			
 			// aapt resource value: 0x7f080085
 			public const int video_thumbnail_image_view = 2131230853;
@@ -3437,23 +3440,23 @@ namespace VideoAppUISample.Droid
 			// aapt resource value: 0x7f08008a
 			public const int video_time_text_view = 2131230858;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int video_timer_layout = 2131230883;
+			// aapt resource value: 0x7f0800a4
+			public const int video_timer_layout = 2131230884;
 			
-			// aapt resource value: 0x7f08009b
-			public const int video_trim_ok_button = 2131230875;
+			// aapt resource value: 0x7f08009c
+			public const int video_trim_ok_button = 2131230876;
 			
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f08010f
-			public const int visible = 2131230991;
+			// aapt resource value: 0x7f080110
+			public const int visible = 2131230992;
 			
 			// aapt resource value: 0x7f080077
 			public const int vorname_edittext = 2131230839;
 			
-			// aapt resource value: 0x7f0800e1
-			public const int vorschau_button = 2131230945;
+			// aapt resource value: 0x7f0800e2
+			public const int vorschau_button = 2131230946;
 			
 			// aapt resource value: 0x7f080079
 			public const int weiter_button = 2131230841;
@@ -4089,6 +4092,9 @@ namespace VideoAppUISample.Droid
 			
 			// aapt resource value: 0x7f0b003c
 			public const int title_activity_new_project = 2131427388;
+			
+			// aapt resource value: 0x7f0b0059
+			public const int user_gruppe_andern = 2131427417;
 			
 			// aapt resource value: 0x7f0b0041
 			public const int vorname = 2131427393;

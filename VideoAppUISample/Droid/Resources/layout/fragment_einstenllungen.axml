@@ -12,13 +12,15 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_162dp">
         <!--bitmap profile-->
-          <refractored.controls.CircleImageView
-               android:layout_width="@dimen/margin_126dp"
+            <refractored.controls.CircleImageView
+                android:id="@+id/profile_picture_imageview"
+                android:layout_width="@dimen/margin_126dp"
                 android:layout_height="@dimen/margin_126dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/login" />
         <!--andern-->
             <TextView
+                android:id="@+id/andern_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -82,34 +84,26 @@
                 </RelativeLayout>
             <!--user gruppe andern-->
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/contentGruppe"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="@dimen/margin_16dp"
+                    android:background="@drawable/background_drop_down">
+                <!--icon attach-->
                     <ImageView
-                        android:id="@+id/icGruppe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_16dp"
-                        android:background="@drawable/ic_link_black" />
-                <!--gruppe-->
-                    <TextView
-                        android:id="@+id/txtGruppe"
+                        android:id="@+id/iconAttach"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/icGruppe"
-                        android:layout_toRightOf="@+id/icGruppe"
-                        android:text="User Grrppe andern"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-                <!--icon arrow-->
-                    <ImageView
-                        android:id="@+id/dropGruppe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:padding="@dimen/margin_16dp"
-                        android:src="@drawable/ic_drop_down" />
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:src="@drawable/ic_attach" />
+                    <Spinner
+                        android:prompt="@string/user_gruppe_andern"
+                        android:id="@+id/group_picker_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/iconAttach"
+                        android:layout_toRightOf="@+id/iconAttach" />
                 </RelativeLayout>
             <!--lock-->
                 <RelativeLayout

@@ -12,13 +12,13 @@
         android:src="@drawable/login"
         tools:ignore="ContentDescription" />
 <!--return activity-->
-<!--<ImageButton
-        android:id="@+id/backActivity"
+    <ImageButton
+        android:id="@+id/back_button_imagebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
         android:padding="16dp"
-        android:src="@drawable/ic_arrow_back" />-->
+        android:src="@drawable/ic_arrow_back" />
 <!--logotipo-->
     <ImageView
         android:id="@+id/logoType"

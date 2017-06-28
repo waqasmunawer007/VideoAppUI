@@ -15,11 +15,12 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "VideoWirdActivity")]
+	[Activity(Label = "VideoWirdActivity", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class VideoWirdActivity : AppCompatActivity
 	{
         ImageButton mBackButton;
-		ProgressDialog mProgressDialog;
+        ProgressBar mProgress;
+		//ProgressDialog mProgressDialog;
 		int progressStatus = 0;
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -28,34 +29,49 @@ namespace VideoAppUISample.Droid
 			// Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_video_wird);
             mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
+            mProgress = FindViewById<ProgressBar>(Resource.Id.video_progressbar);
+            SetUpProgressbar();
+
 			mBackButton.Click += delegate
 			{
-				base.OnBackPressed();
+                LaunchProjectOverviewScreen();
 			};
-			CreateProgressDialog();
+
 		}
 
-		/// <summary>
-		/// Creates the  progress dialog.
-		/// </summary>
-		public void CreateProgressDialog()
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+            LaunchProjectOverviewScreen();
+        }
+
+        private void LaunchProjectOverviewScreen()
+        {
+			Intent intent = new Intent(this, typeof(MainActivity)); //with option Project overview screen
+			intent.PutExtra("launch_project_overview", true);// will use to determine either launch Project Overview screen or not
+			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
+			intent.AddFlags(ActivityFlags.NewTask);
+			StartActivity(intent);
+			Finish();
+        }
+		private void LaunchShareActivity()
 		{
-			mProgressDialog = new ProgressDialog(this);
-			mProgressDialog.Indeterminate = false;
-			mProgressDialog.SetMessage("WIRD GELADEN...");
-			mProgressDialog.SetProgressStyle(ProgressDialogStyle.Horizontal);
-			mProgressDialog.SetCancelable(true);
-			mProgressDialog.Max = 100;
-			mProgressDialog.Progress = 0;
-			mProgressDialog.Show();
-
-			UpdateProgress();//updates the progress
+			Intent intent = new Intent(this, typeof(ShareActivity));
+			StartActivity(intent);
 		}
+        #region Progressbar
+        private void SetUpProgressbar()
+        {
+            mProgress.Progress = 0;   // Main Progress
+            mProgress.Indeterminate = false;
+            mProgress.Max = 100; // Maximum Progress
+            UpdateProgress();
+        }
 
 		/// <summary>
-		/// Updates the download progress value
+		/// Updates the video length timebar
 		/// </summary>
-		public void UpdateProgress()
+	    public void UpdateProgress()
 		{
 			progressStatus = 0;
 			new System.Threading.Thread(new ThreadStart(delegate
@@ -65,7 +81,11 @@ namespace VideoAppUISample.Droid
 					progressStatus += 1;
 					try
 					{
-						System.Threading.Thread.Sleep(100); //actual downloading work do here
+						System.Threading.Thread.Sleep(100);
+                        if (progressStatus == 100)
+                        {
+							LaunchShareActivity();
+                        }
 					}
 					catch (InterruptedException e)
 					{
@@ -73,21 +93,13 @@ namespace VideoAppUISample.Droid
 					}
 					RunOnUiThread(() =>
 					{
-						mProgressDialog.Progress = progressStatus;
-						if (progressStatus == 100)
-						{
-							mProgressDialog.Hide();
-							System.Threading.Thread.Sleep(1000);
-							LoadShareActivity();
-						}
+						mProgress.Progress = progressStatus;
 					});
 				}
 			})).Start();
 		}
-		private void LoadShareActivity()
-		{
-			Intent intent = new Intent(this, typeof(ShareActivity));
-			StartActivity(intent);
-		}
+        #endregion
+       
+
 	}
 }

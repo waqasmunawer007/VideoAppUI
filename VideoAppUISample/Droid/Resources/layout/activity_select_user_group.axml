@@ -47,6 +47,7 @@
             android:padding="@dimen/margin_16dp"
             android:src="@drawable/ic_attach" />
         <Spinner
+            android:prompt="@string/user_gruppe_andern"
             android:id="@+id/group_picker_spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

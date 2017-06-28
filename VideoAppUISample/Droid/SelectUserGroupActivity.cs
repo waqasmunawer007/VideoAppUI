@@ -58,7 +58,7 @@ namespace VideoAppUISample.Droid
         private List<Group> PrepareSampleGroups()
 		{
             List<Group> groups = new List<Group>();
-			Group g0 = new Group()
+			Group g0 = new Group() //Todo somehow 'prompt' property to set title for Spinner not working, so adding one extra group to set title
 			{
 				GroupName = "Deine User Gruppe",
 				GroupId = 0

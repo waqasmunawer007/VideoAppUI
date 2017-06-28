@@ -49,7 +49,6 @@ namespace VideoAppUISample.Droid
 			{
 				Intent intent = new Intent(this.Activity, typeof(MainActivity));
 				StartActivity(intent);
-				//Toast.MakeText(this.Activity, "OK", ToastLength.Long).Show();
 			};
             return mRootView;
 		}

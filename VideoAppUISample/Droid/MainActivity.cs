@@ -7,6 +7,7 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Android.Graphics;
+using Android.Content;
 
 namespace VideoAppUISample.Droid
 {
@@ -45,7 +46,7 @@ namespace VideoAppUISample.Droid
 		/// </summary>
 		private void SetupToolbar()
 		{
-            mToolbar.Background.SetAlpha(0);
+            //mToolbar.Background.SetAlpha(0);
             //mToolbar.SetBackgroundResource(Resource.Color.transparent);
 			SetSupportActionBar(mToolbar);
 			SupportActionBar.SetTitle(Resource.String.projectk);
@@ -75,12 +76,32 @@ namespace VideoAppUISample.Droid
 			tx.Add(Resource.Id.home_frame_layout, mFragmentBisherige);
 			tx.Add(Resource.Id.home_frame_layout, mFragmentEinstenllungen);
 			tx.Add(Resource.Id.home_frame_layout, mFragmentHilfe);
-			tx.Hide(mFragmentBisherige);
+            Intent intent = Intent;
+            if (intent != null)
+            {
+                bool projectViewLaunchMode = intent.GetBooleanExtra("launch_project_overview", false);
+                if (projectViewLaunchMode)
+                {
+                    //show Project OverView screen and hide Project screen
+					tx.Hide(mFragmentProject);	
+                    mCurrentFragment = mFragmentBisherige;
+                }
+                else
+                {
+                    //hide Project Overview screen and show Project screen
+					tx.Hide(mFragmentBisherige);
+					mCurrentFragment = mFragmentProject;
+                }
+            }
+            else
+            {
+				//hide Project Overview screen and show Project screen
+				tx.Hide(mFragmentBisherige);
+				mCurrentFragment = mFragmentProject;
+            }
 			tx.Hide(mFragmentEinstenllungen);
 			tx.Hide(mFragmentHilfe);
-			mCurrentFragment = mFragmentProject;
 			tx.Commit();
-		
 		}
 		/// <summary>
 		/// Shows the selected fragment.
