@@ -354,3 +354,6 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xhdpi/template.png
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xxhdpi/template.png
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-xxxhdpi/template.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-hdpi/ic_file_download.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable-hdpi/ic_play_circle_fill.png
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/Droid/obj/Debug/res/drawable/custom_progressbar.xml

@@ -452,6 +452,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\template.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_file_download.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_play_circle_fill.png" />
+    <AndroidResource Include="Resources\drawable\custom_progressbar.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />
