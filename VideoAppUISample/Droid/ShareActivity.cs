@@ -16,23 +16,30 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "ShareActivity")]
+	[Activity(Label = "ShareActivity",ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class ShareActivity : AppCompatActivity
 	{
 		ProgressBar mProgress;
 		int progressStatus = 0;
 		ImageButton mBackButton;
+        ImageButton mPlayButton;
 		Button mFBButton;
+        TextView mToolbarTitleTextView;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.activity_share);
+            mToolbarTitleTextView = FindViewById<TextView>(Resource.Id.toolbar_title_text_view);
 			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
+            mPlayButton = FindViewById<ImageButton>(Resource.Id.video_play_imagebutton);
 			mFBButton = FindViewById<Button>(Resource.Id.upload_video_facebook_button);
 			mProgress = FindViewById<ProgressBar>(Resource.Id.video_time_line_progressbar);
-			SetUpToolbar();
-			SetupVideoProgressTimeBar();
+			
+            SetUpToolbar();
+            mPlayButton.Click += delegate {
+                SetupVideoProgressTimeBar();
+            };
 		}
 
 		/// <summary>
@@ -40,12 +47,16 @@ namespace VideoAppUISample.Droid
 		/// </summary>
 		private void SetUpToolbar()
 		{
+            mToolbarTitleTextView.Text = "Project-Name";
 			mBackButton.Click += delegate
 			{
-				base.OnBackPressed();
+				LaunchProjectOverviewScreen();
 			};
 		}
 
+        /// <summary>
+        /// Setups the video progress time bar.
+        /// </summary>
 		private void SetupVideoProgressTimeBar()
 		{ 
 			mProgress.Progress = 0;   // Main Progress
@@ -83,6 +94,22 @@ namespace VideoAppUISample.Droid
 				}
 			})).Start();
 		}
+
+		public override void OnBackPressed()
+		{
+			base.OnBackPressed();
+			LaunchProjectOverviewScreen();
+		}
+		private void LaunchProjectOverviewScreen()
+		{
+			Intent intent = new Intent(this, typeof(MainActivity)); //with option Project overview screen
+			intent.PutExtra("launch_project_overview", true);// will use to determine either launch Project Overview screen or not
+			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
+			intent.AddFlags(ActivityFlags.NewTask);
+			StartActivity(intent);
+			Finish();
+		}
+
 	}
 }
 

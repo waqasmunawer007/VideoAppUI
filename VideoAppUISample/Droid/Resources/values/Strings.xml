@@ -56,6 +56,9 @@
   <string name="disabled_row_text">disbaled row text</string>	
   <string name="vorschau_text">vorschau</string>
   <string name="hochkladen_text">Logo Hochkladen</string>
-  <string name="user_gruppe_andern">User Gruppe andern</string>	
+  <string name="user_gruppe_andern">User Gruppe andern</string>
+  <string name="share_facebook">Auf Facebook veroffentlichen</string>
+  <string name="share_youtube">Auf Youtube veroffentlichen</string>
+  <string name="video_local_save">video lokal speichern</string>	
 </resources>
 

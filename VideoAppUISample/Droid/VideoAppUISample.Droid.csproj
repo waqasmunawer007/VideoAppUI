@@ -450,6 +450,8 @@
     <AndroidResource Include="Resources\drawable-xhdpi\template.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\template.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\template.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_file_download.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_play_circle_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

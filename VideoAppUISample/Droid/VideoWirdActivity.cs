@@ -20,7 +20,6 @@ namespace VideoAppUISample.Droid
 	{
         ImageButton mBackButton;
         ProgressBar mProgress;
-		//ProgressDialog mProgressDialog;
 		int progressStatus = 0;
 
 		protected override void OnCreate(Bundle savedInstanceState)
