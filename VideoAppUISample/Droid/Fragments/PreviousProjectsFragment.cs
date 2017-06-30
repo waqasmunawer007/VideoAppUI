@@ -75,104 +75,35 @@ namespace VideoAppUISample.Droid
         void OnVideoItemClick(object sender, int position)
         {
             Project selectedProject = mViewAdapter.GetSelectedProject(position);
-			//Todo correct way to pass the selected project through intent by implementing ISerializable or IParceable interface.
-            DetailProjectActivity.SelectedProject = selectedProject; 
+			//Todo  pass the selected project through intent by implementing ISerializable or IParceable interface.
 			Intent intent = new Intent(this.Activity, typeof(DetailProjectActivity));
 			StartActivity(intent);
 		}
 
-		//Todo Temp function
 		private List<Project> PrepareSampleProjects()
 		{
-            //project #1
+			//project #1
 			Project project1 = new Project();
 			project1.Title = "Personal Spot1";
 			project1.Description = GetString(Resource.String.welcome_paragraph);
-            List<ProjectVideo> project1Videos = new List<ProjectVideo>();
-            ProjectVideo video1 = new ProjectVideo()
-            {
-                VideoDescription = GetString(Resource.String.welcome_paragraph),
-                VideoLength = "21:00",
-				isVideoCompleted = true,
-                Counter = 1
-
-            };
-            project1Videos.Add(video1);
-			ProjectVideo video2 = new ProjectVideo()
-			{
-				VideoDescription = GetString(Resource.String.welcome_paragraph),
-				VideoLength = "22:00",
-                isVideoCompleted = false,
-                Counter = 2   
-
-			};
-            project1Videos.Add(video2);
-			ProjectVideo video3 = new ProjectVideo()
-			{
-				VideoDescription = GetString(Resource.String.welcome_paragraph),
-				VideoLength = "23:00",
-				isVideoCompleted = true,
-                Counter = 3
-
-			};
-            project1Videos.Add(video3);
-
-			ProjectVideo video4 = new ProjectVideo()
-			{
-				VideoDescription = GetString(Resource.String.welcome_paragraph),
-				VideoLength = "23:00",
-				isVideoCompleted = false,
-                Counter = 4
-
-			};
-			project1Videos.Add(video4);
-
-            project1.ProjectVideos = project1Videos;
 			sampleProjectList.Add(project1);
 
-
-            //project #2
+			//project #2
 			Project project2 = new Project();
 			project2.Title = "Personal Spot2";
 			project2.Description = GetString(Resource.String.welcome_paragraph);
-
-			List<ProjectVideo> project2Videos = new List<ProjectVideo>();
-			project2Videos.Add(video1);
-			project2Videos.Add(video2);
-			project2Videos.Add(video3);
-            project2Videos.Add(video4);
-
-			project2.ProjectVideos = project2Videos;
 			sampleProjectList.Add(project2);
 
 			//project #3
 			Project project3 = new Project();
 			project3.Title = "Personal Spot3";
 			project3.Description = GetString(Resource.String.welcome_paragraph);
-
-			List<ProjectVideo> project3Videos = new List<ProjectVideo>();
-			project3Videos.Add(video1);
-			project3Videos.Add(video2);
-			project3Videos.Add(video3);
-            project2Videos.Add(video4);
-
-			project3.ProjectVideos = project3Videos;
-
 			sampleProjectList.Add(project3);
 
-            //project #4
+			//project #4
 			Project project4 = new Project();
 			project4.Title = "Personal Spot4";
 			project4.Description = GetString(Resource.String.welcome_paragraph);
-
-			List<ProjectVideo> project4Videos = new List<ProjectVideo>();
-			project4Videos.Add(video1);
-			project4Videos.Add(video2);
-			project4Videos.Add(video3);
-            project2Videos.Add(video4);
-
-			project4.ProjectVideos = project4Videos;
-
 			sampleProjectList.Add(project4);
 
 

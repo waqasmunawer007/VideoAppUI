@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/LoginActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/IntroductionVideoActivity.cs">
     <Files>
-      <File FileName="Droid/ShareActivity.cs" Line="39" Column="28" />
-      <File FileName="Droid/LoginActivity.cs" Line="19" Column="3" />
-      <File FileName="Droid/Resources/drawable/custom_progressbar.xml" Line="24" Column="55" />
+      <File FileName="Droid/RotatePhoneActivity.cs" Line="21" Column="47" />
+      <File FileName="Droid/ShareActivity.cs" Line="110" Column="13" />
+      <File FileName="Droid/IntroductionVideoActivity.cs" Line="19" Column="101" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -10,6 +10,7 @@
   <color name="colorAccent">#1cdfd3</color>
   <color name="white">#ffffff</color>
   <color name="black">#000000</color>
+  <color name="blackTransparent">#7F000000</color>
   <color name="blueLight">#36cafc</color>
   <color name="colorFacebook">#3b5999</color>
   <color name="colorGoogle">#dd4b39</color>
@@ -21,6 +22,7 @@
   <color name="colorRed">#F44336</color>
   <color name="colorGreen">#69F0AE</color>
   <color name="colorRedTransparent">#66F44336</color>
-  <color name="colorGrayTransparent">#9F9E9E9E</color>	
+  <color name="colorGrayTransparent">#9F9E9E9E</color>
+  <color name="colorDarkBlue">#2196F3</color>   
 </resources>
 

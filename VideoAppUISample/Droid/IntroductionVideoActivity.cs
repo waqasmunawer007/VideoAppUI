@@ -16,7 +16,7 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "ShareActivity")]
+    [Activity(Label = "ShareActivity",ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape)]
 	public class IntroductionVideoActivity : AppCompatActivity
 	{
 		ProgressBar mProgress;

@@ -6,9 +6,12 @@ using System.Text;
 using System.Threading;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
+using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
@@ -16,15 +19,18 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "DownloadProjectActivity")]
+	[Activity(Label = "DownloadProjectActivity",ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class DownloadProjectActivity : AppCompatActivity
 	{
 		ProgressDialog mProgressDialog;
 		ImageButton mBackButton;
+        ImageView mProjectImageView;
+        Button mJettztButton;
 		ImageButton mDownloadButton;
 		TextView mProjectTitleTextView;
 		TextView mProjectDescTextView;
-
+        LinearLayout mBottomLayout;
+        bool ifDownloaded = false;
 		int progressStatus = 0;
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -32,25 +38,44 @@ namespace VideoAppUISample.Droid
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.activity_download_project);
-			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
+            mProjectImageView = FindViewById<ImageView>(Resource.Id.project_imageview);
+			mBackButton = FindViewById<ImageButton>(Resource.Id.back_button_imagebutton);
+            mJettztButton = FindViewById<Button>(Resource.Id.jettzt_button);
+            mBottomLayout = FindViewById<LinearLayout>(Resource.Id.bottom_layout);
 			mDownloadButton = FindViewById<ImageButton>(Resource.Id.download_image_button);
 			mProjectTitleTextView = FindViewById<TextView>(Resource.Id.project_title_text_view);
 			mProjectDescTextView = FindViewById<TextView>(Resource.Id.project_desc_text_view);
-			SetUpToolbar();
+			
+            mProjectImageView.SetBackgroundResource(Resource.Drawable.template);
+
 			mDownloadButton.Click+=delegate {
-				CreateDownloadProgressDialog(); 
+                if (!ifDownloaded)
+                {
+                   CreateDownloadProgressDialog();
+				}
+				
 			};
-		}
-		/// <summary>
-		/// Sets up toolbar.
-		/// </summary>
-		private void SetUpToolbar()
-		{
+
 			mBackButton.Click += delegate
 			{
 				base.OnBackPressed();
 			};
+            mJettztButton.Click += delegate {
+				LoadRotatePhoneActivity();
+			};
 		}
+        /// <summary>
+        /// Updates the user interface once the downloading completed.
+        /// </summary>
+        private void UpdateUI()
+        {
+			mProjectTitleTextView.Text = "Ausgezeichnet!";
+			mProjectDescTextView.Visibility = ViewStates.Visible;
+			mDownloadButton.SetBackgroundResource(Resource.Drawable.bt_done);
+			mJettztButton.Visibility = ViewStates.Visible;
+			mBottomLayout.Visibility = ViewStates.Gone;
+			mProgressDialog.Hide(); 
+        }
 		/// <summary>
 		/// Creates the download progress dialog.
 		/// </summary>
@@ -91,13 +116,8 @@ namespace VideoAppUISample.Droid
 						mProgressDialog.Progress = progressStatus;
 						if (progressStatus == 100)
 						{
-							mProjectDescTextView.Visibility = ViewStates.Visible;
-							mDownloadButton.SetBackgroundResource(Resource.Drawable.bt_done);
-							mProgressDialog.Hide();
-							//do some wait and then launch Rotate Phone screen
-							System.Threading.Thread.Sleep(2000);
-							LoadRotatePhoneActivity();
-
+                            ifDownloaded = true;
+                            UpdateUI();
 						}
 					});
 				}
@@ -106,8 +126,77 @@ namespace VideoAppUISample.Droid
 
 		private void LoadRotatePhoneActivity()
 		{
-			Intent intent = new Intent(this, typeof(RotatePhoneActivity));
-			StartActivity(intent);
+            ScreenOrientation oreintation = GetScreenOrientation();
+            if (oreintation == ScreenOrientation.Landscape) //If already in landscape, just skipe Rotate Phone screen
+            {
+				Intent intent = new Intent(this, typeof(IntroductionVideoActivity));
+				StartActivity(intent);
+            }
+            else
+            {
+				Intent intent = new Intent(this, typeof(RotatePhoneActivity));
+				StartActivity(intent); 
+            }
+		}
+        /// <summary>
+        /// Gets the screen orientation.
+        /// </summary>
+        /// <returns>The screen orientation.</returns>
+		private ScreenOrientation GetScreenOrientation()
+		{
+			ScreenOrientation orientation;
+			SurfaceOrientation rotation = WindowManager.DefaultDisplay.Rotation;
+
+			DisplayMetrics dm = new DisplayMetrics();
+			WindowManager.DefaultDisplay.GetMetrics(dm);
+
+			if ((rotation == SurfaceOrientation.Rotation0 || rotation == SurfaceOrientation.Rotation180) && dm.HeightPixels > dm.WidthPixels
+				|| (rotation == SurfaceOrientation.Rotation90 || rotation == SurfaceOrientation.Rotation270) && dm.WidthPixels > dm.HeightPixels)
+			{
+				// The device's natural orientation is portrait
+				switch (rotation)
+				{
+					case SurfaceOrientation.Rotation0:
+						orientation = ScreenOrientation.Portrait;
+						break;
+					case SurfaceOrientation.Rotation90:
+						orientation = ScreenOrientation.Landscape;
+						break;
+					case SurfaceOrientation.Rotation180:
+						orientation = ScreenOrientation.ReversePortrait;
+						break;
+					case SurfaceOrientation.Rotation270:
+						orientation = ScreenOrientation.ReverseLandscape;
+						break;
+					default:
+						orientation = ScreenOrientation.Portrait;
+						break;
+				}
+			}
+			else
+			{
+				// The device's natural orientation is landscape or if the device is square
+				switch (rotation)
+				{
+					case SurfaceOrientation.Rotation0:
+						orientation = ScreenOrientation.Landscape;
+						break;
+					case SurfaceOrientation.Rotation90:
+						orientation = ScreenOrientation.Portrait;
+						break;
+					case SurfaceOrientation.Rotation180:
+						orientation = ScreenOrientation.ReverseLandscape;
+						break;
+					case SurfaceOrientation.Rotation270:
+						orientation = ScreenOrientation.ReversePortrait;
+						break;
+					default:
+						orientation = ScreenOrientation.Landscape;
+						break;
+				}
+			}
+
+			return orientation;
 		}
 	}
 }

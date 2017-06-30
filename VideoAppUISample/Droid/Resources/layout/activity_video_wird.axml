@@ -41,8 +41,7 @@
             android:id="@+id/video_progressbar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:progress="10"
-            android:progressBackgroundTint="@color/colorBackgroundTimeProgressbar"
-            android:progressTint="@color/colorTintTimebar"
+            android:progressDrawable="@drawable/custom_progressbar_1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_16dp" />
         <TextView

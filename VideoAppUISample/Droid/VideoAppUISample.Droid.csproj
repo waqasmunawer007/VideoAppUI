@@ -453,6 +453,19 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_file_download.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_play_circle_fill.png" />
     <AndroidResource Include="Resources\drawable\custom_progressbar.xml" />
+    <AndroidResource Include="Resources\drawable\custom_progressbar_1.xml" />
+    <AndroidResource Include="Resources\drawable\rotate_screen_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\rotate_screen_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\rotate_screen_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\rotate_screen_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\rotate_screen_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\rotate_screen_background.png" />
+    <AndroidResource Include="Resources\drawable\ic_burger_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_burger_menu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_burger_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_burger_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_burger_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_burger_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

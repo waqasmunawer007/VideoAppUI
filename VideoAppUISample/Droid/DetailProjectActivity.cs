@@ -19,13 +19,11 @@ namespace VideoAppUISample.Droid
 	[Activity(Label = "DetailProjectActivity" ,ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class DetailProjectActivity : Activity
 	{
-
 		RecyclerView mPrjectRecyclerView;
 		LinearLayoutManager mLayoutManager;
 		ProjectVideoRecyclerViewAdapter mViewAdapter { get; set; }
         TextView mToolbarTitleTextView;
         ImageButton mBackButton;
-        public static Project SelectedProject;
 	
  		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -43,10 +41,7 @@ namespace VideoAppUISample.Droid
         /// </summary>
         private void SetUpToolbar()
         {
-			if (SelectedProject != null)
-			{ 
-				mToolbarTitleTextView.Text = SelectedProject.Title;
-			}
+			mToolbarTitleTextView.Text = "Projekt-Name # 1";
 			mBackButton.Click += delegate
 			{
 				base.OnBackPressed();
@@ -61,7 +56,7 @@ namespace VideoAppUISample.Droid
 			mLayoutManager = new LinearLayoutManager(mPrjectRecyclerView.Context);
 			mPrjectRecyclerView.SetLayoutManager(mLayoutManager);
 			mPrjectRecyclerView.HasFixedSize = true;
-            mViewAdapter = new ProjectVideoRecyclerViewAdapter(SelectedProject.ProjectVideos,PrepareSampleMusic(),PrepareSampleAnimations(),this);
+            mViewAdapter = new ProjectVideoRecyclerViewAdapter(PrepareSampleProjectVideo(),PrepareSampleMusic(),PrepareSampleAnimations(),this);
             mViewAdapter.VorschauButtonClick += VorschauButtonClickHandler;
             mViewAdapter.AddNewMusicButtonClick += AddNewMusicButtonClickHandler;
             mViewAdapter.HinzufugenButtonClick += HinzufugenButtonClickHandler;
@@ -116,6 +111,51 @@ namespace VideoAppUISample.Droid
 			animations.Add("Animation2");
 			animations.Add("Animation3");
             return animations;
+		}
+		//Todo Temp function
+		private List<ProjectVideo> PrepareSampleProjectVideo()
+		{
+			List<ProjectVideo> projectVideos = new List<ProjectVideo>();
+			ProjectVideo video1 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "21:00",
+				isVideoCompleted = true,
+				Counter = 1
+
+			};
+			projectVideos.Add(video1);
+
+			ProjectVideo video2 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "22:00",
+				isVideoCompleted = false,
+				Counter = 2
+
+			};
+			projectVideos.Add(video2);
+
+			ProjectVideo video3 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "23:00",
+				isVideoCompleted = true,
+				Counter = 3
+
+			};
+			projectVideos.Add(video3);
+
+			ProjectVideo video4 = new ProjectVideo()
+			{
+				VideoDescription = GetString(Resource.String.welcome_paragraph),
+				VideoLength = "23:00",
+				isVideoCompleted = false,
+				Counter = 4
+
+			};
+			projectVideos.Add(video4);
+			return projectVideos;
 		}
     #endregion
 
