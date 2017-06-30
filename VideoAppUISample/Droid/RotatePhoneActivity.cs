@@ -18,7 +18,7 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "DownloadProjectActivity", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize )]
+	[Activity(Label = "RotatePhoneActivity", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize )]
 	public class RotatePhoneActivity : AppCompatActivity
 	{
 		ImageButton mBackButton;
@@ -48,6 +48,9 @@ namespace VideoAppUISample.Droid
                 LaunchProjectOverviewScreen();
 			};
 		}
+        /// <summary>
+        /// Ons the device back pressed.
+        /// </summary>
 		public override void OnBackPressed()
 		{
 			base.OnBackPressed();

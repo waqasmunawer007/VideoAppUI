@@ -34,7 +34,7 @@ namespace VideoAppUISample.Droid
 			Button logGoogle = FindViewById<Button>(Resource.Id.anmeldenGoogle);
 			logGoogle.Click += delegate
 			{
-                StartActivity(typeof(DownloadProjectActivity));
+                StartActivity(typeof(PreCaptureVideoActivity));
 			};
 
 			// login mail

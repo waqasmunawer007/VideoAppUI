@@ -16,16 +16,16 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-    [Activity(Label = "ShareActivity",ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape)]
+    [Activity(Label = "IntroductionVideoActivity",ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape)]
 	public class IntroductionVideoActivity : AppCompatActivity
 	{
 		ProgressBar mProgress;
 		ImageButton mBackButton;
-		ImageButton mNextButton;
+		ImageView mNextButton;
 		ImageButton mProjectPreviewButton;
 		TextView mVideoTimeTextView;
 		TextView mVideoDescTextView;
-
+        ImageButton mBurgerMenuImageButton;
 
 		int progressStatus = 0;
 
@@ -34,36 +34,47 @@ namespace VideoAppUISample.Droid
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.activity_introduction_video);
-			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
-			mNextButton = FindViewById<ImageButton>(Resource.Id.next_image_button);
+            mBurgerMenuImageButton = FindViewById<ImageButton>(Resource.Id.project_view_menu_button);
+			mBackButton = FindViewById<ImageButton>(Resource.Id.back_button_imagebutton);
+			mNextButton = FindViewById<ImageView>(Resource.Id.next_screen_imageview);
 			mProjectPreviewButton = FindViewById<ImageButton>(Resource.Id.project_view_menu_button);
 			mProgress = FindViewById<ProgressBar>(Resource.Id.video_time_line_progressbar);
 			mVideoTimeTextView = FindViewById<TextView>(Resource.Id.video_time_text_view);
 			mVideoDescTextView = FindViewById<TextView>(Resource.Id.video_desc_text_view);
-
-			SetUpToolbar();
-			SetUpVideoProgressTimeBar();
-
+			
 			mNextButton.Click+=delegate {
 				Intent intent = new Intent(this, typeof(PreCaptureVideoActivity));
 				StartActivity(intent);
 			};
 
 			mProjectPreviewButton.Click += delegate {
-
+				Intent intent = new Intent(this, typeof(DetailProjectActivity));
+				StartActivity(intent);
 			};
 
-		}
-
-		/// <summary>
-		/// Sets up toolbar.
-		/// </summary>
-		private void SetUpToolbar()
-		{
 			mBackButton.Click += delegate
 			{
-				base.OnBackPressed();
+                LaunchProjectOverviewScreen();
 			};
+            SetUpVideoProgressTimeBar();
+
+		}
+        /// <summary>
+        /// Ons the device back pressed.
+        /// </summary>
+		public override void OnBackPressed()
+		{
+			base.OnBackPressed();
+			LaunchProjectOverviewScreen();
+		}
+		private void LaunchProjectOverviewScreen()
+		{
+			Intent intent = new Intent(this, typeof(MainActivity)); //with option Project overview screen
+			intent.PutExtra("launch_project_overview", true);// will use to determine either launch Project Overview screen or not
+			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
+			intent.AddFlags(ActivityFlags.NewTask);
+			StartActivity(intent);
+			Finish();
 		}
 		/// <summary>
 		/// Sets up video progress time bar.

@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/IntroductionVideoActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/values/colors.xml">
     <Files>
-      <File FileName="Droid/RotatePhoneActivity.cs" Line="21" Column="47" />
-      <File FileName="Droid/ShareActivity.cs" Line="110" Column="13" />
-      <File FileName="Droid/IntroductionVideoActivity.cs" Line="19" Column="101" />
+      <File FileName="Droid/PreCaptureVideoActivity.cs" Line="27" Column="20" />
+      <File FileName="Droid/Resources/values/colors.xml" Line="25" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

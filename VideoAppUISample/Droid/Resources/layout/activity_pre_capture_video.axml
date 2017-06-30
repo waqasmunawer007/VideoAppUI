@@ -3,91 +3,128 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
-<!--toolbar-->
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+<!-- Camera Preview layout -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_56dp">
-        <RelativeLayout
+        android:layout_height="match_parent">
+        <SurfaceView
+            android:id="@+id/camera_surfaceview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <!--icon navigation-->
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/video_thumbnail_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login" />
+    <!-- dotted menu button -->
+        <ImageButton
+            android:id="@+id/dotted_menu_image_button"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_32dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:background="@drawable/ic_more_vert" />
+    <!-- video recording layout -->
+        <FrameLayout
+            android:layout_gravity="right|center"
+            android:layout_width="@dimen/margin_56dp"
+            android:visibility="visible"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_height="@dimen/margin_56dp">
             <ImageButton
-                android:id="@+id/back_image_button"
+                android:layout_gravity="center"
+                android:id="@+id/video_recording_imagebutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:background="@null"
-                android:padding="@dimen/margin_16dp"
-                android:src="@drawable/ic_arrow_back" />
-        <!--title project-->
-            <TextView
-                android:id="@+id/toolbar_title_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/back_image_button"
-                android:layout_toRightOf="@+id/back_image_button"
-                android:text=""
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="@dimen/font_size_20" />
-        </RelativeLayout>
-    </android.support.design.widget.AppBarLayout>
-<!-- Camera Preview layout -->
-    <LinearLayout
-        android:layout_below="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:weightSum="1">
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <SurfaceView
-                android:id="@+id/camera_surfaceview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <ImageView
-                android:id="@+id/video_thumbnail_image_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/login" />
-        <!-- dotted menu button -->
+                android:background="@drawable/ic_blank_circle" />
             <ImageButton
-                android:id="@+id/dotted_menu_image_button"
-                android:layout_gravity="right|top"
-                android:layout_marginTop="@dimen/margin_10dp"
-                android:layout_width="@dimen/margin_32dp"
-                android:layout_height="@dimen/margin_32dp"
-                android:layout_marginRight="@dimen/margin_10dp"
-                android:background="@drawable/ic_setting_black" />
-        <!-- video recording button -->
-            <ImageButton
-                android:id="@+id/video_recording_image_button"
-                android:layout_gravity="right|center"
-                android:layout_width="@dimen/margin_32dp"
-                android:layout_height="@dimen/margin_32dp"
-                android:layout_marginRight="@dimen/margin_10dp"
-                android:background="@drawable/bt_done" />
-        <!-- Camera focus button -->
-            <ImageButton
-                android:id="@+id/camera_focus_image_button"
                 android:layout_gravity="center"
-                android:layout_width="@dimen/margin_48dp"
-                android:layout_height="@dimen/margin_48dp"
-                android:background="@drawable/ic_done_light" />
-        <!-- Bottom Layout -->
-            <RelativeLayout
-                android:layout_gravity="bottom"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="@dimen/size_50dp"
+                android:background="@drawable/ic_fill_red_circle" />
+            <ImageButton
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
+                android:background="@drawable/ic_fill_white_circle" />
+        </FrameLayout>
+    <!-- stop recording normal option -->
+        <FrameLayout
+            android:layout_gravity="right|center"
+            android:layout_width="@dimen/margin_56dp"
+            android:visibility="gone"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_height="@dimen/margin_56dp">
+            <ImageButton
+                android:layout_gravity="center"
+                android:id="@+id/stop_recording_normal_imagebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_fill_white_circle" />
+            <ImageButton
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/margin_16dp"
+                android:layout_height="@dimen/margin_16dp"
+                android:background="@drawable/ic_stop_recording" />
+        </FrameLayout>
+    <!-- stop recording danger option -->
+        <FrameLayout
+            android:layout_gravity="right|center"
+            android:layout_width="@dimen/margin_56dp"
+            android:visibility="gone"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_height="@dimen/margin_56dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/stop_recording_danger_imagebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorRed"
+                android:src="@drawable/ic_fill_white_circle" />
+            <ImageView
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/margin_16dp"
+                android:layout_height="@dimen/margin_16dp"
+                android:tint="@color/white"
+                android:src="@drawable/ic_stop_recording" />
+        </FrameLayout>
+    <!-- Camera focus button -->
+        <ImageButton
+            android:id="@+id/camera_focus_image_button"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/margin_56dp"
+            android:layout_height="@dimen/margin_56dp"
+            android:background="@drawable/ic_blank_circle" />
+    <!-- Bottom Layout -->
+        <RelativeLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/time_video_detail_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
-                    android:id="@+id/time_video_detail_layout"
+                    android:paddingBottom="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/margin_10dp"
+                    android:layout_gravity="left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -95,9 +132,8 @@
                     <LinearLayout
                         android:id="@+id/video_timer_layout"
                         android:layout_marginLeft="@dimen/margin_10dp"
-                        android:layout_marginBottom="@dimen/margin_10dp"
                         android:layout_width="wrap_content"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                     <!-- timer button -->
@@ -111,49 +147,56 @@
                             android:paddingLeft="@dimen/margin_5dp"
                             android:gravity="center"
                             android:id="@+id/video_time_text_view"
-                            android:layout_width="wrap_content"
+                            android:layout_width="56.5dp"
                             android:layout_height="wrap_content"
                             android:text="15 Seconds"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="@dimen/font_size_9" />
                     </LinearLayout>
-                <!-- Timebar -->
-                    <ProgressBar
-                        android:id="@+id/video_time_line_progressbar"
-                        style="@android:style/Widget.ProgressBar.Horizontal"
-                        android:progress="10"
-                        android:progressBackgroundTint="@color/colorBackgroundTimeProgressbar"
-                        android:progressTint="@color/colorTintTimebar"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/margin_16dp" />
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_marginRight="@dimen/margin_10dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="@dimen/margin_16dp"
-                    android:layout_centerVertical="true"
-                    android:paddingBottom="@dimen/margin_10dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="@dimen/margin_16dp"
                     android:layout_width="wrap_content"
+                    android:padding="@dimen/margin_10dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <!-- camera switch button -->
                     <ImageButton
                         android:id="@+id/camera_switch_image_button"
-                        android:layout_width="@dimen/margin_16dp"
-                        android:layout_height="@dimen/margin_16dp"
-                        android:src="@drawable/ic_galley_black"
-                        android:layout_marginRight="@dimen/margin_10dp"
-                        android:background="@null" />
+                        android:layout_width="@dimen/margin_18dp"
+                        android:layout_height="@dimen/margin_18dp"
+                        android:background="@drawable/ic_switch_camera"
+                        android:layout_marginRight="@dimen/margin_10dp" />
                 <!-- project preview button -->
                     <ImageButton
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
                         android:id="@+id/project_preview_image_button"
-                        android:layout_width="@dimen/margin_16dp"
-                        android:layout_height="@dimen/margin_16dp"
-                        android:src="@drawable/ic_view_agend_black"
-                        android:background="@null" />
+                        android:layout_width="@dimen/margin_14dp"
+                        android:layout_height="@dimen/margin_14dp"
+                        android:background="@drawable/ic_burger_menu" />
                 </LinearLayout>
-            </RelativeLayout>
-        </FrameLayout>
-    </LinearLayout>
+            </FrameLayout>
+        <!-- Timebar -->
+            <ProgressBar
+                android:layout_below="@id/time_video_detail_layout"
+                android:id="@+id/video_time_line_progressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progress="10"
+                android:progressDrawable="@drawable/custom_progressbar_danger"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_16dp" />
+        </RelativeLayout>
+    <!--return activity-->
+        <ImageButton
+            android:layout_gravity="left|start"
+            android:id="@+id/back_button_imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_back" />
+    </FrameLayout>
 </RelativeLayout>

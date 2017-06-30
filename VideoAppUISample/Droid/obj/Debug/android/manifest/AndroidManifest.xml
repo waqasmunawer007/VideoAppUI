@@ -21,9 +21,9 @@
     <activity android:configChanges="orientation|screenSize" android:label="VideoWirdActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.VideoWirdActivity" />
     <activity android:configChanges="orientation|screenSize" android:label="ShareActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.ShareActivity" />
     <activity android:configChanges="orientation|screenSize" android:label="DownloadProjectActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.DownloadProjectActivity" />
-    <activity android:configChanges="orientation|screenSize" android:label="DownloadProjectActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.RotatePhoneActivity" />
-    <activity android:label="ShareActivity" android:screenOrientation="landscape" android:name="md5db99e0f44738b1df054820e68a30bd22.IntroductionVideoActivity" />
-    <activity android:label="ShareActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.PreCaptureVideoActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="RotatePhoneActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.RotatePhoneActivity" />
+    <activity android:label="IntroductionVideoActivity" android:screenOrientation="landscape" android:name="md5db99e0f44738b1df054820e68a30bd22.IntroductionVideoActivity" />
+    <activity android:label="ShareActivity" android:screenOrientation="landscape" android:name="md5db99e0f44738b1df054820e68a30bd22.PreCaptureVideoActivity" />
     <activity android:label="PostCaptureVideoActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.PostCaptureVideoActivity" />
     <activity android:label="ShareActivity" android:name="md5db99e0f44738b1df054820e68a30bd22.PostCaptureVideoSuccessActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.videoappuisample.mono.MonoRuntimeProvider.__mono_init__" />
