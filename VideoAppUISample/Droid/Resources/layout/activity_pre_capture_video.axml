@@ -31,6 +31,7 @@
         <FrameLayout
             android:layout_gravity="right|center"
             android:layout_width="@dimen/margin_56dp"
+            android:id="@+id/video_recording_layout"
             android:visibility="visible"
             android:clickable="false"
             android:focusable="false"
@@ -61,6 +62,7 @@
         <FrameLayout
             android:layout_gravity="right|center"
             android:layout_width="@dimen/margin_56dp"
+            android:id="@+id/stop_recording_normal_layout"
             android:visibility="gone"
             android:clickable="false"
             android:focusable="false"
@@ -84,6 +86,7 @@
         <FrameLayout
             android:layout_gravity="right|center"
             android:layout_width="@dimen/margin_56dp"
+            android:id="@+id/stop_recording_danger_layout"
             android:visibility="gone"
             android:clickable="false"
             android:focusable="false"

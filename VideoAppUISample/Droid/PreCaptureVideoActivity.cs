@@ -22,9 +22,15 @@ namespace VideoAppUISample.Droid
 	{
 		ProgressBar mProgress;
 		ImageButton mBackButton;
+
         ImageButton mRecordingButton;
         ImageView mStopRecordingNormalButton;
         ImageView mStopRecordingDangerButton;
+        FrameLayout mRecordingLayout;
+		FrameLayout mStopRecordingNormalLayout;
+		FrameLayout mStopRecordingDangerLayout;
+
+
 		ImageButton mProjectPreviewButton;
 		ImageButton mCameraSwitchButton;
 		ImageButton mCameraFocusButton;
@@ -40,6 +46,10 @@ namespace VideoAppUISample.Droid
 			SetContentView(Resource.Layout.activity_pre_capture_video);
 			mBackButton = FindViewById<ImageButton>(Resource.Id.back_button_imagebutton);
 			mDottedMenuButton = FindViewById<ImageButton>(Resource.Id.dotted_menu_image_button);
+
+			mRecordingLayout = FindViewById<FrameLayout>(Resource.Id.video_recording_layout);
+			mStopRecordingNormalLayout = FindViewById<FrameLayout>(Resource.Id.stop_recording_normal_layout);
+			mStopRecordingDangerLayout = FindViewById<FrameLayout>(Resource.Id.stop_recording_danger_layout);
             mRecordingButton = FindViewById<ImageButton>(Resource.Id.video_recording_imagebutton);
             mStopRecordingNormalButton = FindViewById<ImageView>(Resource.Id.stop_recording_normal_imagebutton);
             mStopRecordingDangerButton = FindViewById<ImageView>(Resource.Id.stop_recording_danger_imagebutton);
@@ -57,8 +67,8 @@ namespace VideoAppUISample.Droid
 			};
 
 			mRecordingButton.Click+=delegate {
-				mRecordingButton.Visibility = ViewStates.Gone;
-				mStopRecordingNormalButton.Visibility = ViewStates.Visible;
+				mRecordingLayout.Visibility = ViewStates.Gone;
+                mStopRecordingNormalLayout.Visibility = ViewStates.Visible;
 				mVideoTimerLayout.Visibility = ViewStates.Visible;
 				SetUpVideoProgressTimeBar();
 				//if (!isVideoRecordingMode)
@@ -176,8 +186,8 @@ namespace VideoAppUISample.Droid
 						}
                         if (progressStatus > 50)
                         {
-                            mStopRecordingNormalButton.Visibility = ViewStates.Gone;
-                            mStopRecordingDangerButton.Visibility = ViewStates.Visible;
+                            mStopRecordingNormalLayout.Visibility = ViewStates.Gone;
+                            mStopRecordingDangerLayout.Visibility = ViewStates.Visible;
                             mProgress.ProgressDrawable = Android.Support.V4.Content.ContextCompat.GetDrawable(this,Resource.Drawable.custom_progressbar_danger);
                         }
 					});
