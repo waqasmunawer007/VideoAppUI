@@ -23,8 +23,8 @@ namespace VideoAppUISample.Droid
 		ProgressBar mProgress;
 		ImageButton mBackButton;
         ImageButton mRecordingButton;
-        ImageButton mStopRecordingNormalButton;
-        ImageButton mStopRecordingDangerButton;
+        ImageView mStopRecordingNormalButton;
+        ImageView mStopRecordingDangerButton;
 		ImageButton mProjectPreviewButton;
 		ImageButton mCameraSwitchButton;
 		ImageButton mCameraFocusButton;
@@ -41,8 +41,8 @@ namespace VideoAppUISample.Droid
 			mBackButton = FindViewById<ImageButton>(Resource.Id.back_button_imagebutton);
 			mDottedMenuButton = FindViewById<ImageButton>(Resource.Id.dotted_menu_image_button);
             mRecordingButton = FindViewById<ImageButton>(Resource.Id.video_recording_imagebutton);
-            mStopRecordingNormalButton = FindViewById<ImageButton>(Resource.Id.stop_recording_normal_imagebutton);
-            mStopRecordingDangerButton = FindViewById<ImageButton>(Resource.Id.stop_recording_danger_imagebutton);
+            mStopRecordingNormalButton = FindViewById<ImageView>(Resource.Id.stop_recording_normal_imagebutton);
+            mStopRecordingDangerButton = FindViewById<ImageView>(Resource.Id.stop_recording_danger_imagebutton);
 
 			mCameraSwitchButton = FindViewById<ImageButton>(Resource.Id.camera_switch_image_button);
 			mCameraFocusButton = FindViewById<ImageButton>(Resource.Id.camera_focus_image_button);

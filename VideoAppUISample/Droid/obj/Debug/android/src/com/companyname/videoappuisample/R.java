@@ -3247,8 +3247,8 @@ containing a value of this type.
         public static final int start=0x7f080036;
         public static final int start_project_button=0x7f0800e4;
         public static final int status_bar_latest_event_content=0x7f0800fa;
-        public static final int stop_recording_danger_layout=0x7f0800a9;
-        public static final int stop_recording_normal_layout=0x7f0800a8;
+        public static final int stop_recording_danger_imagebutton=0x7f0800a9;
+        public static final int stop_recording_normal_imagebutton=0x7f0800a8;
         public static final int submenuarrow=0x7f080060;
         public static final int submit_area=0x7f080071;
         public static final int success_message_text_view=0x7f0800a6;
