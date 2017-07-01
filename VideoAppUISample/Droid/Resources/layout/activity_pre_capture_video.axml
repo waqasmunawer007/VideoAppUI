@@ -150,7 +150,7 @@
                             android:paddingLeft="@dimen/margin_5dp"
                             android:gravity="center"
                             android:id="@+id/video_time_text_view"
-                            android:layout_width="56.5dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="15 Seconds"
                             android:textAllCaps="false"

@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Droid/Fragments/ProjectFragment.cs" Line="114" Column="79" />
+      <File FileName="Droid/PreCaptureVideoActivity.cs" Line="44" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
