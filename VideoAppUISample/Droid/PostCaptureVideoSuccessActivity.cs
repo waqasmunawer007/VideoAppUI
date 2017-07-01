@@ -42,6 +42,7 @@ namespace VideoAppUISample.Droid
 		private void LaunchProjectDetailScreen()
 		{
 			Intent intent = new Intent(this, typeof(DetailProjectActivity));
+            intent.PutExtra("video_recording_flow", true);
 			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
 			intent.AddFlags(ActivityFlags.NewTask);
 			StartActivity(intent);

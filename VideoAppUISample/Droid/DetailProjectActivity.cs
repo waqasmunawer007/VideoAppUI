@@ -24,7 +24,7 @@ namespace VideoAppUISample.Droid
 		ProjectVideoRecyclerViewAdapter mViewAdapter { get; set; }
         TextView mToolbarTitleTextView;
         ImageButton mBackButton;
-	
+        bool VideoCompletionFlow = false;
  		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -34,7 +34,16 @@ namespace VideoAppUISample.Droid
             mToolbarTitleTextView = FindViewById<TextView>(Resource.Id.toolbar_title_text_view);
             SetUpToolbar();
             SetUpProjectVideoRecyclerView();
- 
+
+			Intent intent = Intent;
+			if (intent != null)
+			{
+                //if DetailActivity launches through Video Player
+                VideoCompletionFlow = intent.GetBooleanExtra("video_recording_flow", false);//todo temparay code, need to revisit it
+				
+			}
+
+
 		}
         /// <summary>
         /// Sets up toolbar.
@@ -43,8 +52,20 @@ namespace VideoAppUISample.Droid
         {
 			mToolbarTitleTextView.Text = "Projekt-Name # 1";
 			mBackButton.Click += delegate
-			{
-				base.OnBackPressed();
+            {
+				//todo temparay code, need to revisit it
+				if (VideoCompletionFlow)
+                {
+                    Intent intent = new Intent(this, typeof(MainActivity));
+                    intent.PutExtra("launch_project_overview", true);
+					StartActivity(intent);
+                    Finish();
+                }
+                else
+                {
+                    base.OnBackPressed();
+                }
+				
 			};
         }
         #region Project Video RecyclerView Setup
