@@ -17,38 +17,34 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "ShareActivity")]
+	[Activity(Label = "PostCaptureVideoSuccessActivity",ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class PostCaptureVideoSuccessActivity : AppCompatActivity
 	{
-		
-		ImageButton mBackButton;
-		ImageButton mOkButton;
         TextView mSuccessTextView;
+        ImageView mCheckImageButton;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.activity_post_capture_video_success);
-			mBackButton = FindViewById<ImageButton>(Resource.Id.back_image_button);
-			mOkButton = FindViewById<ImageButton>(Resource.Id.ok_image_button);
             mSuccessTextView = FindViewById<TextView>(Resource.Id.success_message_text_view);
+            mCheckImageButton = FindViewById<ImageView>(Resource.Id.check_imagebutton);
 
-			SetUpToolbar();
-
-			mOkButton.Click+=delegate {
-              //Todo launch project detail activity with the selected project containing latest created video  
-
-			};
+            mCheckImageButton.Click +=delegate {
+                LaunchProjectDetailScreen();
+                this.Finish();
+            };
 		}
+       
 		/// <summary>
-		/// Sets up toolbar.
-		/// </summary>
-		private void SetUpToolbar()
+        /// Launchs the project detail screen.
+        /// </summary>
+		private void LaunchProjectDetailScreen()
 		{
-			mBackButton.Click += delegate
-			{
-				base.OnBackPressed();
-			};
+			Intent intent = new Intent(this, typeof(DetailProjectActivity));
+			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
+			intent.AddFlags(ActivityFlags.NewTask);
+			StartActivity(intent);
 		}
 
 	}

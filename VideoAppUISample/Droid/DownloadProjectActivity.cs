@@ -85,7 +85,8 @@ namespace VideoAppUISample.Droid
 			mProgressDialog.Indeterminate = false;
 			mProgressDialog.SetMessage("Downlaoding. Please wait...");
 			mProgressDialog.SetProgressStyle(ProgressDialogStyle.Horizontal);
-			mProgressDialog.SetCancelable(true);
+            mProgressDialog.SetCancelable(false);
+            mProgressDialog.SetCanceledOnTouchOutside(false);
 			mProgressDialog.Max = 100;
 			mProgressDialog.Progress = 0;
 			mProgressDialog.Show();

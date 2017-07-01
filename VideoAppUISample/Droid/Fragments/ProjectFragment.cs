@@ -112,7 +112,6 @@ namespace VideoAppUISample.Droid
 		private void LoadDownLoadProjectActivity()
 		{
 			Intent intent = new Intent(this.Activity, typeof(DownloadProjectActivity));
-			//Todo Pass Selected Project Item to DownloadProjectActivity screen here
 			StartActivity(intent);
 
 		}

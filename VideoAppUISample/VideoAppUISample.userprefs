@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{1EE169B2-CFD0-4101-AFD3-384CE45FB25B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/values/colors.xml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Droid/PreCaptureVideoActivity.cs" Line="27" Column="20" />
-      <File FileName="Droid/Resources/values/colors.xml" Line="25" Column="36" />
+      <File FileName="Droid/Fragments/ProjectFragment.cs" Line="114" Column="79" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -16,5 +15,5 @@
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.VideoAppUISample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DFD76B1A-D3A8-4A72-B0EE-90B96670B8EF" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_4_API_23" AndroidDesignerPreferredTheme="MyTheme" />
+  <MonoDevelop.Ide.ItemProperties.VideoAppUISample.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.3.7_FWVGA_kitkat" AndroidDesignerPreferredTheme="MyTheme" />
 </Properties>

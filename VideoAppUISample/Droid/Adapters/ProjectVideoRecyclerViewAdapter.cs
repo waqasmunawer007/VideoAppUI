@@ -134,11 +134,11 @@ namespace VideoAppUISample.Droid.Adapters
                 {
                     vh.mVideoThumbnailImageView.SetBackgroundResource(Resource.Drawable.login);
                     vh.mVideoCounterCircleTextView.Visibility = ViewStates.Gone;
-                    vh.mVideoCompleteCircleButton.Visibility = ViewStates.Visible;
+                    vh.mCheckCircleLayout.Visibility = ViewStates.Visible;
                 }
                 else
                 {
-					vh.mVideoCompleteCircleButton.Visibility = ViewStates.Gone;
+					vh.mCheckCircleLayout.Visibility = ViewStates.Gone;
 					vh.mVideoCounterCircleTextView.Visibility = ViewStates.Visible;
                     vh.mVideoCounterCircleTextView.Text = projectVideo.Counter + "";
                     vh.mVideoThumbnailImageView.SetBackgroundResource(Resource.Drawable.video_rect_placeholder);
@@ -255,6 +255,7 @@ namespace VideoAppUISample.Droid.Adapters
         {
             public ImageView mVideoThumbnailImageView { get; private set; }
 			public ImageView mVideoCompleteCircleButton { get; private set; }
+            public FrameLayout mCheckCircleLayout;
             public TextView mVideoDescTextView { get; private set; }
             public TextView mVideoLengthTextView { get; private set; }
 			public TextView mVideoCounterCircleTextView { get; private set; }
@@ -274,7 +275,8 @@ namespace VideoAppUISample.Droid.Adapters
                 mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
                 mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
 				mVideoCounterCircleTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
-				mVideoCompleteCircleButton = itemView.FindViewById<ImageButton>(Resource.Id.video_complete_status_imagebutton);
+				mVideoCompleteCircleButton = itemView.FindViewById<ImageView>(Resource.Id.video_complete_status_imagebutton);
+                mCheckCircleLayout = itemView.FindViewById<FrameLayout>(Resource.Id.circle_check_button_layout);
 				mSwipeLayout = itemView.FindViewById<Com.Daimajia.Swipe.SwipeLayout>(Resource.Id.swipe_layout);
                 mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
                 mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);

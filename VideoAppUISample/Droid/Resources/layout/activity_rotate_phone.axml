@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/rotate_screen_background"
     android:layout_height="match_parent"
     android:focusable="true"
     android:clickable="true">
@@ -10,10 +11,7 @@
         android:id="@+id/background_imageview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/rotate_screen_background"
-        tools:ignore="ContentDescription" />
+        android:background="@drawable/rotate_screen_background" />
 <!--return activity-->
     <ImageButton
         android:id="@+id/back_button_imagebutton"

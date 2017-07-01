@@ -13,16 +13,13 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
-
+using VideoAppUISample.Droid.Models;
 
 namespace VideoAppUISample.Droid
 {
 	[Activity(Label = "ShareActivity",ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape)]
 	public class PreCaptureVideoActivity : AppCompatActivity
 	{
-		ProgressBar mProgress;
-		ImageButton mBackButton;
-
         ImageButton mRecordingButton;
         ImageView mStopRecordingNormalButton;
         ImageView mStopRecordingDangerButton;
@@ -30,7 +27,8 @@ namespace VideoAppUISample.Droid
 		FrameLayout mStopRecordingNormalLayout;
 		FrameLayout mStopRecordingDangerLayout;
 
-
+		ProgressBar mProgress;
+		ImageButton mBackButton;
 		ImageButton mProjectPreviewButton;
 		ImageButton mCameraSwitchButton;
 		ImageButton mCameraFocusButton;
@@ -71,29 +69,19 @@ namespace VideoAppUISample.Droid
                 mStopRecordingNormalLayout.Visibility = ViewStates.Visible;
 				mVideoTimerLayout.Visibility = ViewStates.Visible;
 				SetUpVideoProgressTimeBar();
-				//if (!isVideoRecordingMode)
-				//{
-    //                isVideoRecordingMode = true;
-    //                mRecordingButton.Visibility = ViewStates.Gone;
-    //                mStopRecordingNormalButton.Visibility = ViewStates.Visible;
-				//	mRecordingButton.SetBackgroundResource(Resource.Drawable.bt_download);//TOdo replace button with stop video buttton
-					
-				//	mVideoTimerLayout.Visibility = ViewStates.Visible;
-				//	SetUpVideoProgressTimeBar();
-				//}
-				//else
-				//{ 
-				//	//launch Post Video Capture screen
-				//	Intent intent = new Intent(this, typeof(PostCaptureVideoActivity));
-				//	StartActivity(intent);
-				//}
 			};
 
             mStopRecordingNormalButton.Click +=delegate {
-                //stop recording within the time range
+				//stop recording within the time range
+				Intent intent = new Intent(this, typeof(PostCaptureVideoActivity));
+                intent.PutExtra("video_recording_status",VideoStatus.NORMAL_RECORDING);
+				StartActivity(intent);
             };
             mStopRecordingDangerButton.Click += delegate {
-                //time threshold value crossed
+				//time threshold value crossed
+				Intent intent = new Intent(this, typeof(PostCaptureVideoActivity));
+                intent.PutExtra("video_recording_status", VideoStatus.DANGER_RECORDING);
+				StartActivity(intent);
             };
 
 			mProjectPreviewButton.Click += delegate {
