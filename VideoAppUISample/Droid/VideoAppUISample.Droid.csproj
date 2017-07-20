@@ -36,7 +36,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -513,6 +512,12 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_chevron_left.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_touch.png" />
     <AndroidResource Include="Resources\drawable\custom_progressbar_green.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\bg_splash.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bg_splash.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bg_splash.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bg_splash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bg_splash.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_splash_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />

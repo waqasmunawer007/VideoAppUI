@@ -2,13 +2,13 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
   <item>
     <bitmap
-     android:src="@drawable/login"
+     android:src="@drawable/bg_splash"
      android:tileMode="disabled"
      android:gravity="center"/>
   </item>
   <item>
     <bitmap
-        android:src="@drawable/img_logotype"
+        android:src="@drawable/ic_splash_logo"
         android:tileMode="disabled"
         android:gravity="center"/>
   </item>

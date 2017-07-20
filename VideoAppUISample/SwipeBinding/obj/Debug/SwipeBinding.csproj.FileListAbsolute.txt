@@ -8,7 +8,6 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.Media.Compat.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.v4.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.v7.CardView.dll
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.csprojResolveAssemblyReference.cache
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/XbdMerge/Xamarin.Android.Support.Annotations.dll.stamp
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/XbdMerge/Xamarin.Android.Support.Compat.dll.stamp
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/XbdMerge/Xamarin.Android.Support.Core.UI.dll.stamp
@@ -20,3 +19,4 @@
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.csproj.CoreCompileInputs.cache
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.dll
 /Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.pdb
+/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.csprojResolveAssemblyReference.cache

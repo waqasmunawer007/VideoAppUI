@@ -22,11 +22,12 @@ namespace VideoAppUISample.Droid
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
+           // SetContentView(Resource.Layout.activity_splash);
 
-			Task startupWork = new Task(() =>
+           Task startupWork = new Task(() =>
 		   {
 			   Log.Debug(TAG, "Performing some startup work that takes a bit of time.");
-			   Task.Delay(2000); // Simulate a bit of startup work.
+			   Task.Delay(3000); // Simulate a bit of startup work.
 				Log.Debug(TAG, "Working in the background - important stuff.");
 		   });
 

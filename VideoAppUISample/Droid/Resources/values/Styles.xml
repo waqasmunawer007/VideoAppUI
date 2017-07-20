@@ -12,7 +12,7 @@
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowBackground">@drawable/login</item>
+    <item name="android:windowBackground">@drawable/bg_splash</item>
     <item name="android:background">@drawable/splash_screen</item>
     <item name="android:windowNoTitle">true</item>
   </style>
