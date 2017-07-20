@@ -7,11 +7,11 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/XbdMerge/Xamarin.Android.Support.Fragment.dll.stamp
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/XbdMerge/Xamarin.Android.Support.v4.dll.stamp
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/XbdMerge/Xamarin.Android.Support.v7.CardView.dll.stamp
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.Jars.library-1.2.0.aar
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/SwipeBinding.dll.mdb
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.obj.Debug.__AndroidLibraryProjects__.zip
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/SwipeBinding.pdb
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/SwipeBinding.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.dll
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.dll.mdb
+/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.pdb
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.Annotations.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.Compat.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.Core.UI.dll
@@ -20,4 +20,3 @@
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.Fragment.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.v4.dll
 /Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/bin/Debug/Xamarin.Android.Support.v7.CardView.dll
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeBinding/obj/Debug/SwipeBinding.obj.Debug.__AndroidLibraryProjects__.zip

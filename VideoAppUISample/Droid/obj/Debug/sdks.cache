@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Sdk>
-  <AndroidApiLevel>25</AndroidApiLevel>
-  <AndroidApiLevelName>25</AndroidApiLevelName>
+  <AndroidApiLevel>24</AndroidApiLevel>
+  <AndroidApiLevelName>24</AndroidApiLevelName>
   <AndroidNdkPath>/Users/muhammadrashid/Library/Developer/Xamarin/android-ndk/android-ndk-r11c</AndroidNdkPath>
   <AndroidSdkBuildToolsPath>/Users/muhammadrashid/waqas/waqasData/sdk/build-tools/23.0.0</AndroidSdkBuildToolsPath>
   <AndroidSdkBuildToolsBinPath>/Users/muhammadrashid/waqas/waqasData/sdk/build-tools/23.0.0</AndroidSdkBuildToolsBinPath>

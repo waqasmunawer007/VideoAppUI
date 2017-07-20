@@ -46,8 +46,6 @@ namespace VideoAppUISample.Droid
 		/// </summary>
 		private void SetupToolbar()
 		{
-            //mToolbar.Background.SetAlpha(0);
-            //mToolbar.SetBackgroundResource(Resource.Color.transparent);
 			SetSupportActionBar(mToolbar);
 			SupportActionBar.SetTitle(Resource.String.projectk);
 			SupportActionBar.SetDisplayHomeAsUpEnabled(true);

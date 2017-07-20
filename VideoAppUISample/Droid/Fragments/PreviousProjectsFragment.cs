@@ -64,6 +64,7 @@ namespace VideoAppUISample.Droid
 
             mViewAdapter = new ProjectRecyclerViewAdapter(PrepareSampleProjects());
             mViewAdapter.VideoThumbnailClick += OnVideoItemClick;
+			mViewAdapter.EditProjectClick += OnEditProjectClick;
             mPrjectRecyclerView.SetAdapter(mViewAdapter);
 
         }
@@ -79,7 +80,20 @@ namespace VideoAppUISample.Droid
 			Intent intent = new Intent(this.Activity, typeof(DetailProjectActivity));
 			StartActivity(intent);
 		}
+		/// <summary>
+		/// Ons the edit project click.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="position">Position.</param>
+		void OnEditProjectClick(object sender, int position)
+		{
+			Project selectedProject = mViewAdapter.GetSelectedProject(position);
+			//Todo  pass the selected project through intent by implementing ISerializable or IParceable interface.
+			Intent intent = new Intent(this.Activity, typeof(DetailProjectActivity));
+			StartActivity(intent);
+		}
 
+		//TODO sample data preparing, remove it once you add actual data
 		private List<Project> PrepareSampleProjects()
 		{
 			//project #1

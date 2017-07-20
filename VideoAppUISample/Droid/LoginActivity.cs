@@ -27,7 +27,7 @@ namespace VideoAppUISample.Droid
 			Button logFacebook = FindViewById<Button>(Resource.Id.anmeldenFacebook);
 			logFacebook.Click += delegate
 			{
-				StartActivity(typeof(MainActivity));
+				//StartActivity(typeof(MainActivity));
 			};
 
 			// login google

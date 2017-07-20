@@ -51,6 +51,7 @@ namespace VideoAppUISample.Droid
 					mTermImageView.SetBackgroundResource(Resource.Drawable.ic_check_circle_activate);
                     ifTermsSelected = true;
                 }
+				checkFieldsForEmptyValues();
                
             };
 		}
@@ -62,7 +63,7 @@ namespace VideoAppUISample.Droid
 		{
 			string email = mEmailEditText.Text;
 			string password = mPasswordEditText.Text;
-			if (email.Equals("") || password.Equals(""))
+			if (email.Equals("") || password.Equals("") || !ifTermsSelected)
 			{
 				mWeiterButton.Alpha = 0.7f;
 				mWeiterButton.Enabled = false;

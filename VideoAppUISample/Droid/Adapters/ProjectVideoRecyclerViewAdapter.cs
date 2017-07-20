@@ -11,7 +11,7 @@ namespace VideoAppUISample.Droid.Adapters
 {
     public class ProjectVideoRecyclerViewAdapter : RecyclerView.Adapter 
     {
-        List<ProjectVideo> mItems;
+        public static List<ProjectVideo> mItems;
         List<String> mMusicItems;
         List<String> mAnimationItems;
         public MusicSpinnerAdapter mMusicSpinnerAdapter;
@@ -164,36 +164,18 @@ namespace VideoAppUISample.Droid.Adapters
                 }
                 vh.mAnimationSpiner.Adapter = mAnimationSpinnerAdapter;
                 vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(AnimationSpinner_ItemSelected);
+				#endregion
 
-                //vh.mAnimationPickCheckbox.Click += (o, e) =>
-                //{
-                //	if (vh.mAnimationPickCheckbox.Checked)
-                //	{
-                //		string selectedAnimation = (string)vh.mAnimationSpiner.SelectedItem;
-                //	}
-                //};
-                #endregion
-
-                #region Right Swipe settings
-                vh.mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
-                var bottomView = vh.mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
-                vh.mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
-                vh.mSwipeLayout.LeftSwipeEnabled = false;
-                vh.mSwipeLayout.RightSwipeEnabled = true;
-                vh.mSwipeLayout.StartOpen += (sender, e) => { };
-                vh.mSwipeLayout.OpenEvent += (sender, e) =>
-               {
-                   Android.Util.Log.Info("Open", "open event");
-                   vh.mDisabledLayout.Visibility = ViewStates.Visible;
+				if (projectVideo.isDisbaled)
+				{
+				   vh.mDisabledLayout.Visibility = ViewStates.Visible;
                    vh.mDisbaledRowTextView.Visibility = ViewStates.Visible;
-               };
-                // unlock disabled cell 
-                vh.mUnlockDisabledCellButton.Click += delegate
-                {
-                    vh.mDisabledLayout.Visibility = ViewStates.Gone;
-                    vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
-                };
-                #endregion
+				}
+				else
+				{ 
+					vh.mDisabledLayout.Visibility = ViewStates.Gone;
+					vh.mDisbaledRowTextView.Visibility = ViewStates.Gone;
+				}
             }
             else
             {
@@ -266,23 +248,50 @@ namespace VideoAppUISample.Droid.Adapters
             public ImageButton mUnlockDisabledCellButton;
             public TextView mDisbaledRowTextView;
 
-            public ProjectVideoViewHolder(View itemView) : base(itemView)
-            {
-                // Locate and cache view references:
-                mAnimationPickImageView = itemView.FindViewById<ImageView>(Resource.Id.animation_pick_imageview);
-                mAnimationSpiner = itemView.FindViewById<Spinner>(Resource.Id.animation_spinner);
-                mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.cover_video_image_view);
-                mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
-                mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
+			public ProjectVideoViewHolder(View itemView) : base(itemView)
+			{
+				// Locate and cache view references:
+				mAnimationPickImageView = itemView.FindViewById<ImageView>(Resource.Id.animation_pick_imageview);
+				mAnimationSpiner = itemView.FindViewById<Spinner>(Resource.Id.animation_spinner);
+				mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.cover_video_image_view);
+				mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
+				mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
 				mVideoCounterCircleTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
 				mVideoCompleteCircleButton = itemView.FindViewById<ImageView>(Resource.Id.video_complete_status_imagebutton);
-                mCheckCircleLayout = itemView.FindViewById<FrameLayout>(Resource.Id.circle_check_button_layout);
+				mCheckCircleLayout = itemView.FindViewById<FrameLayout>(Resource.Id.circle_check_button_layout);
 				mSwipeLayout = itemView.FindViewById<Com.Daimajia.Swipe.SwipeLayout>(Resource.Id.swipe_layout);
-                mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
-                mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);
+				mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
+				mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);
 				mDisbaledRowTextView = itemView.FindViewById<TextView>(Resource.Id.disabled_row_textview);
-            }
-        }
+
+				#region Right Swipe handlings
+				mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
+				var bottomView = mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
+				mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
+				mSwipeLayout.LeftSwipeEnabled = false;
+				mSwipeLayout.RightSwipeEnabled = true;
+				mSwipeLayout.StartOpen += (sender, e) => { };
+				mSwipeLayout.OpenEvent += (sender, e) =>
+			   	{
+				   ProjectVideo projectVideo = mItems[AdapterPosition];
+				   if (!projectVideo.isDisbaled)
+				   {
+					   Android.Util.Log.Info("Open", "open event" + AdapterPosition);
+					   projectVideo.isDisbaled = true;
+					   mDisabledLayout.Visibility = ViewStates.Visible;
+					   mDisbaledRowTextView.Visibility = ViewStates.Visible;
+				   }
+			   };
+				mUnlockDisabledCellButton.Click += delegate
+				{
+					ProjectVideo projectVideo = mItems[AdapterPosition];
+					projectVideo.isDisbaled = false;
+					mDisabledLayout.Visibility = ViewStates.Gone;
+					mDisbaledRowTextView.Visibility = ViewStates.Gone;
+				};
+				#endregion
+			}
+		}
        /// <summary>
        /// Animations the spinner item selected.
        /// </summary>

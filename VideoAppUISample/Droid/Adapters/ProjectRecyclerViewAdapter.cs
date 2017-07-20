@@ -9,6 +9,7 @@ namespace VideoAppUISample.Droid.Adapters
 	public class ProjectRecyclerViewAdapter : RecyclerView.Adapter
 	{
 		public event EventHandler<int> VideoThumbnailClick;
+		public event EventHandler<int> EditProjectClick;
         List<Project> mItems;
 
 		/// <summary>
@@ -41,6 +42,16 @@ namespace VideoAppUISample.Droid.Adapters
                 return mItems.Count;
 			}
 		}
+		/// <summary>
+		/// Ons the right label click.
+		/// </summary>
+		/// <param name="position">Position.</param>
+		void OnEditProjectClick(int position)
+		{
+			if (EditProjectClick != null)
+				EditProjectClick(this, position);
+		}
+
         /// <summary>
         /// Ons the project video thumbnail click.
         /// </summary>
@@ -60,7 +71,7 @@ namespace VideoAppUISample.Droid.Adapters
 		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
 		{
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.project_cell_item_layout, parent, false);
-            ProjectViewHolder vh = new ProjectViewHolder(itemView, OnVideoThumbnailClick);
+			ProjectViewHolder vh = new ProjectViewHolder(itemView, OnVideoThumbnailClick,OnEditProjectClick);
 			return vh;
 		}
 
@@ -68,16 +79,22 @@ namespace VideoAppUISample.Droid.Adapters
 		{
 			public ImageView mVideoThumbnailImageView { get; private set; }
             public TextView mProjectTitleTextView { get; private set; }
+			public TextView mEditProjectTextView { get; private set; }
             public TextView mProjectEditTextView { get; private set; }
 
-			public ProjectViewHolder(View itemView, Action<int> videoItemClickListener) : base(itemView)
+			public ProjectViewHolder(View itemView, Action<int> videoItemClickListener, Action<int> editProjectClickListener) : base(itemView)
 			{
 				// Locate and cache view references:
 				mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.video_thumbnail_image_view);
 				mProjectTitleTextView = itemView.FindViewById<TextView>(Resource.Id.project_name);
-                mProjectEditTextView = itemView.FindViewById<TextView>(Resource.Id.edit_project_text_view);
+                mEditProjectTextView = itemView.FindViewById<TextView>(Resource.Id.edit_project_text_view);
+
 				#pragma warning disable CS0618 // Type or member is obsolete
 				mVideoThumbnailImageView.Click += (sender, e) => videoItemClickListener(base.Position);
+				#pragma warning restore CS0618 // Type or member is obsolete
+
+				#pragma warning disable CS0618 // Type or member is obsolete
+				mEditProjectTextView.Click += (sender, e) => editProjectClickListener(base.Position);
 				#pragma warning restore CS0618 // Type or member is obsolete
 			}
 		}

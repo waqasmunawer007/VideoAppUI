@@ -1,0 +1,1 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><item><shape android:shape="oval"><solid android:color="@color/colorAccent" /><size android:height="60dp" android:width="60dp" /></shape></item><item android:drawable="@drawable/ic_done_video_completed" android:bottom="15dp" android:left="15dp" android:right="15dp" android:top="15dp"></item></layer-list>
