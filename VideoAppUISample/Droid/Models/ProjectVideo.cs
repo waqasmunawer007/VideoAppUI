@@ -9,6 +9,5 @@ namespace VideoAppUISample.Droid.Models
 		public bool isVideoCompleted;
         public int Counter;
 		public bool isDisbaled;
-
     }
 }

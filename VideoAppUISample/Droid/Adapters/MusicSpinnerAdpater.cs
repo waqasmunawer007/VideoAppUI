@@ -33,12 +33,10 @@ namespace VideoAppUISample.Droid.Adapters
 			musicList.Add(musicName);
 			NotifyDataSetChanged();
 		}
-
         public string GetSelectedMusicItem(int position)
         {
             return musicList[position];
         }
-
 		public override View GetDropDownView(int position, View convertView, ViewGroup parent)
 		{
 			View row = inflater.Inflate(resourceLayout, parent, false);

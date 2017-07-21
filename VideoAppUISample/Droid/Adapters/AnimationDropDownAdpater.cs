@@ -23,6 +23,12 @@ namespace VideoAppUISample.Droid.Adapters
             this.animations = animations;
             inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
 		}
+
+		public string GetSelectedAnimation(int position)
+		{
+			return animations[position];
+		}
+
 		public override View GetDropDownView(int position, View convertView, ViewGroup parent)
 		{
 			View row = inflater.Inflate(resourceLayout, parent, false);

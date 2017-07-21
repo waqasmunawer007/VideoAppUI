@@ -22,6 +22,7 @@ namespace VideoAppUISample.Droid.Adapters
         public event EventHandler<int> MusicSpinnerClick;
 		public event EventHandler<int> GreenCriclClick;
 		public event EventHandler<int> BlueCircleClick;
+        public event EventHandler<int> AnimationSpinnerClick;
         Context mContext;
 		private const int Type_Item = 1;
         private  const int Type_Footer = 2;
@@ -58,7 +59,15 @@ namespace VideoAppUISample.Droid.Adapters
 			}
 			return selectedVideos;
 		}
-
+        /// <summary>
+        /// Ons the animation spinner click.
+        /// </summary>
+        /// <param name="position">Position.</param>
+		void OnAnimationSpinnerClick(int position)
+		{
+			if (AnimationSpinnerClick != null)
+				AnimationSpinnerClick(this, position);
+		}
 		/// <summary>
 		/// Ons the music spinner click.
 		/// </summary>
@@ -169,17 +178,16 @@ namespace VideoAppUISample.Droid.Adapters
                     vh.mVideoThumbnailImageView.SetBackgroundResource(Resource.Drawable.video_rect_placeholder);
                    
                 }
-                #endregion
-
-                #region Animations
-                if (mAnimationSpinnerAdapter == null)
-                {
-                    mAnimationSpinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, mAnimationItems);
-
-                }
-                vh.mAnimationSpiner.Adapter = mAnimationSpinnerAdapter;
-                vh.mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(AnimationSpinner_ItemSelected);
 				#endregion
+
+                //Animation adapter settings
+				if (mAnimationSpinnerAdapter == null)
+				{
+					mAnimationSpinnerAdapter = new AnimationDropDownAdpater(mContext, Resource.Layout.animation_spiner_item_layout, mAnimationItems);
+
+				}
+				vh.mAnimationSpiner.Adapter = mAnimationSpinnerAdapter;
+               
 
 				if (projectVideo.isDisbaled)
 				{
@@ -205,7 +213,7 @@ namespace VideoAppUISample.Droid.Adapters
             if (viewType == Type_Item)
             {
 				View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.project_video_cell_item_layout, parent, false);
-                ProjectVideoViewHolder vh = new ProjectVideoViewHolder(itemView,OnGreenCircleClick,OnBlueCircleClick);
+                ProjectVideoViewHolder vh = new ProjectVideoViewHolder(itemView,OnGreenCircleClick,OnBlueCircleClick,OnAnimationSpinnerClick);
 				return vh; 
             }
             else
@@ -263,68 +271,68 @@ namespace VideoAppUISample.Droid.Adapters
             public ImageButton mUnlockDisabledCellButton;
             public TextView mDisbaledRowTextView;
 
-            public ProjectVideoViewHolder(View itemView,Action<int> greenCircleClick,Action<int> blueCircleClick) : base(itemView)
-			{
-				// Locate and cache view references:
-				mAnimationPickImageView = itemView.FindViewById<ImageView>(Resource.Id.animation_pick_imageview);
-				mAnimationSpiner = itemView.FindViewById<Spinner>(Resource.Id.animation_spinner);
-				mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.cover_video_image_view);
-				mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
-				mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
-				mVideoCounterCircleTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
-				mVideoCompleteCircleButton = itemView.FindViewById<ImageView>(Resource.Id.video_complete_status_imagebutton);
-				mCheckCircleLayout = itemView.FindViewById<FrameLayout>(Resource.Id.circle_check_button_layout);
-				mSwipeLayout = itemView.FindViewById<Com.Daimajia.Swipe.SwipeLayout>(Resource.Id.swipe_layout);
-				mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
-				mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);
-				mDisbaledRowTextView = itemView.FindViewById<TextView>(Resource.Id.disabled_row_textview);
+            public ProjectVideoViewHolder(View itemView, Action<int> greenCircleClick, Action<int> blueCircleClick, Action<int> animationSpinnerClick) : base(itemView)
+            {
+                // Locate and cache view references:
+                mAnimationPickImageView = itemView.FindViewById<ImageView>(Resource.Id.animation_pick_imageview);
+                mAnimationSpiner = itemView.FindViewById<Spinner>(Resource.Id.animation_spinner);
+                mVideoThumbnailImageView = itemView.FindViewById<ImageView>(Resource.Id.cover_video_image_view);
+                mVideoDescTextView = itemView.FindViewById<TextView>(Resource.Id.video_desc_text_view);
+                mVideoLengthTextView = itemView.FindViewById<TextView>(Resource.Id.video_length_text_view);
+                mVideoCounterCircleTextView = itemView.FindViewById<TextView>(Resource.Id.video_counter);
+                mVideoCompleteCircleButton = itemView.FindViewById<ImageView>(Resource.Id.video_complete_status_imagebutton);
+                mCheckCircleLayout = itemView.FindViewById<FrameLayout>(Resource.Id.circle_check_button_layout);
+                mSwipeLayout = itemView.FindViewById<Com.Daimajia.Swipe.SwipeLayout>(Resource.Id.swipe_layout);
+                mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
+                mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);
+                mDisbaledRowTextView = itemView.FindViewById<TextView>(Resource.Id.disabled_row_textview);
 
-				#pragma warning disable CS0618 // Type or member is obsolete
+                #pragma warning disable CS0618 // Type or member is obsolete
                 mVideoCompleteCircleButton.Click += (sender, e) => greenCircleClick(base.Position);
                 #pragma warning restore CS0618 // Type or member is obsolete
-				
+
                 #pragma warning disable CS0618 // Type or member is obsolete
                 mVideoCounterCircleTextView.Click += (sender, e) => blueCircleClick(base.Position);
-				#pragma warning restore CS0618 // Type or member is obsolete
+                #pragma warning restore CS0618 // Type or member is obsolete
 
-				#region Right Swipe handlings
-				mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
-				var bottomView = mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
-				mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
-				mSwipeLayout.LeftSwipeEnabled = false;
-				mSwipeLayout.RightSwipeEnabled = true;
-				mSwipeLayout.StartOpen += (sender, e) => { };
-				mSwipeLayout.OpenEvent += (sender, e) =>
-			   	{
-				   ProjectVideo projectVideo = mItems[AdapterPosition];
-				   if (!projectVideo.isDisbaled)
-				   {
-					   Android.Util.Log.Info("Open", "open event" + AdapterPosition);
-					   projectVideo.isDisbaled = true;
-					   mDisabledLayout.Visibility = ViewStates.Visible;
-					   mDisbaledRowTextView.Visibility = ViewStates.Visible;
-				   }
-			   };
-				mUnlockDisabledCellButton.Click += delegate
-				{
-					ProjectVideo projectVideo = mItems[AdapterPosition];
-					projectVideo.isDisbaled = false;
-					mDisabledLayout.Visibility = ViewStates.Gone;
-					mDisbaledRowTextView.Visibility = ViewStates.Gone;
-				};
-				#endregion
-			}
+                mAnimationSpiner.ItemSelected += (sender, e) => animationSpinnerClick(e.Position);
+
+                #region Right Swipe handlings
+                mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);
+                var bottomView = mSwipeLayout.FindViewById(Resource.Id.bottom_wrapper);
+                mSwipeLayout.AddDrag(Com.Daimajia.Swipe.SwipeLayout.DragEdge.Right, bottomView);
+                mSwipeLayout.LeftSwipeEnabled = false;
+                mSwipeLayout.RightSwipeEnabled = true;
+                mSwipeLayout.StartOpen += (sender, e) => { };
+                mSwipeLayout.OpenEvent += (sender, e) =>
+                   {
+                       ProjectVideo projectVideo = mItems[AdapterPosition];
+                       if (!projectVideo.isDisbaled)
+                       {
+                           Android.Util.Log.Info("Open", "open event" + AdapterPosition);
+                           projectVideo.isDisbaled = true;
+                           mDisabledLayout.Visibility = ViewStates.Visible;
+                           mDisbaledRowTextView.Visibility = ViewStates.Visible;
+                       }
+                   };
+                mUnlockDisabledCellButton.Click += delegate
+                {
+                    ProjectVideo projectVideo = mItems[AdapterPosition];
+                    projectVideo.isDisbaled = false;
+                    mDisabledLayout.Visibility = ViewStates.Gone;
+                    mDisbaledRowTextView.Visibility = ViewStates.Gone;
+                };
+                #endregion
+                //mAnimationSpiner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(AnimationSpinner_ItemSelected);
+
+            }
 		}
-       /// <summary>
-       /// Animations the spinner item selected.
-       /// </summary>
-       /// <param name="sender">Sender.</param>
-       /// <param name="e">E.</param>
-		private void AnimationSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-		{
-			Spinner spinner = (Spinner)sender;
-            string selectedAnimation = (string)spinner.GetItemAtPosition(e.Position);	
-		}
+       
+		//private void AnimationSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+		//{
+		//	Spinner spinner = (Spinner)sender;
+  //          string selectedAnimation = (string)spinner.GetItemAtPosition(e.Position);	
+		//}
        
     }
 

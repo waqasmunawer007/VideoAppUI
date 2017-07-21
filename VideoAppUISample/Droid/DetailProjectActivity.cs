@@ -101,6 +101,7 @@ namespace VideoAppUISample.Droid
             mViewAdapter.MusicSpinnerClick += Music_ItemSelected;
             mViewAdapter.GreenCriclClick += GreenCircleButtonClickHandler;
             mViewAdapter.BlueCircleClick += BlueCircleButtonClickHandler;
+            mViewAdapter.AnimationSpinnerClick += Animation_ItemSelected;
 			mPrjectRecyclerView.SetAdapter(mViewAdapter);
 		}
         /// <summary>
@@ -170,8 +171,17 @@ namespace VideoAppUISample.Droid
         /// <param name="sender">Sender.</param>
         /// <param name="position">Position.</param>
 		void Music_ItemSelected(object sender, int position)
-		{
+        {
             string selectedMusic = (string)mViewAdapter.mMusicSpinnerAdapter.GetSelectedMusicItem(position);
+		}
+        /// <summary>
+        /// Animations the item selected.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
+		void Animation_ItemSelected(object sender, int position)
+		{
+            string selectedAnimation = (string)mViewAdapter.mAnimationSpinnerAdapter.GetSelectedAnimation(position);
 		}
 
 		private List<String> PrepareSampleMusic()
