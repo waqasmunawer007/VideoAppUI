@@ -20,6 +20,8 @@ namespace VideoAppUISample.Droid.Adapters
         public event EventHandler<int> AddNewMusicButtonClick;
         public event EventHandler<int> HinzufugenButtonClick;
         public event EventHandler<int> MusicSpinnerClick;
+		public event EventHandler<int> GreenCriclClick;
+		public event EventHandler<int> BlueCircleClick;
         Context mContext;
 		private const int Type_Item = 1;
         private  const int Type_Footer = 2;
@@ -31,7 +33,10 @@ namespace VideoAppUISample.Droid.Adapters
             mMusicItems = musicItems;
             mAnimationItems = animations;
         }
-
+        public ProjectVideo GetSelectedVideo(int position)
+        {
+            return mItems[position];
+        }
         public void AddNewVideo(ProjectVideo projectVideo)
         {
 			mItems.Add(projectVideo);
@@ -52,6 +57,26 @@ namespace VideoAppUISample.Droid.Adapters
 				}
 			}
 			return selectedVideos;
+		}
+
+		/// <summary>
+		/// Ons the music spinner click.
+		/// </summary>
+		/// <param name="position">Position.</param>
+		void OnGreenCircleClick(int position)
+		{
+            if (GreenCriclClick != null)
+				GreenCriclClick(this, position);
+		}
+
+		/// <summary>
+		/// Ons the music spinner click.
+		/// </summary>
+		/// <param name="position">Position.</param>
+		void OnBlueCircleClick(int position)
+		{
+            if (BlueCircleClick != null)
+				BlueCircleClick(this, position);
 		}
 
         /// <summary>
@@ -144,16 +169,6 @@ namespace VideoAppUISample.Droid.Adapters
                     vh.mVideoThumbnailImageView.SetBackgroundResource(Resource.Drawable.video_rect_placeholder);
                    
                 }
-                vh.mVideoCounterCircleTextView.Click += delegate
-                {
-                    Intent intent = new Intent(mContext, typeof(IntroductionVideoActivity));
-                    mContext.StartActivity(intent);
-                };
-                vh.mVideoCompleteCircleButton.Click += delegate
-                {
-                    Intent intent = new Intent(mContext, typeof(PostCaptureVideoActivity));
-                    mContext.StartActivity(intent);
-                };
                 #endregion
 
                 #region Animations
@@ -190,7 +205,7 @@ namespace VideoAppUISample.Droid.Adapters
             if (viewType == Type_Item)
             {
 				View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.project_video_cell_item_layout, parent, false);
-				ProjectVideoViewHolder vh = new ProjectVideoViewHolder(itemView);
+                ProjectVideoViewHolder vh = new ProjectVideoViewHolder(itemView,OnGreenCircleClick,OnBlueCircleClick);
 				return vh; 
             }
             else
@@ -248,7 +263,7 @@ namespace VideoAppUISample.Droid.Adapters
             public ImageButton mUnlockDisabledCellButton;
             public TextView mDisbaledRowTextView;
 
-			public ProjectVideoViewHolder(View itemView) : base(itemView)
+            public ProjectVideoViewHolder(View itemView,Action<int> greenCircleClick,Action<int> blueCircleClick) : base(itemView)
 			{
 				// Locate and cache view references:
 				mAnimationPickImageView = itemView.FindViewById<ImageView>(Resource.Id.animation_pick_imageview);
@@ -263,6 +278,14 @@ namespace VideoAppUISample.Droid.Adapters
 				mDisabledLayout = itemView.FindViewById<LinearLayout>(Resource.Id.disabled_row_layout);
 				mUnlockDisabledCellButton = itemView.FindViewById<ImageButton>(Resource.Id.unlock_disabled_row_imagebutton);
 				mDisbaledRowTextView = itemView.FindViewById<TextView>(Resource.Id.disabled_row_textview);
+
+				#pragma warning disable CS0618 // Type or member is obsolete
+                mVideoCompleteCircleButton.Click += (sender, e) => greenCircleClick(base.Position);
+                #pragma warning restore CS0618 // Type or member is obsolete
+				
+                #pragma warning disable CS0618 // Type or member is obsolete
+                mVideoCounterCircleTextView.Click += (sender, e) => blueCircleClick(base.Position);
+				#pragma warning restore CS0618 // Type or member is obsolete
 
 				#region Right Swipe handlings
 				mSwipeLayout.SetShowMode(Com.Daimajia.Swipe.SwipeLayout.ShowMode.PullOut);

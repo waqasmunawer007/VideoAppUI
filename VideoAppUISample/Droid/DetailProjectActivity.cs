@@ -99,19 +99,57 @@ namespace VideoAppUISample.Droid
             mViewAdapter.AddNewMusicButtonClick += AddNewMusicButtonClickHandler;
             mViewAdapter.HinzufugenButtonClick += HinzufugenButtonClickHandler;
             mViewAdapter.MusicSpinnerClick += Music_ItemSelected;
+            mViewAdapter.GreenCriclClick += GreenCircleButtonClickHandler;
+            mViewAdapter.BlueCircleClick += BlueCircleButtonClickHandler;
 			mPrjectRecyclerView.SetAdapter(mViewAdapter);
 		}
+        /// <summary>
+        /// Video Completed green circle button click handler.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
+		void GreenCircleButtonClickHandler(object sender, int position)
+		{
+            ProjectVideo selectedVideo = mViewAdapter.GetSelectedVideo(position);
+			Intent intent = new Intent(this, typeof(PostCaptureVideoActivity));
+			StartActivity(intent);
+		}
+        /// <summary>
+        /// Blues video counter number circle button click handler.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
+		void BlueCircleButtonClickHandler(object sender, int position)
+		{
+            ProjectVideo selectedVideo = mViewAdapter.GetSelectedVideo(position);
+			Intent intent = new Intent(this, typeof(IntroductionVideoActivity));
+			StartActivity(intent);
+		}
+        /// <summary>
+        /// Adds the new music button click handler.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
 		void AddNewMusicButtonClickHandler(object sender, int position)
 		{
             //add new music item into the existing music list
             mViewAdapter.mMusicSpinnerAdapter.AddNewMusic("new song");
-            //Toast.MakeText(this, "new song added", ToastLength.Short).Show();
 		}
+        /// <summary>
+        /// Vorschaus the button click handler.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
 		void VorschauButtonClickHandler(object sender, int position)
 		{
 			Intent intent = new Intent(this, typeof(VideoWirdActivity));
             StartActivity(intent);
 		}
+        /// <summary>
+        /// Hinzufugens the button click handler.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
 		void HinzufugenButtonClickHandler(object sender, int position)
 		{
             //add new video into existing project videos list
@@ -126,10 +164,14 @@ namespace VideoAppUISample.Droid
 			};
             mViewAdapter.AddNewVideo(dummyVieo);
 		}
+        /// <summary>
+        /// Musics the item selected.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="position">Position.</param>
 		void Music_ItemSelected(object sender, int position)
 		{
             string selectedMusic = (string)mViewAdapter.mMusicSpinnerAdapter.GetSelectedMusicItem(position);
-            //Toast.MakeText(this, "Selected Music "+ selectedMusic, ToastLength.Short).Show();
 		}
 
 		private List<String> PrepareSampleMusic()
