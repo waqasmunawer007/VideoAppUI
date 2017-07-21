@@ -1,5 +1,0 @@
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/VideoAppUISample/bin/Debug/VideoAppUISample.dll
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/VideoAppUISample/bin/Debug/VideoAppUISample.pdb
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/VideoAppUISample/obj/Debug/VideoAppUISample.csproj.CoreCompileInputs.cache
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/VideoAppUISample/obj/Debug/VideoAppUISample.dll
-/Users/waqas/UVSoft/VideoApp/VideoAppUI/VideoAppUISample/VideoAppUISample/obj/Debug/VideoAppUISample.pdb

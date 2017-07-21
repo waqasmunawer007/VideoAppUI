@@ -1,6 +1,0 @@
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeLayoutLibrary/obj/Debug/MonoAndroid,Version=v7.0.AssemblyAttribute.cs
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeLayoutLibrary/obj/Debug/SwipeLayoutLibrary.obj.Debug.__AndroidLibraryProjects__.zip
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeLayoutLibrary/bin/Debug/SwipeLayoutLibrary.dll.mdb
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeLayoutLibrary/bin/Debug/SwipeLayoutLibrary.dll
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeLayoutLibrary/obj/Debug/SwipeLayoutLibrary.dll
-/Users/muhammadrashid/vidoeApp/VideoAppUI/VideoAppUISample/SwipeLayoutLibrary/obj/Debug/SwipeLayoutLibrary.dll.mdb
