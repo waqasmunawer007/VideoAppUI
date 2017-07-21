@@ -8,6 +8,7 @@ using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Android.Graphics;
 using Android.Content;
+using Android.Content.PM;
 
 namespace VideoAppUISample.Droid
 {

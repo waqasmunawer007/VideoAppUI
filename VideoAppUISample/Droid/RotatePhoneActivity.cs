@@ -45,7 +45,7 @@ namespace VideoAppUISample.Droid
 		{
 			mBackButton.Click += delegate
 			{
-                LaunchProjectOverviewScreen();
+				 base.OnBackPressed();
 			};
 		}
         /// <summary>
@@ -54,17 +54,16 @@ namespace VideoAppUISample.Droid
 		public override void OnBackPressed()
 		{
 			base.OnBackPressed();
-			LaunchProjectOverviewScreen();
 		}
-		private void LaunchProjectOverviewScreen()
-		{
-			Intent intent = new Intent(this, typeof(MainActivity)); //with option Project overview screen
-			intent.PutExtra("launch_project_overview", true);// will use to determine either launch Project Overview screen or not
-			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
-			intent.AddFlags(ActivityFlags.NewTask);
-			StartActivity(intent);
-			Finish();
-		}
+		//private void LaunchProjectOverviewScreen()
+		//{
+		//	Intent intent = new Intent(this, typeof(MainActivity)); //with option Project overview screen
+		//	intent.PutExtra("launch_project_overview", true);// will use to determine either launch Project Overview screen or not
+		//	intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
+		//	intent.AddFlags(ActivityFlags.NewTask);
+		//	StartActivity(intent);
+		//	Finish();
+		//}
 
 		public override void OnConfigurationChanged(Android.Content.Res.Configuration newConfig)
 		{

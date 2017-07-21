@@ -19,7 +19,7 @@ using Java.Lang;
 
 namespace VideoAppUISample.Droid
 {
-	[Activity(Label = "DownloadProjectActivity",ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+	[Activity(Label = "DownloadProjectActivity" , ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class DownloadProjectActivity : AppCompatActivity
 	{
 		ProgressDialog mProgressDialog;
@@ -64,6 +64,10 @@ namespace VideoAppUISample.Droid
 				LoadRotatePhoneActivity();
 			};
 		}
+		protected override void OnResume()
+		{
+			base.OnResume();
+		}
         /// <summary>
         /// Updates the user interface once the downloading completed.
         /// </summary>
@@ -74,7 +78,7 @@ namespace VideoAppUISample.Droid
 			mDownloadButton.SetBackgroundResource(Resource.Drawable.bt_done);
 			mJettztButton.Visibility = ViewStates.Visible;
 			mBottomLayout.Visibility = ViewStates.Gone;
-			mProgressDialog.Hide(); 
+			mProgressDialog.Dismiss(); 
         }
 		/// <summary>
 		/// Creates the download progress dialog.
@@ -131,11 +135,15 @@ namespace VideoAppUISample.Droid
             if (oreintation == ScreenOrientation.Landscape) //If already in landscape, just skipe Rotate Phone screen
             {
 				Intent intent = new Intent(this, typeof(IntroductionVideoActivity));
+				intent.AddFlags(ActivityFlags.ClearTop);  
+				intent.AddFlags(ActivityFlags.SingleTop); //avoid to recreate activity, if it is on the back stack
 				StartActivity(intent);
             }
             else
             {
 				Intent intent = new Intent(this, typeof(RotatePhoneActivity));
+				//intent.AddFlags(ActivityFlags.ClearTop);  
+				//intent.AddFlags(ActivityFlags.SingleTop); //avoid to recreate activity, if it is on the back stack
 				StartActivity(intent); 
             }
 		}

@@ -42,7 +42,9 @@ namespace VideoAppUISample.Droid
 		private void LaunchProjectDetailScreen()
 		{
 			Intent intent = new Intent(this, typeof(DetailProjectActivity));
-            intent.PutExtra("video_recording_flow", true);
+			//video_recording_flow flag will use to determine that the bank button option on DetailProjectActivity screen
+			//should navigate the flow to Project listing screen.
+            intent.PutExtra("video_recording_flow", true); 
 			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
 			intent.AddFlags(ActivityFlags.NewTask);
 			StartActivity(intent);

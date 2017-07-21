@@ -38,8 +38,9 @@ namespace VideoAppUISample.Droid
 			Intent intent = Intent;
 			if (intent != null)
 			{
-                //if DetailActivity launches through Video Player
-                VideoCompletionFlow = intent.GetBooleanExtra("video_recording_flow", false);//todo temparay code, need to revisit it
+                //DetailActivity launched from PostCaptureVideoSuccessActivity after successfull video completion
+				//in that case on pressing back button use should navigate to to Project Listing screen
+                VideoCompletionFlow = intent.GetBooleanExtra("video_recording_flow", false);
 				
 			}
 
@@ -53,11 +54,10 @@ namespace VideoAppUISample.Droid
 			mToolbarTitleTextView.Text = "Projekt-Name # 1";
 			mBackButton.Click += delegate
             {
-				//todo temparay code, need to revisit it
 				if (VideoCompletionFlow)
                 {
                     Intent intent = new Intent(this, typeof(MainActivity));
-                    intent.PutExtra("launch_project_overview", true);
+                    intent.PutExtra("launch_project_overview", true);//will load ProjectFragment by default
 					StartActivity(intent);
                     Finish();
                 }
@@ -68,6 +68,23 @@ namespace VideoAppUISample.Droid
 				
 			};
         }
+		/// <summary>
+		/// Ons the device back pressed.
+		/// </summary>
+		public override void OnBackPressed()
+		{
+			if (VideoCompletionFlow)
+                {
+                    Intent intent = new Intent(this, typeof(MainActivity));
+					intent.PutExtra("launch_project_overview", true);
+					StartActivity(intent);
+					Finish();
+                }
+                else
+                {
+                    base.OnBackPressed();
+                }
+		}
         #region Project Video RecyclerView Setup
         /// <summary>
         /// Sets up project videos recycler view.

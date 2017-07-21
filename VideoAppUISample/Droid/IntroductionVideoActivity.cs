@@ -46,18 +46,15 @@ namespace VideoAppUISample.Droid
 				Intent intent = new Intent(this, typeof(PreCaptureVideoActivity));
 				StartActivity(intent);
 			};
-
 			mProjectPreviewButton.Click += delegate {
 				Intent intent = new Intent(this, typeof(DetailProjectActivity));
 				StartActivity(intent);
 			};
-
 			mBackButton.Click += delegate
 			{
-                LaunchProjectOverviewScreen();
+                base.OnBackPressed();
 			};
             SetUpVideoProgressTimeBar();
-
 		}
         /// <summary>
         /// Ons the device back pressed.
@@ -65,16 +62,7 @@ namespace VideoAppUISample.Droid
 		public override void OnBackPressed()
 		{
 			base.OnBackPressed();
-			LaunchProjectOverviewScreen();
-		}
-		private void LaunchProjectOverviewScreen()
-		{
-			Intent intent = new Intent(this, typeof(MainActivity)); //with option Project overview screen
-			intent.PutExtra("launch_project_overview", true);// will use to determine either launch Project Overview screen or not
-			intent.AddFlags(ActivityFlags.ClearTask);  //clear previous activity stack
-			intent.AddFlags(ActivityFlags.NewTask);
-			StartActivity(intent);
-			Finish();
+
 		}
 		/// <summary>
 		/// Sets up video progress time bar.

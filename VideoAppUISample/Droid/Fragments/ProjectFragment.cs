@@ -44,7 +44,8 @@ namespace VideoAppUISample.Droid
 			SetUpViewPager();
 
             mStartButton.Click += delegate {
-                ShowConfirmationDialog();
+				//ShowConfirmationDialog();
+				LoadDownLoadProjectActivity();
             };
 			return mRootView;
 		}
@@ -113,7 +114,6 @@ namespace VideoAppUISample.Droid
 		{
 			Intent intent = new Intent(this.Activity, typeof(DownloadProjectActivity));
 			StartActivity(intent);
-
 		}
 
 		//Temp function
